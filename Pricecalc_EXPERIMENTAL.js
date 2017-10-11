@@ -97,14 +97,13 @@ function showLocation() {
 
   	function calculateDistance()
   	{
-  		try
-  		{
+
   			var glatlng1 = new GLatLng(location1.lat, location1.lon);
   			var glatlng2 = new GLatLng(location2.lat, location2.lon);
   			var miledistance = glatlng1.distanceFrom(glatlng2, 3959).toFixed(1);
   			var kmdistance = (miledistance * 1.609344).toFixed(1);
   			document.getElementById('results').innerHTML = 'Address 1: ' + location1.address + ' (' + location1.lat + ':' + location1.lon + ')<br />Address 2: ' + location2.address + ' (' + location2.lat + ':' + location2.lon + ')<br />Distance: ' + miledistance + ' miles (or ' + kmdistance + ' kilometers)<br/>';
-}
+
 }
 
         // do our JS math here
