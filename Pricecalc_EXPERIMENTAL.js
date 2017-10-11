@@ -18,17 +18,17 @@
     function initialize() {
 
 // Initial map function
-// this initiates the first map seen prior to calculating your selected locations
+// this initiates the first map seen prior to calculating selected locations
 
       directionsDisplay = new google.maps.DirectionsRenderer();
 
-// default location is Chicago USA, perhaps change to your place of business?
+// default location is Toronto
 
-      var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+      var toronto = new google.maps.LatLng(41.850033, -87.6500523);
       var myOptions = {
         zoom:7,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: chicago
+        center: toronto
       }
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
     directionsDisplay.setMap(map);
