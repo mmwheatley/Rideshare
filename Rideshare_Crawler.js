@@ -9,7 +9,7 @@ var URL = require('url-parse');
 var START_URL = "https://www.kijiji.ca/b-travel-vacations/kitchener-waterloo/c302l1700212";
 //var SEARCH_WORD = "ride share";
 var MAX_PAGES_TO_VISIT = 10;
-var MAX_SEARCH_WORDS = 4;
+var MAX_SEARCH_WORDS = 5;
 
 
 var pagesVisited = {};
@@ -19,12 +19,12 @@ var url = new URL(START_URL);
 var baseUrl = url.protocol + "//" + url.hostname;
 
 
-var SEARCH_WORD = ["ride share","ride","taxi","airport"];
+var SEARCH_WORD = ["ride share","ride","taxi","airport","driver"];
 var word_num = 0;
 
 
 pagesToVisit.push(START_URL);
-console.log("RideShare KIJIJI Cawler 1.0");
+console.log("RideShare Kijiji Cawler 1.5");
 
 
 crawl();
@@ -73,6 +73,7 @@ function visitPage(url, callback)
        callback();
        return;
      }
+
      // Document Body is parsed here
 
      var $ = cheerio.load(body);
