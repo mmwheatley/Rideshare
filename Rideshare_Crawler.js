@@ -54,7 +54,58 @@ function crawl()
 }
 
 
-f
+function visitPage(url, callback)
+{
+  // Add page and increment num visited
+  pagesVisited[url] = true;
+  numPagesVisited++;
+
+  // Request carry out:
+  console.log("Visiting page " + url);
+  request(url, function(error, response, body)
+
+  {
+     // Retrieve status code: HTTP OK is 200
+     console.log("Status code: " + response.statusCode);
+     if(response.statusCode !== 200)
+
+     {
+       callback();
+       return;
+     }
+     // Document Body is parsed here
+
+     var $ = cheerio.load(body);
+     var isWordFound = searchForWord($, SEARCH_WORD[word_num]);
+
+     if(isWordFound)
+     {
+       console.log('Word ' + SEARCH_WORD[word_num] + ' found at page ' + url);
+
+       //Increase array pointer to next word
+
+       word_num++;
+
+       if (word_num < MAX_SEARCH_WORDS)
+
+        {
+          //clear pagesVisited and push start url into array
+
+          pagesVisited ={};
+          pagesToVisit.push(START_URL);
+          callback();
+        }
+
+     }
+     else
+     {
+       collectInternalLinks($);
+       // Callback is crawl()
+       callback();
+     }
+
+  });
+}
 
 function searchForWord($, word)
 
