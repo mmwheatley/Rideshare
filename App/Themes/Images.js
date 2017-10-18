@@ -1,5 +1,10 @@
 // leave off @2x/@3x
 const images = {
+	// my icons
+	fastcar: require("../Images/fastcar.png"),
+	bigR: require("../Images/R.png"),
+	speedcar: require("../Images/speedcar.jpg"),
+	// ignite
 	logo: require("../Images/ignitenb.png"),
 	logoDark: require("../Images/ignitenbdark.png"),
 	clearLogo: require("../Images/top_logo.png"),

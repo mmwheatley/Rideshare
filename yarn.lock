@@ -4048,6 +4048,10 @@ ignite-i18n@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ignite-i18n/-/ignite-i18n-1.1.1.tgz#d6dade3f9209bc7457de61c7425fa26ec9e67b3e"
 
+ignite-maps@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/ignite-maps/-/ignite-maps-0.1.6.tgz#f449c52cee5fb0f3ecce7d603b5904354cf8503b"
+
 ignite-native-base-boilerplate@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ignite-native-base-boilerplate/-/ignite-native-base-boilerplate-2.0.0.tgz#9f6bd32bb126a48c5f02ecbdca3ac9b7b9e7f7df"
@@ -6613,6 +6617,10 @@ react-native-i18n@1.0.0:
     create-react-class "^15.6.0"
     prop-types "^15.5.10"
     react-timer-mixin "^0.13.3"
+
+react-native-maps@0.16.4:
+  version "0.16.4"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.16.4.tgz#c18c3cab8cd0ce05431cd74dac11a39afaa579e4"
 
 react-native-tab-view@^0.0.69:
   version "0.0.69"

@@ -4,7 +4,7 @@ import { Colors, Metrics } from '../../Themes'
 export default StyleSheet.create({
   container: {
     paddingTop: 70,
-    backgroundColor: Colors.background
+    backgroundColor: Colors.royal,
   },
   form: {
     backgroundColor: Colors.snow,
@@ -49,6 +49,12 @@ export default StyleSheet.create({
     color: Colors.silver
   },
   topLogo: {
+    alignSelf: 'center',
+    resizeMode: 'contain'
+  },
+  anotherLogo: {
+    height: Metrics.images.logo,
+    width: Metrics.images.bigLogo,
     alignSelf: 'center',
     resizeMode: 'contain'
   }
