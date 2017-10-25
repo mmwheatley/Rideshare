@@ -5,7 +5,7 @@ export default {
     backgroundColor: '#fff'
   },
   logo: {
-    width: 260,
+    width: 60,
     resizeMode: 'contain'
   }
 }

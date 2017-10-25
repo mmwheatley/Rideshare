@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BackHandler, Dimensions, View,StyleSheet } from 'react-native'
+import { BackHandler, Dimensions, View, StyleSheet } from 'react-native'
 import MapView from 'react-native-maps'
 import { Content, Container, Header, Left, Right, Body, Button, Text, Title, Icon, Footer, FooterTab } from 'native-base'
 import { connect } from 'react-redux'
@@ -35,9 +35,8 @@ class HomeScreen extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
-              <Icon name="menu" />
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+              <Icon name="ios-menu" />
             </Button>
           </Left>
           <Body>

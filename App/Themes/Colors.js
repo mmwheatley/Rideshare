@@ -27,7 +27,8 @@ const colors = {
   jackson: '#1F3A93',
   sherpa: '#013243',
   sky: '#1E8BC3',
-  royal: '#4183D7'
+  royal: '#4183D7',
+  amaranth: '#FB6567'
 }
 
 export default colors

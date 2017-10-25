@@ -16,6 +16,7 @@ class LoginScreen extends React.Component {
 	isAttempting = false;
 	keyboardDidShowListener = {};
 	keyboardDidHideListener = {};
+	focusPassword = false;
 
 	constructor(props) {
 		super(props);
@@ -26,6 +27,7 @@ class LoginScreen extends React.Component {
 			topLogo: { width: Metrics.screenWidth - 40 },
 		};
 		this.isAttempting = false;
+		this.focusPassword = false;
 	}
 
 	componentWillReceiveProps(newProps) {
@@ -83,6 +85,10 @@ class LoginScreen extends React.Component {
 		this.setState({ password: text });
 	};
 
+	handleUsernameSubmit = text => {
+		this.focusPassword = true;
+	}
+
 	render() {
 		const { username, password } = this.state;
 		const { fetching } = this.props;
@@ -109,13 +115,15 @@ class LoginScreen extends React.Component {
 								autoCorrect={false}
 								onChangeText={this.handleChangeUsername}
 								underlineColorAndroid="transparent"
-								onSubmitEditing={() => this.password._root.focus()}
+								//onSubmitEditing={() => this.password._root.focus()}
+								onSubmitEditing={() => this.handleUsernameSubmit}
 							/>
 						</Item>
 						<Item floatingLabel>
 							<Label>Password</Label>
 							<Input
-								ref={ref => (this.password = ref)}
+								//ref={ref => (this.password = ref)}
+								focus = {this.focusPassword}
 								//value={password}
 								editable={editable}
 								keyboardType="default"
