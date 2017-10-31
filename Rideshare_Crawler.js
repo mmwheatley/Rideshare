@@ -6,7 +6,8 @@ var cheerio = require('cheerio');
 var URL = require('url-parse');
 
 
-var START_URL = "https://www.kijiji.ca/b-travel-vacations/kitchener-waterloo/c302l1700212";
+var KIJIJI_URL = "https://www.kijiji.ca/b-travel-vacations/kitchener-waterloo/c302l1700212";
+var START_URL = "https://www.facebook.com/groups/225049564330328/"
 //var SEARCH_WORD = "ride share";
 var MAX_PAGES_TO_VISIT = 10;
 var MAX_SEARCH_WORDS = 5;
@@ -19,7 +20,7 @@ var url = new URL(START_URL);
 var baseUrl = url.protocol + "//" + url.hostname;
 
 
-var SEARCH_WORD = ["ride share","ride","taxi","airport","driver"];
+var SEARCH_WORD = ["share","ride","taxi","airport","driver"];
 var word_num = 0;
 
 
