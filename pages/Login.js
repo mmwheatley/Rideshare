@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, Text, TextInput, View, Button } from 'react-native';
-import { loginUser,login } from '../redux/actions/auth';
+import { loginUser,login, cleanError } from '../redux/actions/auth';
 import { Hoshi } from 'react-native-textinput-effects';
 
 class Login extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            email: '',
+            email: 'uwzhuboyuan@gmail.com',
             password: ''
         };
     }
 
     userLogin (e) {
         console.log('Pressed!!')
-        console.log('email:', this.state.email)
-        console.log('password', this.state.password)
-        console.log('')
         this.props.onLogin(this.state.email, this.state.password);
         e.preventDefault();
     }
+
+    componentDidUpdate (prevProps) {
+      if (this.props.sysAlert != '' && this.props.errorFlag) {
+        alert(this.props.sysAlert);
+        this.props.cleanErrorStatus();
+      }
+    }
+
 
     render() {
         return (
@@ -34,6 +39,8 @@ class Login extends Component {
                   backgroundColor={'#FFF'}
                   autoCorrect={false}
                   value={this.state.email} 
+                  keyboardType='email-address'
+                  autoCapitalize='none'
                   onChangeText={(text) => this.setState({ email: text })}
                   />
 
@@ -42,6 +49,7 @@ class Login extends Component {
                   borderColor={'#b76c94'}
                   backgroundColor={'#FFF'}
                   autoCorrect={false}
+                  autoCapitalize='none'
                   value={this.state.password} 
                   onChangeText={(text) => this.setState({ password: text })}
                 />
@@ -55,13 +63,16 @@ class Login extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        isLoggedIn: state.auth.isLoggedIn
+        isLoggedIn: state.auth.isLoggedIn,
+        sysAlert: state.auth.sysAlert,
+        errorFlag: state.auth.errorFlag
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onLogin: (email, password) => { dispatch(loginUser(email, password)); }
+        onLogin: (email, password) => { dispatch(loginUser(email, password)); },
+        cleanErrorStatus: () => {dispatch(cleanError()); }
     }
 }
 

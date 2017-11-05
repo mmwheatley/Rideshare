@@ -1,22 +1,17 @@
-/*global fetch:true*/
-export const login = (password, email) => {
-    return {
-        type: 'LOGIN',
-        email: email,
-        password: password
-    };
-};
-
 export const logout = () => {
     return {
         type: 'LOGOUT'
     };
 };
 
+export const cleanError = () => {
+    return {
+        type: 'CLEAN_ERROR'
+    };
+};
+
+
 export const loginUser = (email, password) => {
-    console.log('email2:', email);
-    console.log('password2', password);
-    console.log('')
     return (dispatch) => {
         dispatch({
             type: 'LOAD_SPINNER'
@@ -58,3 +53,4 @@ export const loginUser = (email, password) => {
         });
     };
 };
+
