@@ -1,2 +1,2 @@
-dependencies: /Users/zhuboyuan/study/RNCognito/ios/RNCognito/main.m \
-  /Users/zhuboyuan/study/RNCognito/ios/RNCognito/AppDelegate.h
+dependencies: /Users/zhuboyuan/git/RNCognito/ios/RNCognito/main.m \
+  /Users/zhuboyuan/git/RNCognito/ios/RNCognito/AppDelegate.h

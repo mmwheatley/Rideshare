@@ -1,3 +1,6 @@
 dependencies: \
-  /Users/zhuboyuan/study/learngit/RNCognito/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.c \
-  /Users/zhuboyuan/study/learngit/RNCognito/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.c \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h

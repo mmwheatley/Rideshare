@@ -1,19 +1,19 @@
 dependencies: \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTView.m \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTView.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTBorderStyle.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTComponent.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTPointerEvents.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTBorderDrawing.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Base/RCTConvert.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTAnimationType.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
-  /Users/zhuboyuan/study/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/zhuboyuan/study/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/zhuboyuan/study/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/zhuboyuan/study/RNCognito/node_modules/react-native/React/Views/UIView+React.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTView.m \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTView.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTBorderDrawing.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h
