@@ -1,5 +1,5 @@
 const defaultState = {
-    isLoggedIn: false,
+    navi_page: 'loginPage',
     password: '',
     authentication_token: '',
     email: '',
@@ -11,7 +11,7 @@ const defaultState = {
 export default function reducer(state = defaultState, action) {
     switch (action.type) {
         case 'LOGOUT':
-            return { ...state, isLoggedIn: false, errorFlag: false }; 
+            return { ...state, navi_page: 'loginPage', errorFlag: false }; 
            
         case 'LOGIN_FAILED':
           return { ...state, errorFlag: true, 
@@ -20,7 +20,7 @@ export default function reducer(state = defaultState, action) {
                       sysAlert: 'user error'
                     };
         case 'LOGIN_USER_SUCCESS':
-          return { ...state, isLoggedIn: true, 
+          return { ...state, navi_page: 'securedPage', 
                       email: action.email, 
                       password: action.password,
                       authentication_token:action.authentication_token};
@@ -32,6 +32,11 @@ export default function reducer(state = defaultState, action) {
           return {
             sysAlert : action.alert
         };
+        case 'REGISTER' :
+          return {...state, navi_page: 'registerPage'};
+
+
+
         default:
             return state;
     }

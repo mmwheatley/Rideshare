@@ -10,6 +10,12 @@ export const cleanError = () => {
     };
 };
 
+export const onRegister = () => {
+    return {
+        type: 'REGISTER'
+    };
+};
+
 
 export const loginUser = (email, password) => {
     return (dispatch) => {

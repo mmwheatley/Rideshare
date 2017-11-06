@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, Text, TextInput, View, Button } from 'react-native';
-import { loginUser,login, cleanError } from '../redux/actions/auth';
+import { loginUser,login, cleanError, onRegister } from '../redux/actions/auth';
 import { Hoshi } from 'react-native-textinput-effects';
 
 class Login extends Component {
@@ -16,6 +16,12 @@ class Login extends Component {
     userLogin (e) {
         console.log('Pressed!!')
         this.props.onLogin(this.state.email, this.state.password);
+        e.preventDefault();
+    }
+
+    userRegister (e) {
+        console.log('try to Register')
+        this.props.onRegister();
         e.preventDefault();
     }
 
@@ -56,7 +62,7 @@ class Login extends Component {
                 />
                 <View style={{margin: 7}}/>
                 <Button onPress={(e) => this.userLogin(e)} title="Login"/>
-                <Button onPress={(e) => this.userLogin(e)} title="Register"/>
+                <Button onPress={(e) => this.userRegister(e)} title="Register"/>
             </ScrollView>
         );
     }
@@ -74,7 +80,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onLogin: (email, password) => { dispatch(loginUser(email, password)); },
-        cleanErrorStatus: () => {dispatch(cleanError()); }
+        cleanErrorStatus: () => {dispatch(cleanError()); },
+        onRegister: () => {dispatch(onRegister()); }
     }
 }
 
