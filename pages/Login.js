@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, Text, TextInput, View, Button } from 'react-native';
-import { loginUser,login, cleanError, onRegister } from '../redux/actions/auth';
+import { loginUser, cleanError, onRegister } from '../redux/actions/auth';
 import { Hoshi } from 'react-native-textinput-effects';
 
 class Login extends Component {
@@ -71,7 +71,6 @@ class Login extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        isLoggedIn: state.auth.isLoggedIn,
         sysAlert: state.auth.sysAlert,
         errorFlag: state.auth.errorFlag
     };
