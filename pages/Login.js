@@ -50,11 +50,13 @@ class Login extends Component {
                   backgroundColor={'#FFF'}
                   autoCorrect={false}
                   autoCapitalize='none'
+                  secureTextEntry={true}
                   value={this.state.password} 
                   onChangeText={(text) => this.setState({ password: text })}
                 />
                 <View style={{margin: 7}}/>
                 <Button onPress={(e) => this.userLogin(e)} title="Login"/>
+                <Button onPress={(e) => this.userLogin(e)} title="Register"/>
             </ScrollView>
         );
     }
