@@ -41,7 +41,7 @@ export const loginUser = (email, password) => {
                     case 1: //user_not_found
                         console.log('user_not_found!!');
                         dispatch({
-                            type: 'LOGIN_FAILED'
+                            type: 'LOGIN_USER_NOT_EXIST'
                         });
                         break;
                     case 0: //no_error

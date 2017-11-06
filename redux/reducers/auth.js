@@ -13,11 +13,11 @@ export default function reducer(state = defaultState, action) {
         case 'LOGOUT':
             return { ...state, navi_page: 'loginPage', errorFlag: false }; 
            
-        case 'LOGIN_FAILED':
+        case 'LOGIN_USER_NOT_EXIST':
           return { ...state, errorFlag: true, 
                       email: '', password: '', 
                       spinner: false, 
-                      sysAlert: 'user error'
+                      sysAlert: 'user does not exist'
                     };
         case 'LOGIN_USER_SUCCESS':
           return { ...state, navi_page: 'securedPage', 

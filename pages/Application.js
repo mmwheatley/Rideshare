@@ -6,11 +6,6 @@ import Register from './Register';
 
 class Application extends Component {
     render() {
-        // if (this.props.isLoggedIn) {
-        //     return <Secured />;
-        // } else {
-        //     return <Login />;
-        // }
         switch (this.props.navi_page){
             case 'loginPage':
                 return <Login />;

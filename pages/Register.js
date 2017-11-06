@@ -5,18 +5,12 @@ import { loginUser,login, cleanError, onRegister, logout} from '../redux/actions
 import { Hoshi } from 'react-native-textinput-effects';
 
 class Secured extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {value : "please choose gender"}
-    }
+
     userLogout(e) {
         this.props.onLogout();
         e.preventDefault();
     }
-    onSelect(value, label) {
-        this.setState({value : value});
-    }
-    
+
     render() {
         return (
             <ScrollView style={{padding: 20}}>
@@ -81,7 +75,11 @@ class Secured extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        email: state.auth.email
+        email: state.register.email,
+        password: state.register.password,
+        firstName: state.register.firstName,
+        lastName: state.register.lastName,
+        mobileNumber: state.register.mobileNumber
     };
 }
 
