@@ -9,7 +9,7 @@ class Secured extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            email: 'uwshangerlie',
+            email: 'uwshang',
             password: '123',
             firstName:'erlie',
             lastName:'shang',
@@ -31,6 +31,7 @@ class Secured extends Component {
     componentDidUpdate (prevProps) {
       if (this.props.sysAlert != '' && this.props.errorFlag) {
         alert(this.props.sysAlert);
+        console.log('should clean');
         this.props.cleanErrorStatus();
       }
     }
@@ -99,11 +100,6 @@ class Secured extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        // email: state.register.email,
-        // password: state.register.password,
-        // firstName: state.register.firstName,
-        // lastName: state.register.lastName,
-        // mobileNumber: state.register.mobileNumber
         sysAlert: state.register.sysAlert,
         errorFlag: state.register.errorFlag
     };
@@ -113,7 +109,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onLogout: () => { dispatch(logout()); },
         onRegister: (email, password, firstName, lastName, mobileNumber) => { dispatch(register(email, password, firstName, lastName, mobileNumber)); },
-        cleanErrorStatus: () => {dispatch(cleanError()); }
+        cleanErrorStatus: () => {dispatch(cleanError()); },
     }
 }
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Login from './Login';
 import Secured from './Secured';
 import Register from './Register';
+import Verify from './Verify';
 
 class Application extends Component {
     render() {
@@ -12,7 +13,12 @@ class Application extends Component {
             case 'securedPage':
                 return <Secured />;
             case 'registerPage':
-                return <Register />;
+                switch (this.props.navi_register){
+                    case 'registerPage':
+                        return <Register />;
+                    case 'verifyPage':
+                        return <Verify />;
+                }
             default:
                 return <Login />;
         }
@@ -21,7 +27,8 @@ class Application extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        navi_page: state.auth.navi_page
+        navi_page: state.auth.navi_page,
+        navi_register: state.register.navi_register
     };
 }
 

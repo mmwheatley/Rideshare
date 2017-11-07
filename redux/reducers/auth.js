@@ -3,13 +3,15 @@ const defaultState = {
     authentication_token: '',
     email: '',
     errorFlag: false,
-    spinner: false,
     sysAlert: '',
     navi_page: ''
 };
 
 export default function reducer(state = defaultState, action) {
     switch (action.type) {
+
+        case 'VERIFY_SUCCESS':
+          return {...state, navi_page: 'loginPage'}
         case 'REGISTER' :
             return {...state, navi_page: 'registerPage'};
         case 'LOGOUT':
