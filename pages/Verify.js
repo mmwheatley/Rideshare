@@ -20,12 +20,6 @@ class Secured extends Component {
 
     verify(e) {
         this.props.Verify(this.state.code ,this.props.email); 
-
-      // console.log('HIHIHI');
-      // console.log(this.props.flag);
-      //   if (this.props.flag === 'registerPage'){
-      //       this.props.onLogout();
-      //   }
         e.preventDefault();
     }
     
