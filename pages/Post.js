@@ -5,10 +5,11 @@ import { tomain, postinfo} from '../redux/actions/core';
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 import { Hoshi } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
+import Moment from 'moment';
 
 const radio_props = [
-        {label: 'show my Tel No.  ', button_value: 1 },
-        {label: 'don\'t show it', button_value: 0 }
+        {label: 'show my Tel No.  ', button_value: '1' },
+        {label: 'don\'t show it', button_value: '0' }
     ];
 
 
@@ -17,15 +18,15 @@ class Main extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            button_value: 0,
+            button_value: '1',
             date_from:'',
             date_to:'',
-            pick_up_location:'',
-            pick_up_range:0,
-            drop_off_location:'',
-            drop_off_range:0,
-            seat:0,
-            price:0,
+            pick_up_location:'waterloo',
+            pick_up_range:'3',
+            drop_off_location:'water',
+            drop_off_range:'3',
+            seat:'4',
+            price:'40',
         };
     }
 
@@ -38,7 +39,9 @@ class Main extends Component {
 
     toPost (e) {
         console.log('Pressed!!');
-        this.props.PostRideshare(this.props.token, this.state.date_from ,this.state.date_to, this.state.pick_up_location, this.state.pick_up_range, this.state.drop_off_location, this.state.drop_off_range, this.state.seat, this.state.price);
+        this.state.date_from = Moment(this.state.date_from).format();
+        this.state.date_to = Moment(this.state.date_to).format();
+        this.props.PostRideshare(this.props.token, this.state.date_from ,this.state.date_to, this.state.pick_up_location, this.state.pick_up_range, this.state.drop_off_location, this.state.drop_off_range, this.state.seat, this.state.price, this.state.button_value);
         e.preventDefault();
     }
 
@@ -180,7 +183,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         backToMain: () => { dispatch(tomain()); },
-        PostRideshare: (token, date_from ,date_to, pick_up_location, pick_up_range, drop_off_location, drop_off_range, seat, price) => { dispatch(postinfo(token, date_from ,date_to, pick_up_location, pick_up_range, drop_off_location, drop_off_range, seat, price)); }
+        PostRideshare: (token, date_from ,date_to, pick_up_location, pick_up_range, drop_off_location, drop_off_range, seat, price, button_value) => { dispatch(postinfo(token, date_from ,date_to, pick_up_location, pick_up_range, drop_off_location, drop_off_range, seat, price, button_value)); }
     }
 }
 
