@@ -3,8 +3,6 @@ export const verify = (code, email) => {
         console.log('start verify');
         console.log(code, email);
 
-
-
         fetch('https://rideshare-carpool.herokuapp.com/users/verify', {
             method: 'POST',
             headers: {
@@ -22,6 +20,7 @@ export const verify = (code, email) => {
                 switch (data.code) {
                     case 0: //no_error
                         console.log('SUCCESS!!');
+                        alert("registered successfully")
                         dispatch({
                         	type: 'VERIFY_SUCCESS',
                         });
