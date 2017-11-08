@@ -1,7 +1,7 @@
 # Rideshare
 A rideshare application for ECE651 project
 
-to start: 
+To start: 
 
 Step 1: npm install
 
