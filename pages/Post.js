@@ -21,9 +21,9 @@ class Main extends Component {
             button_value: '1',
             date_from:'',
             date_to:'',
-            pick_up_location:'waterloo',
+            pick_up_location:'459 hazel street, waterloo, ON',
             pick_up_range:'3',
-            drop_off_location:'water',
+            drop_off_location:'11 younge street, toronto, ON',
             drop_off_range:'3',
             seat:'4',
             price:'40',
@@ -143,7 +143,7 @@ class Main extends Component {
                   onChangeText={(text) => this.setState({ seat: text })}
                   />
                 <Hoshi
-                  label={'Price Per Seat'}
+                  label={'Price Per Seat (CAD)'}
                   borderColor={'#b76c94'}
                   backgroundColor={'#FFF'}
                   autoCorrect={false}
