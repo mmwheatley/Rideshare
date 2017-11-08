@@ -40,15 +40,14 @@ export const postinfo = (token, date_from ,date_to, pick_up_location, pick_up_ra
                     case 0: //no_error
                         console.log('SUCCESS!!');
                         console.log(data);
+                        alert("success");
                         dispatch({
                         	type: 'POST_SUCCESS',
                         });
                         break;
                     default:
                         console.log('exist an error');
-                        dispatch({
-                            type: 'POST_NETWORK_ERROR'
-                        }); 
+                        alert("error");
 
                 }
             })
