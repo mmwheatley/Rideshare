@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Login from './Login';
 import Main from './Secured';
 import Post from './Post';
+import Result from './Result';
 import Register from './Register';
 import Verify from './Verify';
 
@@ -17,6 +18,8 @@ class Application extends Component {
                         return <Main />;
                     case 'post':
                         return <Post />;
+                    case 'result':
+                        return <Result />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){

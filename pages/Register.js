@@ -5,7 +5,7 @@ import { logout} from '../redux/actions/auth';
 import { register, cleanError} from '../redux/actions/register';
 import { Hoshi } from 'react-native-textinput-effects';
 
-class Secured extends Component {
+class Register extends Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -113,4 +113,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Secured);
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

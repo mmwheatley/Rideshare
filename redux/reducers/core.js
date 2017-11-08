@@ -12,6 +12,8 @@ export default function reducer(state = defaultState, action) {
           return {...state, navi_core:'post'}; 
         case 'TOMAIN':
           return {...state, navi_core:'main'};  
+        case 'GETSULT':
+          return {...state, navi_core:'result'}; 
         // case 'POST_NETWORK_ERROR':
         //   return { ...state, errorFlag: true,
         //           sysAlert: 'server error'};  
