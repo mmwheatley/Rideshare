@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, Text, FlatList } from 'react-native';
-
+import { View, FlatList, Image } from 'react-native';
+import { List, ListItem } from "react-native-elements";
 
 
 class Result extends Component {
@@ -15,9 +15,19 @@ class Result extends Component {
 
 render() {
   return (
-
-          <Text> item </Text>
-
+    <List>
+      <FlatList
+        data={this.props.data_array}
+        renderItem={({ item }) => (
+          <ListItem
+            // roundAvatar
+            title={`${item.driver.firstName} ${item.driver.lastName}    Rate:${item.driver.score}`}
+            subtitle={`price:${item.price}      seats available:${item.totalSeats}`}
+          />
+        )}
+        keyExtractor={item => item._id}
+      />
+    </List>
   );
 }
 }
