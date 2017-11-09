@@ -4,6 +4,17 @@ export const topost = () => {
     };
 };
 
+export const showDetailInfo = (item) => {
+    return (dispatch) => {
+        console.log('begin to show');
+        console.log(item);
+        dispatch({
+            type: 'TOSHOWDETAIL'
+        });
+        
+    }
+};
+
 export const getresult = (token, pick_up_location,drop_off_location,departDate) => {
     return (dispatch) => {
         console.log('get result')

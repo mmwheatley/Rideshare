@@ -5,6 +5,8 @@ const defaultState = {
 
 export default function reducer(state = defaultState, action) {
     switch (action.type) {
+        case 'TOSHOWDETAIL':
+          return {...state, navi_core:'detail'}
         case 'POST_SUCCESS':
           return {...state, navi_core:'main'};     
         case 'TOPOSTPAGE':

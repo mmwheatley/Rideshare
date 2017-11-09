@@ -6,6 +6,8 @@ import Post from './Post';
 import Result from './Result';
 import Register from './Register';
 import Verify from './Verify';
+import Detail from './Detail';
+
 
 class Application extends Component {
     render() {
@@ -20,6 +22,8 @@ class Application extends Component {
                         return <Post />;
                     case 'result':
                         return <Result />;
+                    case 'detail':
+                        return <Detail />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){
