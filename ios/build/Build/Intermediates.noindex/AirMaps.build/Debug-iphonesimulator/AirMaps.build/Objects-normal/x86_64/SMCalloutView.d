@@ -1,0 +1,3 @@
+dependencies: \
+  /Users/mark/Documents/Extra-Learning/React-Training/OLD/RideShare/node_modules/react-native-maps/lib/ios/AirMaps/Callout/SMCalloutView.m \
+  /Users/mark/Documents/Extra-Learning/React-Training/OLD/RideShare/node_modules/react-native-maps/lib/ios/AirMaps/Callout/SMCalloutView.h
