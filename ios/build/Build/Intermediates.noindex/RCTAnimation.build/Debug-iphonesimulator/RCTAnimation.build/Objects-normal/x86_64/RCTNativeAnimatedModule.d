@@ -26,6 +26,7 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUIManagerObserverCoordinator.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTValueAnimatedNode.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTAnimatedNode.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/RCTNativeAnimatedNodesManager.h

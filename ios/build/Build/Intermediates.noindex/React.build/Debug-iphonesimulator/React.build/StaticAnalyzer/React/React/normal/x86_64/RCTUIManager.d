@@ -27,6 +27,8 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Modules/RCTAccessibilityManager.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridge+Private.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponentData.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Modules/RCTLayoutAnimation.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Modules/RCTLayoutAnimationGroup.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTModuleData.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTModuleMethod.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridgeMethod.h \
@@ -37,4 +39,5 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTRootShadowView.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTShadowView.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTRootViewInternal.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTScrollableProtocol.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTScrollableProtocol.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Modules/RCTUIManagerObserverCoordinator.h

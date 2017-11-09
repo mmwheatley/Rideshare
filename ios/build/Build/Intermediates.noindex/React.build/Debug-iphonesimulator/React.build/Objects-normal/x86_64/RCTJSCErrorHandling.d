@@ -5,4 +5,6 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTJSStackFrame.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTJSStackFrame.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTUtils.h

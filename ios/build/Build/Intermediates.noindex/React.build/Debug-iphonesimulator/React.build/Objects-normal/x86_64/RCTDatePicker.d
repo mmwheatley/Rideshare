@@ -5,4 +5,6 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTAssert.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTDefines.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponent.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h

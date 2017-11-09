@@ -16,19 +16,20 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTKeyCommands.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTLog.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTRootContentView.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTView.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTPointerEvents.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTTouchHandler.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Modules/RCTUIManager.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTViewManager.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTConvert.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTAnimationType.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTBorderStyle.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTPointerEvents.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponent.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTView.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTRootContentView.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Profiler/RCTProfile.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h

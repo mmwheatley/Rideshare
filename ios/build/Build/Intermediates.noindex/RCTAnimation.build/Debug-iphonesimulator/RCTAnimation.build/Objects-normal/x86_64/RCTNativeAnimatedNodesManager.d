@@ -33,6 +33,7 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTDivisionAnimatedNode.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Drivers/RCTEventAnimation.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Drivers/RCTFrameAnimation.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Drivers/RCTDecayAnimation.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTInterpolationAnimatedNode.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTModuloAnimatedNode.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/NativeAnimation/Nodes/RCTMultiplicationAnimatedNode.h \

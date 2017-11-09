@@ -29,4 +29,4 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponent.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridge+Private.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Modules/RCTDevMenu.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/DevSupport/RCTDevMenu.h

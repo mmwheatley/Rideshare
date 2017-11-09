@@ -3,6 +3,8 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTPicker.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTConvert.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTAnimationType.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTBorderStyle.h \
@@ -12,6 +14,4 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTUtils.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTPointerEvents.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h

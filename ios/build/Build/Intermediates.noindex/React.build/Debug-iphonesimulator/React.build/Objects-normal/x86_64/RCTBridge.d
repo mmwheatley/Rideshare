@@ -20,6 +20,7 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTJSEnvironment.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTModuleData.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Profiler/RCTProfile.h \

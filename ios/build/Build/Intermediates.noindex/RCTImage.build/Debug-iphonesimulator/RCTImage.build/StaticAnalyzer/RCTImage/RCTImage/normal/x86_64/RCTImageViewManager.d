@@ -27,4 +27,7 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTResizeMode.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestHandler.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestDelegate.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Image/RCTImageShadowView.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Image/RCTImageView.h

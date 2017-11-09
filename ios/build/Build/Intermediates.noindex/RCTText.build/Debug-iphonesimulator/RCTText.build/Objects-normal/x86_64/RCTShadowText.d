@@ -24,6 +24,7 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFont.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView+Layout.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUIManager.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
   /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
@@ -31,4 +32,6 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Text/RCTText.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Text/RCTTextView.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTView.h
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTView.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Text/RCTTextInput.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Text/RCTBackedTextInputViewProtocol.h

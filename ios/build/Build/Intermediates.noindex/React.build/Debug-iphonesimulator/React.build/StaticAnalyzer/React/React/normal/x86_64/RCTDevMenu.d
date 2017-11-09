@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Modules/RCTDevMenu.m \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Modules/RCTDevMenu.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/DevSupport/RCTDevMenu.m \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/DevSupport/RCTDevMenu.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridge.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \

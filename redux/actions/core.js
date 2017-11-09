@@ -23,22 +23,21 @@ export const getresult = (token, pick_up_location,drop_off_location,departDate) 
                 dropOffLoc: drop_off_location
             })
         }).then((response) => {
-            response.json().then(data => {
-                console.log(data);
-                // switch (data.code) {
-                //     case 0: //no_error
-                //         console.log('SUCCESS!!');
-                //         console.log(data);
-                //         alert("success");
-                //         dispatch({
-                //             type: 'POST_SUCCESS',
-                //         });
-                //         break;
-                //     default:
-                //         console.log('exist an error');
-                //         alert("error");
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+                        dispatch({
+                            type: 'GETSULT',
+                            array: data_got.data
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
 
-                // }
+                }
             });
         });
     };

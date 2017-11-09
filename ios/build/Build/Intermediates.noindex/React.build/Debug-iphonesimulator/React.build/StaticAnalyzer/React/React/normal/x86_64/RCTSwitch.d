@@ -10,4 +10,6 @@ dependencies: \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridgeModule.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTFrameUpdate.h \
   /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTInvalidating.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h

@@ -1,24 +1,21 @@
 const defaultState = {
-    errorFlag: false,
-    sysAlert: '',
-    navi_core:'main'
+    navi_core:'main',
+    data : []
 };
 
 export default function reducer(state = defaultState, action) {
     switch (action.type) {
         case 'POST_SUCCESS':
-          return {...state, navi_core:'main'};      
+          return {...state, navi_core:'main'};     
         case 'TOPOSTPAGE':
           return {...state, navi_core:'post'}; 
         case 'TOMAIN':
           return {...state, navi_core:'main'};  
         case 'GETSULT':
-          return {...state, navi_core:'result'}; 
-        // case 'POST_NETWORK_ERROR':
-        //   return { ...state, errorFlag: true,
-        //           sysAlert: 'server error'};  
-        // case 'CLEAN_ERROR':
-        //   return { ...state, errorFlag: false};                                                                                                                                            
+          return {...state, 
+                    navi_core:'result', 
+                    data: state.data.concat(action.array)
+                 };                                                                                                                                           
         default:
             return state;
     }

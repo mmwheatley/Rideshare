@@ -1,53 +1,36 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, Text, View, Button } from 'react-native';
-import { topost, getresult } from '../redux/actions/core';
-import { Kaede } from 'react-native-textinput-effects';
+import { View, Text, FlatList } from 'react-native';
+
+
 
 class Result extends Component {
-    
-    postRideshare (e) {
-        console.log('Pressed!!')
-        this.props.toPostPage();
-        e.preventDefault();
+    constructor(props) {
+        super(props);
     }
 
-    searchRideshare (e) {
-        console.log('Pressed!!')
-        this.props.toResultPage();
-        e.preventDefault();
+    componentDidMount() {
+        console.log(this.props.data_array);
     }
 
-    render() {
-        return (
-            <ScrollView style={{padding: 20}}>
-                <Kaede
-                    label={'start point'}
-                    autoCorrect={false}
-                    autoCapitalize='none'
-                />
-                <Kaede
-                    label={'destination'}
-                    autoCorrect={false}
-                    autoCapitalize='none'
-                />
+render() {
+  return (
 
+          <Text> item </Text>
 
-            </ScrollView>
-        );
-    }
+  );
+}
 }
 
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        data_array : state.core.data
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        toPostPage: () => { dispatch(topost()); },
-        toResultPage: () => { dispatch(getresult()); }
     }
 }
 
