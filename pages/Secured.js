@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, Text, View, Button } from 'react-native';
-import { topost, getresult } from '../redux/actions/core';
+import { topost, getresult, cleandata } from '../redux/actions/core';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
 import Moment from 'moment';
@@ -28,6 +28,7 @@ class Main extends Component {
             alert("please input departure time");
         }
         else{
+            this.props.cleanData();
             this.state.departDate = Moment(this.state.departDate).format();
             this.props.toResultPage(this.props.token, this.state.pick_up_location, this.state.drop_off_location,this.state.departDate);
         }
@@ -97,6 +98,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         toPostPage: () => { dispatch(topost()); },
+        cleanData: () => {dispatch(cleandata())},
         toResultPage: (token, pick_up_location,drop_off_location,departDate) => { dispatch(getresult(token, pick_up_location,drop_off_location,departDate)); }
     }
 }

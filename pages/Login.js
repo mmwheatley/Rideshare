@@ -35,10 +35,7 @@ class Login extends Component {
 
     render() {
         return (
-            <ScrollView style={{padding: 20}}>
-                <Text style={{fontSize: 27}}>
-                    Login
-                </Text>
+            <ScrollView style={{padding: 30}}>
                 <Hoshi
                   label={'Username'}
                   borderColor={'#b76c94'}

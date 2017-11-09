@@ -4,12 +4,25 @@ export const topost = () => {
     };
 };
 
+export const cleandata = () => {
+    return {
+        type: 'CLEAN'
+    };
+};
+
+export const gobacktoresult = () => {
+    return {
+        type: 'GOBACKTORESULT'
+    };
+};
+
 export const showDetailInfo = (item) => {
     return (dispatch) => {
         console.log('begin to show');
         console.log(item);
         dispatch({
-            type: 'TOSHOWDETAIL'
+            type: 'TOSHOWDETAIL',
+            item: item
         });
         
     }
@@ -40,7 +53,7 @@ export const getresult = (token, pick_up_location,drop_off_location,departDate) 
                     case 0: //no_error
                         console.log('SUCCESS!!');
                         dispatch({
-                            type: 'GETSULT',
+                            type: 'GETRESULT',
                             array: data_got.data
                         });
                         break;
