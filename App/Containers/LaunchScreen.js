@@ -13,20 +13,22 @@ export default class LaunchScreen extends React.Component {
 				<Image source={Images.background} style={styles.backgroundImage} resizeMode="stretch" />
 				<ScrollView style={styles.container}>
 					<View style={styles.centered}>
-						<Image source={Images.fastcar} style={styles.logo} />
+						<Image source={Images.launch} style={styles.logo} />
 					</View>
 
 					<View style={styles.section}>
-						<Text style={styles.title}>
-							RideShare
-							
+						<Image source={Images.ready} />
+						<Text style={styles.sectionText}>
+							{
+								"This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship. For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite."
+							}
 						</Text>
 					</View>
 					<Button
 						style={{ alignSelf: "center" }}
-						onPress={() => this.props.navigation.navigate("LoginScreen")}
+						onPress={() => this.props.navigation.navigate("NavigationDrawer")}
 					>
-						<NBText>Let's Go!</NBText>
+						<NBText>Explore!</NBText>
 					</Button>
 				</ScrollView>
 			</View>

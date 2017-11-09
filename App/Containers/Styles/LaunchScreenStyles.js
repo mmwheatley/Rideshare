@@ -6,18 +6,10 @@ export default StyleSheet.create({
   logo: {
     marginTop: Metrics.doubleSection,
     height: Metrics.images.logo,
-    width: Metrics.images.bigLogo,
+    width: Metrics.images.logo,
     resizeMode: 'contain'
   },
   centered: {
     alignItems: 'center'
-  },
-  title: {
-    color: '#FFF',
-    fontSize: 60,
-    fontWeight: 'normal',
-    fontFamily: 'Futura',
-    textAlign: 'center'
-}
-
+  }
 })

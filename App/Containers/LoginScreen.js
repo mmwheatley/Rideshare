@@ -20,7 +20,7 @@ class LoginScreen extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: "reactnative@react.native",
+			username: "reactnative@infinite.red",
 			password: "password",
 			visibleHeight: Metrics.screenHeight,
 			topLogo: { width: Metrics.screenWidth - 40 },
@@ -72,7 +72,7 @@ class LoginScreen extends React.Component {
 		// this.isAttempting = true
 		// attempt a login - a saga is listening to pick it up from here.
 		// this.props.attemptLogin(username, password);
-		this.props.navigation.navigate("NavigationDrawer");
+		this.props.navigation.navigate("LaunchScreen");
 	};
 
 	handleChangeUsername = text => {
@@ -94,14 +94,14 @@ class LoginScreen extends React.Component {
 				style={[Styles.container, { height: this.state.visibleHeight }]}
 				keyboardShouldPersistTaps="always"
 			>
-				<Image source={Images.fastcar} style={[Styles.anotherLogo, this.state.anotherLogo]} />
+				<Image source={Images.logo} style={[Styles.topLogo, this.state.topLogo]} />
 				<View style={Styles.form}>
 					<Form>
-						<Item floatingLabel>
+						<Item stackedLabel>
 							<Label>Username</Label>
 							<Input
 								ref="username"
-								//value={username}
+								value={username}
 								editable={editable}
 								keyboardType="default"
 								returnKeyType="next"
@@ -112,11 +112,11 @@ class LoginScreen extends React.Component {
 								onSubmitEditing={() => this.password._root.focus()}
 							/>
 						</Item>
-						<Item floatingLabel>
+						<Item stackedLabel>
 							<Label>Password</Label>
 							<Input
 								ref={ref => (this.password = ref)}
-								//value={password}
+								value={password}
 								editable={editable}
 								keyboardType="default"
 								returnKeyType="go"
@@ -130,13 +130,14 @@ class LoginScreen extends React.Component {
 						</Item>
 					</Form>
 					<View style={[Styles.loginRow]}>
-						<Button style={{ flex: 1, justifyContent: "center" }} 
-							full onPress={this.handlePressLogin}>
+						<Button style={{ flex: 1, justifyContent: "center" }} full onPress={this.handlePressLogin}>
 							<NBText>Sign In</NBText>
 						</Button>
-						<Button style={{ flex: 1, justifyContent: "center" }} 
+						<Button
+							style={{ flex: 1, justifyContent: "center" }}
 							full
-							onPress={() => this.props.navigation.goBack()}>
+							onPress={() => this.props.navigation.goBack()}
+						>
 							<NBText>Cancel</NBText>
 						</Button>
 					</View>
