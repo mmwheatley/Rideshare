@@ -16,6 +16,14 @@ export const gobacktoresult = () => {
     };
 };
 
+export const gotochat = () => {
+    return {
+        type: 'GOCHAT'
+    };
+};
+
+
+
 export const showDetailInfo = (item) => {
     return (dispatch) => {
         console.log('begin to show');

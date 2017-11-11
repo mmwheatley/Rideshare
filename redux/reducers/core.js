@@ -12,6 +12,8 @@ export default function reducer(state = defaultState, action) {
           return {...state, data : []}
         case 'GOBACKTORESULT':
           return {...state, navi_core:'result'}
+        case 'GOCHAT':
+          return {...state, navi_core:'chat'}
         case 'POST_SUCCESS':
           return {...state, navi_core:'main'};     
         case 'TOPOSTPAGE':

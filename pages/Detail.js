@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, FlatList, Image, Text } from 'react-native';
-import { gobacktoresult } from '../redux/actions/core';
+import { gobacktoresult, gotochat } from '../redux/actions/core';
 import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 import Moment from 'moment';
 
@@ -18,6 +18,12 @@ class Result extends Component {
         console.log('gonna go back')
         console.log(this.props.item)
         this.props.goBack();
+        e.preventDefault();
+    }
+
+    toChat (e) {
+        console.log('to chat')
+        this.props.ToChatPage();
         e.preventDefault();
     }
 
@@ -47,7 +53,9 @@ class Result extends Component {
                 <Title>Details</Title>
               </Body>
               <Right>
-
+                <Button transparent onPress={(e) => this.toChat(e)}>
+                <Icon name="chatbubbles" />
+                </Button>
               </Right>
             </Header>
 
@@ -96,7 +104,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        goBack: () => {dispatch(gobacktoresult()); }
+        goBack: () => {dispatch(gobacktoresult()); },
+        ToChatPage: ()=>{dispatch(gotochat());}
     }
 }
 
