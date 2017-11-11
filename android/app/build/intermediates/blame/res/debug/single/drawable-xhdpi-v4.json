@@ -16,12 +16,16 @@
         "source": "/Users/mark/Documents/Extra Learning/React-Training/Maps/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/googleg_disabled_color_18.png"
     },
     {
-        "merged": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
-        "source": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "/Users/mark/Documents/Extra Learning/React-Training/Maps/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_full_open_on_phone.png",
         "source": "/Users/mark/Documents/Extra Learning/React-Training/Maps/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
@@ -32,12 +36,20 @@
         "source": "/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/googleg_disabled_color_18.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/googleg_disabled_color_18.png"
+    },
+    {
         "merged": "/Users/mark/Documents/Extra Learning/React-Training/Maps/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
         "source": "/Users/mark/Documents/Extra Learning/React-Training/Maps/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "/Users/mark/Documents/Extra-Learning/React-Training/Maps/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
         "source": "/Users/mark/Documents/Extra-Learning/React-Training/Maps/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_full_open_on_phone.png",
@@ -80,6 +92,14 @@
         "source": "/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/googleg_standard_color_18.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/googleg_standard_color_18.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_full_open_on_phone.png"
+    },
+    {
         "merged": "/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/googleg_disabled_color_18.png",
         "source": "/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/googleg_disabled_color_18.png"
     },
@@ -104,8 +124,16 @@
         "source": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/googleg_standard_color_18.png"
     },
     {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
         "merged": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
         "source": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "/Users/mark/Documents/Extra Learning/React-Training/Maps/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",

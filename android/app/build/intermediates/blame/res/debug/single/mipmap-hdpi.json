@@ -4,6 +4,10 @@
         "source": "/Users/mark/Documents/Extra-Learning/React-Training/AllMAPS/Maps/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/mark/Documents/Extra Learning/React-Training/Maps/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
         "source": "/Users/mark/Documents/Extra Learning/React-Training/Maps/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
