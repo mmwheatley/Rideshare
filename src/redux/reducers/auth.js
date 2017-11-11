@@ -10,6 +10,8 @@ const defaultState = {
 export default function reducer(state = defaultState, action) {
     switch (action.type) {
 
+        case 'LAUNCHLOGIN':
+        return {...state, navi_page: 'loginPage'}
         case 'VERIFY_SUCCESS':
           return {...state, navi_page: 'loginPage'}
         case 'REGISTER' :
@@ -17,7 +19,7 @@ export default function reducer(state = defaultState, action) {
         case 'LOGOUT':
             return { ...state, 
                         errorFlag: false ,
-                        navi_page: 'loginPage'
+                        navi_page: 'launchPage'
                     }; 
            
         case 'LOGIN_USER_NOT_EXIST':

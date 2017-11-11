@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.m \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.m \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h

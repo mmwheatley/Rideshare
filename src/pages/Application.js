@@ -7,11 +7,14 @@ import Result from './Result';
 import Register from './Register';
 import Verify from './Verify';
 import Detail from './Detail';
+import Launch from './Launch';
 
 
 class Application extends Component {
     render() {
         switch (this.props.navi_page){
+            case 'launchPage':
+                return <Launch />;
             case 'loginPage':
                 return <Login />;
             case 'securedPage':
@@ -33,7 +36,7 @@ class Application extends Component {
                         return <Verify />;
                 }
             default:
-                return <Login />;
+                return <Launch />;
         }
     }
 }

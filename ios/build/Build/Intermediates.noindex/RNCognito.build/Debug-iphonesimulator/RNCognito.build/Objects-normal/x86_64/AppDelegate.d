@@ -1,11 +1,12 @@
-dependencies: /Users/zhuboyuan/git/RNCognito/ios/RNCognito/AppDelegate.m \
-  /Users/zhuboyuan/git/RNCognito/ios/RNCognito/AppDelegate.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBundleURLProvider.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+dependencies: \
+  /Users/mark/Documents/GitHub/RideShare/ios/RNCognito/AppDelegate.m \
+  /Users/mark/Documents/GitHub/RideShare/ios/RNCognito/AppDelegate.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBundleURLProvider.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h

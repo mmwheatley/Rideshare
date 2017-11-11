@@ -1,20 +1,20 @@
 dependencies: \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTWrapperViewController.m \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTWrapperViewController.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTViewControllerProtocol.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTEventDispatcher.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridge.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTBridgeModule.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTFrameUpdate.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTInvalidating.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTNavItem.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTComponent.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/UIView+React.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Views/RCTWrapperViewController.m \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Views/RCTWrapperViewController.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Views/RCTViewControllerProtocol.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Views/RCTNavItem.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h

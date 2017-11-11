@@ -7,8 +7,8 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
-import Application from './pages/Application';
-import store from './redux';
+import Application from './src/pages/Application';
+import store from './src/redux';
 
 export default class RNCognito extends Component {
   render() {

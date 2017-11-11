@@ -1,3 +1,9 @@
+export const launchLogin = () =>{
+    return {
+        type: 'LAUNCHLOGIN'
+    }
+}
+
 export const logout = () => {
     return {
         type: 'LOGOUT'
