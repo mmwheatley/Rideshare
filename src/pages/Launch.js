@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import { ScrollView, Text, Image, View } from "react-native";
 import { Icon, Button, Text as NBText } from "native-base";
-import { Images } from "../Themes";
+import { Images, Colors  } from "../Themes";
 
 // Styles
 import styles from "./Styles/LaunchScreenStyles";
@@ -38,18 +38,18 @@ class Launch extends React.Component {
                     </Text>
                 </View >
                 <View style={styles.loginRow}>
-                    <Button
+                    <Button 
+                        light
                         style={styles.loginButton} 
                         onPress={(e) => this.gotoLogin(e)}
                         >
-                        <Icon name="ios-lock" />
                         <NBText style={styles.loginText}>Login</NBText>
                     </Button>
-                    <Button
+                    <Button 
+                        light
                         style={styles.signUpButton} 
                         onPress={(e) => this.userRegister(e)}
                     >
-                        <Icon name="ios-key" />
                         <NBText style={styles.loginText} >Register</NBText>
                     </Button>
                 </View>

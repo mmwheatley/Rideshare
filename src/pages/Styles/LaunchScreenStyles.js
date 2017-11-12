@@ -5,7 +5,7 @@ export default StyleSheet.create({
   ...ApplicationStyles.screen,
   container: {
     paddingTop: 70,
-    backgroundColor: Colors.sky,
+    backgroundColor: Colors.royal,
   },
   logo: {
     marginTop: Metrics.doubleSection,
@@ -37,16 +37,16 @@ export default StyleSheet.create({
   loginButton: {
     width: '40%',
     justifyContent: "center",
-    padding: 6
+    padding: 6,
   },
   signUpButton: {
     width: '40%',
     justifyContent: "center",
-    padding: 6
+    padding: 6,
   },
   loginText: {
     textAlign: 'center',
-    color: Colors.silver
+    color: Colors.jackson
   }
   
 })

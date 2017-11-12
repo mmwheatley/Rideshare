@@ -28,7 +28,8 @@ const colors = {
   sherpa: '#013243',
   sky: '#1E8BC3',
   royal: '#4183D7',
-  amaranth: '#FB6567'
+  amaranth: '#FB6567',
+  alice:'#E4F1FE',
 }
 
 export default colors
