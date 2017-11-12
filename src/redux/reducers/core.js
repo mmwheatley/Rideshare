@@ -8,6 +8,10 @@ export default function reducer(state = defaultState, action) {
     switch (action.type) {
         case 'TOSHOWDETAIL':
           return {...state, navi_core:'detail', item: action.item}
+        case 'TOCHATLIST':
+          return {...state, navi_core:'chatlist'}
+        case 'TOCHATPAGE':
+          return {...state, navi_core:'chatpage'}
         case 'CLEAN':
           return {...state, data : []}
         case 'GOBACKTORESULT':

@@ -1,10 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, Text, View, Button } from 'react-native';
-import { topost, getresult, cleandata } from '../redux/actions/core';
+import { ScrollView, View,Text} from 'react-native';
+import { topost, getresult, cleandata, tochatlist} from '../redux/actions/core';
+import { logout } from '../redux/actions/auth';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
 import Moment from 'moment';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Footer,
+  FooterTab,
+  Text as NBText,
+  Body,
+  Left,
+  Right,
+  Icon
+} from "native-base";
+import Styles from "./Styles/LoginScreenStyles";
+
 
 class Main extends Component {
     constructor (props) {
@@ -35,55 +52,117 @@ class Main extends Component {
          e.preventDefault();
     }
 
+    logoutAndBackToLoginPage(e){
+        console.log('try to log out');
+        this.props.logout();
+
+    }
+
+    toChatList (e) {
+        console.log('to chat list!!')
+        this.props.toChatList();
+        e.preventDefault();
+    }
+
     render() {
         return (
-            <ScrollView style={{padding: 20}}>
-                <Kaede
-                    label={'Pick Up'}
-                    autoCorrect={false}
-                    autoCapitalize='none'
-                    value={this.state.pick_up_location} 
-                    onChangeText={(text) => this.setState({ pick_up_location: text })}
-                />
-                <Kaede
-                    label={'Drop Off'}
-                    style = {{marginTop: 4}}
-                    autoCorrect={false}
-                    autoCapitalize='none'
-                    value={this.state.drop_off_location} 
-                    onChangeText={(text) => this.setState({ drop_off_location: text })}
-                />
-                <DatePicker
-                    style={{width: 320, marginTop: 4}}
-                    date={this.state.departDate}
+               <Container>
+                <Header>
+                  <Left>
+                    <Button transparent onPress={(e) => this.logoutAndBackToLoginPage(e)}>
+                      <Icon name="body" />
+                    </Button>
+                  </Left>
+                  <Body>
+                    <Title>RideShare</Title>
+                  </Body>
+                  <Right>
 
-                    mode="datetime"
-                    placeholder="select departure time"
-                    format='YYYY-MM-DD HH:mm'
-                    minDate="2017-11-01"
-                    maxDate="2018-11-01"
-                    confirmBtnText="Confirm"
-                    cancelBtnText="Cancel"
-                    customStyles={{
-                      dateIcon: {
-                        position: 'absolute',
-                        left: 0,
-                        top: 4,
-                        marginLeft: 0
-                      },
-                      dateInput: {
-                        marginLeft: 36
-                      }
-                    }}
-                    onDateChange={(date) => {this.setState({departDate: date})}}
-                  />
+                  </Right>
+                </Header>
 
-                <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center',}}>
-                    <Button onPress={(e) => this.searchRideshare(e)} title="Search Rideshare  "/>
-                    <Button onPress={(e) => this.postRideshare(e)} title="  Post New Rideshare"/>
-                </View>
+                <Content>
+                    <ScrollView >
+                        <Kaede
+                            label={'Pick Up'}
+                            autoCorrect={false}
+                            autoCapitalize='none'
+                            value={this.state.pick_up_location} 
+                            onChangeText={(text) => this.setState({ pick_up_location: text })}
+                        />
+                        <Kaede
+                            label={'Drop Off'}
+                            style = {{marginTop: 4}}
+                            autoCorrect={false}
+                            autoCapitalize='none'
+                            value={this.state.drop_off_location} 
+                            onChangeText={(text) => this.setState({ drop_off_location: text })}
+                        />
+                        <DatePicker
+                            style={{width: 320, marginTop: 4}}
+                            date={this.state.departDate}
 
-            </ScrollView>
+                            mode="datetime"
+                            placeholder="select departure time"
+                            format='YYYY-MM-DD HH:mm'
+                            minDate="2017-11-01"
+                            maxDate="2018-11-01"
+                            confirmBtnText="Confirm"
+                            cancelBtnText="Cancel"
+                            customStyles={{
+                              dateIcon: {
+                                position: 'absolute',
+                                left: 0,
+                                top: 4,
+                                marginLeft: 0
+                              },
+                              dateInput: {
+                                marginLeft: 36
+                              }
+                            }}
+                            onDateChange={(date) => {this.setState({departDate: date})}}
+                          />
+
+                        <View style={[Styles.loginRow]}>
+                            <Button 
+                                style={{ flex: 1, justifyContent: "center" }} 
+                                full 
+                                onPress={(e) => this.searchRideshare(e)}>
+                                <NBText style={Styles.loginText}>Search</NBText>
+                            </Button>
+                            <Button 
+                                style={{ flex: 1, justifyContent: "center" }} 
+                                full
+                                onPress={(e) => this.postRideshare(e)}>
+                                
+                                <NBText style={Styles.loginText}>Post</NBText>
+                            </Button>
+                        </View>
+                    </ScrollView>
+                </Content>
+
+                <Footer>
+                  <FooterTab>
+                    <Button active={this.state.tab1} onPress={() => this.toggleTab1()}>
+                      <Icon active={this.state.tab1} name="paper" style={{ color: "brown" }} />
+                      <Text>History</Text>
+                    </Button>
+                    <Button active={this.state.tab2} onPress={() => this.toggleTab2()}>
+                      <Icon active={this.state.tab2} name="person" style={{ color: "brown" }} />
+                      <Text>Profile</Text>
+                    </Button>
+                    <Button onPress={(e) => this.toChatList(e)}>
+                      <Icon active={this.state.tab3} name="chatbubbles" style={{ color: "brown" }} />
+                      <Text>Chat</Text>
+                    </Button>
+                    <Button active={this.state.tab4} onPress={() => this.toggleTab4()}>
+                      <Icon active={this.state.tab4} name="logo-github" style={{ color: "brown" }} />
+                      <Text>Help</Text>
+                    </Button>
+                  </FooterTab>
+                </Footer>
+              </Container>
+            
         );
     }
 }
@@ -99,6 +178,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         toPostPage: () => { dispatch(topost()); },
         cleanData: () => {dispatch(cleandata())},
+        logout: () => {dispatch(logout())},
+        toChatList: () => {dispatch(tochatlist())},
         toResultPage: (token, pick_up_location,drop_off_location,departDate) => { dispatch(getresult(token, pick_up_location,drop_off_location,departDate)); }
     }
 }

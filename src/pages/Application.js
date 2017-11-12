@@ -8,6 +8,9 @@ import Register from './Register';
 import Verify from './Verify';
 import Detail from './Detail';
 import Launch from './Launch';
+import ChatList from './ChatList';
+import Chat from './Chat';
+
 
 
 class Application extends Component {
@@ -27,6 +30,10 @@ class Application extends Component {
                         return <Result />;
                     case 'detail':
                         return <Detail />;
+                    case 'chatlist':
+                        return <ChatList />;
+                    case 'chatpage':
+                        return <Chat />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){

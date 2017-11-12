@@ -1,3 +1,15 @@
+export const tochatlist = () => {
+    return {
+        type: 'TOCHATLIST'
+    };
+};
+
+export const goToChatPage = () => {
+    return {
+        type: 'TOCHATPAGE'
+    };
+};
+
 export const topost = () => {
     return {
         type: 'TOPOSTPAGE'

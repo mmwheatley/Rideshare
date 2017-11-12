@@ -11,8 +11,6 @@ export default function reducer(state = defaultState, action) {
     switch (action.type) {
 
         case 'LAUNCHLOGIN':
-        return {...state, navi_page: 'loginPage'}
-        case 'VERIFY_SUCCESS':
           return {...state, navi_page: 'loginPage'}
         case 'REGISTER' :
             return {...state, navi_page: 'registerPage'};
