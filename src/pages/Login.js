@@ -59,7 +59,7 @@ class Login extends Component {
 		this.setState({
 			visibleHeight: newSize,
 			topLogo: { width: 100, height: 70 },
-		});
+        });
     };
     keyboardDidHide = e => {
 		// Animation types easeInEaseOut/linear/spring
@@ -84,7 +84,7 @@ class Login extends Component {
                 style={[Styles.container, { height: this.state.visibleHeight }]}
                 keyboardShouldPersistTaps="always"
             >
-                <Image source={Images.fastcar} style={[Styles.anotherLogo, this.state.anotherLogo]} />
+                <Image source={Images.fastcar} style={[Styles.anotherLogo, this.state.topLogo]} />
                 <View style={Styles.form}>
                     <Form>
                         <Item floatingLabel>
@@ -121,14 +121,14 @@ class Login extends Component {
                             style={{ flex: 1, justifyContent: "center" }} 
                             full 
                             onPress={(e) => this.userLogin(e)}>
-                            <NBText>Sign In</NBText>
+                            <NBText style={Styles.loginText}>Sign In</NBText>
                         </Button>
                         <Button 
                             style={{ flex: 1, justifyContent: "center" }} 
                             full
                             onPress={(e) => this.userLogout(e)}>
                             
-                            <NBText>Cancel</NBText>
+                            <NBText style={Styles.loginText}>Cancel</NBText>
                         </Button>
                     </View>
                 </View>

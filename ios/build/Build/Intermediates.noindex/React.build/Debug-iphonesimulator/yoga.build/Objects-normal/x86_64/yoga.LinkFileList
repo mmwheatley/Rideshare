@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /Users/zhuboyuan/git/RNCognito/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/yoga.build/Objects-normal/x86_64/YGNodeList.o
 /Users/zhuboyuan/git/RNCognito/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/yoga.build/Objects-normal/x86_64/Yoga.o
 /Users/zhuboyuan/git/RNCognito/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/yoga.build/Objects-normal/x86_64/YGEnums.o
+=======
+/Users/mark/Documents/GitHub/RideShare/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/yoga.build/Objects-normal/x86_64/YGNodeList.o
+/Users/mark/Documents/GitHub/RideShare/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/yoga.build/Objects-normal/x86_64/Yoga.o
+/Users/mark/Documents/GitHub/RideShare/ios/build/Build/Intermediates.noindex/React.build/Debug-iphonesimulator/yoga.build/Objects-normal/x86_64/YGEnums.o
+>>>>>>> 0fb25a932bb10fc6ed25d12dd7e5688f962f6ba4
