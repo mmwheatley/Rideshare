@@ -1,21 +1,21 @@
 dependencies: \
-  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/Libraries/Text/RCTText.m \
-  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/Libraries/Text/RCTText.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
-  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/Libraries/Text/RCTShadowText.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Text/RCTText.m \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Text/RCTText.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/zhuboyuan/git/RNCognito/node_modules/react-native/Libraries/Text/RCTShadowText.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/zhuboyuan/git/RNCognito/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h
