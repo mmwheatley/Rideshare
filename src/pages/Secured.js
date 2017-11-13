@@ -1,26 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, View,Text} from 'react-native';
-import { topost, getresult, cleandata, tochatlist} from '../redux/actions/core';
+import { topost, getresult, cleandata, tochatlist, tohistory} from '../redux/actions/core';
 import { logout } from '../redux/actions/auth';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
 import Moment from 'moment';
-import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Button,
-  Footer,
-  FooterTab,
-  Text as NBText,
-  Body,
-  Left,
-  Right,
-  Icon,
-  Badge
-} from "native-base";
+import {Container,Header,Title,Content,Button,Footer,FooterTab,Text as NBText,Body,Left,Right,Icon,Badge} from "native-base";
 import Styles from "./Styles/LoginScreenStyles";
 
 
@@ -62,6 +48,12 @@ class Main extends Component {
     toChatList (e) {
         console.log('to chat list!!')
         this.props.toChatList();
+        e.preventDefault();
+    }
+
+    toHistory (e) {
+        console.log('to history!!')
+        this.props.toHistoryPage();
         e.preventDefault();
     }
 
@@ -144,7 +136,7 @@ class Main extends Component {
 
                 <Footer>
                   <FooterTab>
-                    <Button active={this.state.tab1} onPress={() => this.toggleTab1()}>
+                    <Button active={this.state.tab1} onPress={(e) => this.toHistory(e)}>
                       <Icon active={this.state.tab1} name="paper" style={{ color: "brown" }} />
                       <Text>History</Text>
                     </Button>
@@ -182,6 +174,7 @@ const mapDispatchToProps = (dispatch) => {
         cleanData: () => {dispatch(cleandata())},
         logout: () => {dispatch(logout())},
         toChatList: () => {dispatch(tochatlist())},
+        toHistoryPage: () => {dispatch(tohistory())},
         toResultPage: (token, pick_up_location,drop_off_location,departDate) => { dispatch(getresult(token, pick_up_location,drop_off_location,departDate)); }
     }
 }

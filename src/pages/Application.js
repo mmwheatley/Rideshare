@@ -10,6 +10,7 @@ import Detail from './Detail';
 import Launch from './Launch';
 import ChatList from './ChatList';
 import Chat from './Chat';
+import History from './History';
 
 
 
@@ -34,6 +35,8 @@ class Application extends Component {
                         return <ChatList />;
                     case 'chatpage':
                         return <Chat />;
+                    case 'history':
+                        return <History />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){

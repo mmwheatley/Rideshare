@@ -1,3 +1,9 @@
+export const tohistory = () => {
+    return {
+        type: 'TOHISTORY'
+    };
+};
+
 export const tochatlist = () => {
     return {
         type: 'TOCHATLIST'

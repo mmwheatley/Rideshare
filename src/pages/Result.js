@@ -24,7 +24,7 @@ class Result extends Component {
     }
 
     backToMain (e) {
-        console.log('gonna go back to main')
+        console.log('gonna go back to main');
         this.props.goBackToMain();
         e.preventDefault();
     }

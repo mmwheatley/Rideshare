@@ -8,6 +8,8 @@ export default function reducer(state = defaultState, action) {
     switch (action.type) {
         case 'TOSHOWDETAIL':
           return {...state, navi_core:'detail', item: action.item}
+        case 'TOHISTORY':
+          return {...state, navi_core:'history'}
         case 'TOCHATLIST':
           return {...state, navi_core:'chatlist'}
         case 'TOCHATPAGE':
