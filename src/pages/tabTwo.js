@@ -10,7 +10,7 @@ export default class TabOne extends Component {
     // eslint-disable-line
     return (
       <Content padder>
-        <Text> page one</Text>
+        <Text> drive all</Text>
       </Content>
     );
   }

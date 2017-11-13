@@ -10,7 +10,7 @@ export default class TabOne extends Component {
     // eslint-disable-line
     return (
       <Content padder>
-        <Text> driver unprocessed</Text>
+        <Text> passenger unprocessed</Text>
       </Content>
     );
   }

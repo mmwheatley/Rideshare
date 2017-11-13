@@ -5,7 +5,8 @@ import { Container, ScrollableTab, Tabs, Tab, Header, Left, Body, Right, Button,
 import { Images, Colors  } from "../Themes";
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
-
+import TabThree from "./tabThree";
+import TabFour from "./tabFour";
 // Styles
 import styles from "./Styles/LaunchScreenStyles";
 
@@ -63,24 +64,24 @@ class Launch extends React.Component {
 
               <Content padder>
                 {this.state.seg === 1 &&
-                  <Tabs renderTabBar={() => <ScrollableTab />}>
-                    <Tab heading="Tab1">
+                  <Tabs>
+                    <Tab heading="Unprocessed">
                       <TabOne />
                     </Tab>
-                    <Tab heading="Tab2">
+                    <Tab heading="All">
                       <TabTwo />
                     </Tab>
                   </Tabs>}
                 {this.state.seg === 2 &&
-                  <Tabs renderTabBar={() => <ScrollableTab />}>
-                    <Tab heading="Tab1">
-                      <TabOne />
+                  <Tabs>
+                    <Tab heading="Unprocessed">
+                      <TabThree />
                     </Tab>
-                    <Tab heading="Tab2">
-                      <TabTwo />
+                    <Tab heading="All">
+                      <TabFour />
                     </Tab>
                   </Tabs>}
-              </Content>
+            </Content>
             </Container>
         );
 
