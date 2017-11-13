@@ -18,7 +18,8 @@ import {
   Body,
   Left,
   Right,
-  Icon
+  Icon,
+  Badge
 } from "native-base";
 import Styles from "./Styles/LoginScreenStyles";
 
@@ -28,7 +29,7 @@ class Main extends Component {
         super(props);
         this.state = {
             pick_up_location:'459 hazel street, waterloo, ON',
-            drop_off_location:'11 younge street, toronto, ON',
+            drop_off_location:'27 King\'s College Circle Toronto, Ontario M5S 1A1 Canada',
             departDate:''
         };
     }
@@ -151,7 +152,8 @@ class Main extends Component {
                       <Icon active={this.state.tab2} name="person" style={{ color: "brown" }} />
                       <Text>Profile</Text>
                     </Button>
-                    <Button onPress={(e) => this.toChatList(e)}>
+                    <Button  badge vertical onPress={(e) => this.toChatList(e)}>
+                      <Badge ><Text>1</Text></Badge>
                       <Icon active={this.state.tab3} name="chatbubbles" style={{ color: "brown" }} />
                       <Text>Chat</Text>
                     </Button>

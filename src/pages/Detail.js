@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, FlatList, Image, Text } from 'react-native';
-import { gobacktoresult, goToChatPage} from '../redux/actions/core';
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
+import { gobacktoresult, goToChatPage, askForJoinIn} from '../redux/actions/core';
+import { Container, Header, Left, Body, Text as NBText,Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 import Moment from 'moment';
+import Styles from "./Styles/LoginScreenStyles";
 
 
 class Result extends Component {
@@ -34,6 +35,11 @@ class Result extends Component {
         }
     }
 
+    askForJoin(e){
+        this.props.askJoin(this.props.token, this.props.item);
+        e.preventDefault();
+
+    }
 
     componentWillMount(e){
         this.showTel(e);
@@ -89,6 +95,15 @@ class Result extends Component {
                         <Text>Price: {this.props.item.price}</Text>
                     </ListItem>
                 </List>
+
+
+                <Button 
+                    style={{ marginTop: 10, flex: 1, justifyContent: "center" }} 
+                    full
+                    onPress={(e) => this.askForJoin(e)}>
+                    <NBText style={Styles.loginText}>apply to join in</NBText>
+                </Button>
+
             </Content>
           </Container>
         );
@@ -98,14 +113,17 @@ class Result extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        item: state.core.item
+        item: state.core.item,
+        token: state.auth.authentication_token
+
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         goBack: () => {dispatch(gobacktoresult()); },
-        toChat: () => {dispatch(goToChatPage()); }
+        toChat: () => {dispatch(goToChatPage()); },
+        askJoin: (token, item) => {dispatch(askForJoinIn(token, item)); }
 
     }
 }

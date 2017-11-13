@@ -40,6 +40,46 @@ export const showDetailInfo = (item) => {
     }
 };
 
+export const askForJoinIn = (token, item) => {
+    return (dispatch) => {
+        console.log('ask for join');
+        console.log(item);
+        console.log(token);
+
+        fetch('https://rideshare-carpool.herokuapp.com/rides/apply_to_join', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            },
+
+            body: JSON.stringify({
+                ride: item._id
+            })
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+                        alert("applied!")
+                        dispatch({
+                            type: 'TOMAIN',
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
+
+                }
+            });
+        });
+        
+    }
+};
+
+
 export const getresult = (token, pick_up_location,drop_off_location,departDate) => {
     return (dispatch) => {
         console.log('get result')

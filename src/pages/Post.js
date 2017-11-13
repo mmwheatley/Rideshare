@@ -23,7 +23,7 @@ class Main extends Component {
             date_to:'',
             pick_up_location:'459 hazel street, waterloo, ON',
             pick_up_range:'3',
-            drop_off_location:'11 younge street, toronto, ON',
+            drop_off_location:'27 King\'s College Circle Toronto, Ontario M5S 1A1 Canada',
             drop_off_range:'3',
             seat:'4',
             price:'40',

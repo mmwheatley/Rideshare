@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -59,6 +60,7 @@
 		D3C0D366836540529C5ABAA0 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36E02B3EF6084AE18444816B /* Feather.ttf */; };
 		ECD566C505A7416CADA32732 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC928067A55A4EB8899BF8F6 /* Zocial.ttf */; };
 		F042587889E44AB8A3780EA3 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B25044F4B26475E85EF5268 /* EvilIcons.ttf */; };
+		F184C2FE1FB931B600532DB6 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A11CE85D2CC44633A4665D0E /* Ionicons.ttf */; };
 		F1ACF1521FB414EF00132E0E /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1ACF1471FB414EF00132E0E /* Entypo.ttf */; };
 		F1ACF1531FB414EF00132E0E /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1ACF1481FB414EF00132E0E /* EvilIcons.ttf */; };
 		F1ACF1541FB414EF00132E0E /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1ACF1491FB414EF00132E0E /* Feather.ttf */; };
@@ -1050,6 +1052,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F184C2FE1FB931B600532DB6 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1126,7 +1129,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh index.ios.js";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
