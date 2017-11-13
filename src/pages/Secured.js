@@ -53,7 +53,7 @@ class Main extends Component {
 
     toHistory (e) {
         console.log('to history!!')
-        this.props.toHistoryPage();
+        this.props.toHistoryPage(this.props.token);
         e.preventDefault();
     }
 
@@ -174,7 +174,7 @@ const mapDispatchToProps = (dispatch) => {
         cleanData: () => {dispatch(cleandata())},
         logout: () => {dispatch(logout())},
         toChatList: () => {dispatch(tochatlist())},
-        toHistoryPage: () => {dispatch(tohistory())},
+        toHistoryPage: (token) => {dispatch(tohistory(token))},
         toResultPage: (token, pick_up_location,drop_off_location,departDate) => { dispatch(getresult(token, pick_up_location,drop_off_location,departDate)); }
     }
 }

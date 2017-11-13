@@ -1,7 +1,111 @@
-export const tohistory = () => {
-    return {
-        type: 'TOHISTORY'
-    };
+export const tohistory = (token) => {
+    // return {
+    //     type: 'TOHISTORY'
+    // };
+    return (dispatch) => {
+        console.log('ask for history');
+        console.log(token);
+
+        fetch('https://rideshare-carpool.herokuapp.com/rides/get_offering_orders', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+
+                        dispatch({
+                            type: 'TOHISTORY'
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
+
+                }
+            });
+        });
+
+        fetch('https://rideshare-carpool.herokuapp.com/rides/get_offering_orders', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+
+                        dispatch({
+                            type: 'TOHISTORY'
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
+
+                }
+            });
+        });
+
+        fetch('https://rideshare-carpool.herokuapp.com/rides/get_offering_orders', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+
+                        dispatch({
+                            type: 'TOHISTORY'
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
+
+                }
+            });
+        });
+
+        fetch('https://rideshare-carpool.herokuapp.com/rides/get_offering_orders', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+
+                        dispatch({
+                            type: 'TOHISTORY'
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
+
+                }
+            });
+        });
+    }
 };
 
 export const tochatlist = () => {

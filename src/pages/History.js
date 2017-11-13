@@ -24,7 +24,7 @@ class Launch extends React.Component {
 
     backToMain (e) {
         console.log('gonna go back to main');
-        this.props.goBackToMain();
+        this.props.goBackToMain(this.props.token);
         e.preventDefault();
     }
 
@@ -90,6 +90,7 @@ class Launch extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        token: state.auth.authentication_token
     };
 }
 
