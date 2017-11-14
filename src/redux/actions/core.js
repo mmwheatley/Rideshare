@@ -19,19 +19,24 @@ export const makedecide = (token, decide, ride_id, application_id) => {
         }).then((response) => {
             response.json().then(data_got => {
                 console.log(data_got);
-                // switch (data_got.code) {
-                //     case 0: //no_error
-                //         console.log('SUCCESS!!');
-                //         alert("applied!")
-                //         dispatch({
-                //             type: 'TOMAIN',
-                //         });
-                //         break;
-                //     default:
-                //         console.log('exist an error');
-                //         alert("error");
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+                        if (decided === true){
+                            alert('Approved!');
+                        }
+                        else{
+                            alert('Rejected!');
+                        }
+                        dispatch({
+                            type: 'TOMAIN',
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
 
-                // }
+                }
             });
         });
         

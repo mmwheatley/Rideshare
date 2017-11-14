@@ -7,7 +7,6 @@ import Moment from 'moment';
 import styles from "./Styles/LaunchScreenStyles";
 
 
-
 class Result extends Component {
     constructor(props) {
         super(props);
@@ -103,14 +102,28 @@ class Result extends Component {
                       <Text>{`Rate: ${data.userID.score}`}</Text>
                     </Body>
                     <Right>
-                <View style={{flexDirection: 'row', padding: 6 , justifyContent: 'space-between'}}>
-                    <Button onPress={() => this.decide(true, this.props.item._id, data._id)}>
-                        <Text>Y</Text>
-                    </Button>
-                    <Button onPress={() => this.decide(false, this.props.item._id, data._id)}>
-                        <Text>N</Text>
-                    </Button>
-                </View>
+
+                    {data.accepted === null &&
+                        <View style={{flexDirection: 'row', padding: 6 , justifyContent: 'space-between'}}>
+                            <Button onPress={() => this.decide(true, this.props.item._id, data._id)}>
+                                <Text>Y</Text>
+                            </Button>
+                            <Button onPress={() => this.decide(false, this.props.item._id, data._id)}>
+                                <Text>N</Text>
+                            </Button>
+                        </View>
+                    }
+
+                    {data.accepted === true &&
+                        <View style={{flexDirection: 'row', padding: 6 , justifyContent: 'space-between'}}>
+                            <Text style={{fontSize: 13}}> Approved </Text>
+                        </View>
+                    }
+                    {data.accepted === false &&
+                        <View style={{flexDirection: 'row', padding: 6 , justifyContent: 'space-between'}}>
+                            <Text style={{fontSize: 13}}> Rejected </Text>
+                        </View>
+                    }
                     </Right>
 
                   </ListItem>}
