@@ -99,7 +99,7 @@
 		</data>
 		<key>PlugIns/RNCognitoTests.xctest.dSYM/Contents/Resources/DWARF/RNCognitoTests</key>
 		<data>
-		xcEImpEZNNf5UnXgJOSrnRC8K4U=
+		gktHXKQGj1+C3KJGtDWkal0yG48=
 		</data>
 		<key>PlugIns/RNCognitoTests.xctest/Info.plist</key>
 		<data>
@@ -111,7 +111,7 @@
 		</data>
 		<key>PlugIns/RNCognitoTests.xctest/RNCognitoTests</key>
 		<data>
-		z7AFUN7aZk9MHf9xsgv15WBcKNs=
+		No2Z3J0b1Bx6yQI6kEOHV9EC3hQ=
 		</data>
 		<key>PlugIns/RNCognitoTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
@@ -366,11 +366,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xcEImpEZNNf5UnXgJOSrnRC8K4U=
+			gktHXKQGj1+C3KJGtDWkal0yG48=
 			</data>
 			<key>hash2</key>
 			<data>
-			jz4OgX4z0WzOKAGhUvR0H/bSujp0HdokHeRl6QrUX6Q=
+			13CiJhqCgs1sO/xYxGRYq8qx10XsESalxc42HtxwaJ8=
 			</data>
 		</dict>
 		<key>PlugIns/RNCognitoTests.xctest/Info.plist</key>
@@ -399,11 +399,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			z7AFUN7aZk9MHf9xsgv15WBcKNs=
+			No2Z3J0b1Bx6yQI6kEOHV9EC3hQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			3UVT83LJ1nZaqTst3ZQlQyxUiGm8TSDXKkLTuBED7JY=
+			ZooTLOZKyCjY7gnUSuqX5t94evFyR/PdafV5DFxWq/U=
 			</data>
 		</dict>
 		<key>PlugIns/RNCognitoTests.xctest/_CodeSignature/CodeResources</key>

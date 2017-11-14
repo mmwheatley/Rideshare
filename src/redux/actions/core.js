@@ -1,3 +1,44 @@
+export const makedecide = (token, decide, ride_id, application_id) => {
+    return (dispatch) => {
+        console.log('ask for join');
+        console.log(token, decide, ride_id, application_id);
+
+        fetch('https://rideshare-carpool.herokuapp.com/rides/respond_to_ride', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            },
+
+            body: JSON.stringify({
+                ride: ride_id,
+                application: application_id,
+                accept: decide
+            })
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                // switch (data_got.code) {
+                //     case 0: //no_error
+                //         console.log('SUCCESS!!');
+                //         alert("applied!")
+                //         dispatch({
+                //             type: 'TOMAIN',
+                //         });
+                //         break;
+                //     default:
+                //         console.log('exist an error');
+                //         alert("error");
+
+                // }
+            });
+        });
+        
+    }
+};
+
+
 export const tohistory = (token) => {
     return (dispatch) => {
         console.log('ask for history');

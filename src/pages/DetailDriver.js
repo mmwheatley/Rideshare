@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, FlatList, Image, Text } from 'react-native';
-import { tomain, goToChatPage, askForJoinIn, cleandata, tohistory} from '../redux/actions/core';
-import { Container, Header, Left, Body, Text as NBText,Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
+import { View, FlatList, Image } from 'react-native';
+import { tomain, goToChatPage, askForJoinIn, cleandata, tohistory, makedecide} from '../redux/actions/core';
+import { Container, Header, Left, Text, Body, Text as NBText,Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 import Moment from 'moment';
-import Styles from "./Styles/LoginScreenStyles";
+import styles from "./Styles/LaunchScreenStyles";
+
 
 
 class Result extends Component {
@@ -26,6 +27,11 @@ class Result extends Component {
         console.log('go to chat page')
         this.props.toChat();
         e.preventDefault();
+    }
+
+    decide (dec, ride_id, application_id) {
+        console.log('decide now');
+        this.props.toDecide(this.props.token, dec, ride_id, application_id);
     }
 
     showTel(e){
@@ -54,9 +60,8 @@ class Result extends Component {
                 <Title>Details</Title>
               </Body>
               <Right>
-                <Button transparent active={this.state.tab3} onPress={(e) => this.toChatPage(e)}>
-                  <Icon active={this.state.tab3} name="chatbubbles"  />
-                  <Text>Chat</Text>
+                <Button transparent onPress={(e) => this.toChatPage(e)}>
+                  <Icon name="chatbubbles"  />
                 </Button>
               </Right>
             </Header>
@@ -79,14 +84,37 @@ class Result extends Component {
                         <Text>Departure Time from: {Moment(this.props.item.departDate.from).format('lll')} to: {Moment(this.props.item.departDate.to).format('lll')} </Text>
                     </ListItem>
                     <ListItem>
-                        <Text>Available Seats: {this.props.item.totalSeats}</Text>
+                        <Text>Available Seats: {this.props.item.totalSeats-this.props.item.occupiedSeats}</Text>
+                    </ListItem>
+                    <ListItem>
+                        <Text>Total Seats: {this.props.item.totalSeats}</Text>
                     </ListItem>
                     <ListItem>
                         <Text>Price: {this.props.item.price}</Text>
                     </ListItem>
                 </List>
+                <Text style = {{marginTop: 10, fontSize: 20, color: 'blue', fontWeight: 'bold', textAlign:'center', lineHeight: 50}}> The list of applicants</Text>
+              <List
+                dataArray={this.props.item.applications}
+                renderRow={data =>
+                  <ListItem >
+                    <Body>
+                      <Text>{`Name: ${data.userID.firstName} ${data.userID.lastName}`}</Text>
+                      <Text>{`Rate: ${data.userID.score}`}</Text>
+                    </Body>
+                    <Right>
+                <View style={{flexDirection: 'row', padding: 6 , justifyContent: 'space-between'}}>
+                    <Button onPress={() => this.decide(true, this.props.item._id, data._id)}>
+                        <Text>Y</Text>
+                    </Button>
+                    <Button onPress={() => this.decide(false, this.props.item._id, data._id)}>
+                        <Text>N</Text>
+                    </Button>
+                </View>
+                    </Right>
 
-
+                  </ListItem>}
+              />
             </Content>
           </Container>
         );
@@ -107,6 +135,7 @@ const mapDispatchToProps = (dispatch) => {
         toHistoryPage: (token) => {dispatch(tohistory(token))},
         cleanData: () => {dispatch(cleandata())},
         toChat: () => {dispatch(goToChatPage()); },
+        toDecide: (token, dec, ride_id, application_id) => {dispatch(makedecide(token, dec, ride_id, application_id)); },
         askJoin: (token, item) => {dispatch(askForJoinIn(token, item)); }
 
     }
