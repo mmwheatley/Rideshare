@@ -11,8 +11,8 @@ import TabFour from "./tabFour";
 import styles from "./Styles/LaunchScreenStyles";
 
 //reducers
-import { launchLogin, onRegister } from '../redux/actions/auth';
-import { tochatlist,tomain} from '../redux/actions/core';
+import { launchLogin, onRegister} from '../redux/actions/auth';
+import { tochatlist,tomain, cleandata, tohistory} from '../redux/actions/core';
 
 class Launch extends React.Component {
     constructor(props) {
@@ -24,7 +24,14 @@ class Launch extends React.Component {
 
     backToMain (e) {
         console.log('gonna go back to main');
-        this.props.goBackToMain(this.props.token);
+        this.props.goBackToMain();
+        e.preventDefault();
+    }
+
+    toHistory (e) {
+        console.log('to history!!')
+        this.props.cleanData();
+        this.props.toHistoryPage(this.props.token);
         e.preventDefault();
     }
 
@@ -56,8 +63,8 @@ class Launch extends React.Component {
                   </Segment>
                 </Body>
                 <Right>
-                  <Button transparent>
-                    <Icon name="search" />
+                  <Button transparent onPress={(e) => this.toHistory(e)}>
+                    <Icon name="refresh" />
                   </Button>
                 </Right>
               </Header>
@@ -96,7 +103,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        goBackToMain: () => {dispatch(tomain())}
+        goBackToMain: () => {dispatch(tomain())},
+        toHistoryPage: (token) => {dispatch(tohistory(token))},
+        cleanData: () => {dispatch(cleandata())}
     }
 }
 

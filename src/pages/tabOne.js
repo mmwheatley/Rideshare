@@ -2,8 +2,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, FlatList, Image } from 'react-native';
-import { showDetailInfo} from '../redux/actions/core';
+import { showDetailInfoDriver} from '../redux/actions/core';
 import { tomain } from '../redux/actions/core';
+import Moment from 'moment';
 import {
   Container,
   Header,
@@ -25,7 +26,7 @@ class Result extends Component {
         super(props);
     }
 
-    showDetail(item){
+    showDetailDriver(item){
         console.log(item);
         this.props.detail(item);
     }
@@ -38,18 +39,16 @@ class Result extends Component {
               <List
                 dataArray={this.props.data_array}
                 renderRow={data =>
-                  <ListItem avatar onPress={ () => this.showDetail(data) }>
+                  <ListItem avatar onPress={ () => this.showDetailDriver(data) }>
                     <Left>
 
                     </Left>
                     <Body>
-                      <Text>{`${data.driver.firstName} ${data.driver.lastName} `}</Text>
-                      <Text numberOfLines={1} note>{`price:${data.price}   seats available:${data.totalSeats}`}</Text>
+                      <Text>{`${Moment(data.departDate.from).format('lll')} `}</Text>
+                      <Text numberOfLines={2} note>{`From: ${data.pickUpLoc.formattedAddress}`}</Text>
+                      <Text numberOfLines={2} note>{`To: ${data.dropOffLoc.formattedAddress}`}</Text>
                       
                     </Body>
-                    <Right>
-                      <Text note>{`Rate:${data.driver.score}`}</Text>
-                    </Right>
                   </ListItem>}
               />
             </Content>
@@ -63,13 +62,13 @@ class Result extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        data_array : state.core.data
+        data_array : state.core.undriver
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        detail: (item) => {dispatch(showDetailInfo(item))}
+        detail: (item) => {dispatch(showDetailInfoDriver(item))}
     }
 }
 

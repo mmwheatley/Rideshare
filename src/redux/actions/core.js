@@ -1,12 +1,9 @@
 export const tohistory = (token) => {
-    // return {
-    //     type: 'TOHISTORY'
-    // };
     return (dispatch) => {
         console.log('ask for history');
         console.log(token);
 
-        fetch('https://rideshare-carpool.herokuapp.com/rides/get_offering_orders', {
+        fetch('https://rideshare-carpool.herokuapp.com/rides/get_unprocessed_orders', {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
@@ -14,13 +11,14 @@ export const tohistory = (token) => {
             }
         }).then((response) => {
             response.json().then(data_got => {
-                console.log(data_got);
+                console.log(data_got.data);
                 switch (data_got.code) {
                     case 0: //no_error
-                        console.log('SUCCESS!!');
+                        console.log('got driver unprocessed!!');
 
                         dispatch({
-                            type: 'TOHISTORY'
+                            type: 'DRIVERUNPROCESSED',
+                            array: data_got.data
                         });
                         break;
                     default:
@@ -39,13 +37,13 @@ export const tohistory = (token) => {
             }
         }).then((response) => {
             response.json().then(data_got => {
-                console.log(data_got);
                 switch (data_got.code) {
                     case 0: //no_error
-                        console.log('SUCCESS!!');
-
+                        console.log('got driver all orders!!');
+                        console.log(data_got.data);
                         dispatch({
-                            type: 'TOHISTORY'
+                            type: 'DRIVERALL',
+                            array: data_got.data
                         });
                         break;
                     default:
@@ -56,7 +54,7 @@ export const tohistory = (token) => {
             });
         });
 
-        fetch('https://rideshare-carpool.herokuapp.com/rides/get_offering_orders', {
+        fetch('https://rideshare-carpool.herokuapp.com/rides/get_applied_orders', {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
@@ -64,13 +62,13 @@ export const tohistory = (token) => {
             }
         }).then((response) => {
             response.json().then(data_got => {
-                console.log(data_got);
                 switch (data_got.code) {
                     case 0: //no_error
-                        console.log('SUCCESS!!');
-
+                        console.log('got passenger all orders!!');
+                        console.log(data_got.data);
                         dispatch({
-                            type: 'TOHISTORY'
+                            type: 'PASSENGERALL',
+                            array: data_got.data
                         });
                         break;
                     default:
@@ -81,7 +79,7 @@ export const tohistory = (token) => {
             });
         });
 
-        fetch('https://rideshare-carpool.herokuapp.com/rides/get_offering_orders', {
+        fetch('https://rideshare-carpool.herokuapp.com/rides/get_pending_applications', {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
@@ -89,22 +87,27 @@ export const tohistory = (token) => {
             }
         }).then((response) => {
             response.json().then(data_got => {
-                console.log(data_got);
                 switch (data_got.code) {
                     case 0: //no_error
-                        console.log('SUCCESS!!');
-
+                        console.log('got passenger unprocessed!!');
+                        console.log(data_got.data);
                         dispatch({
-                            type: 'TOHISTORY'
+                            type: 'PASSENGERUNPROCESSED',
+                            array: data_got.data
                         });
                         break;
                     default:
                         console.log('exist an error');
                         alert("error");
-
                 }
             });
         });
+
+        dispatch({
+            type: 'TOHISTORY'
+        });
+
+    
     }
 };
 
@@ -144,6 +147,18 @@ export const showDetailInfo = (item) => {
         console.log(item);
         dispatch({
             type: 'TOSHOWDETAIL',
+            item: item
+        });
+        
+    }
+};
+
+export const showDetailInfoDriver = (item) => {
+    return (dispatch) => {
+        console.log('driver detail');
+        console.log(item);
+        dispatch({
+            type: 'TOSHOWDETAILDRIVER',
             item: item
         });
         

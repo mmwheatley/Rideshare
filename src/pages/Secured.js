@@ -53,6 +53,7 @@ class Main extends Component {
 
     toHistory (e) {
         console.log('to history!!')
+        this.props.cleanData();
         this.props.toHistoryPage(this.props.token);
         e.preventDefault();
     }

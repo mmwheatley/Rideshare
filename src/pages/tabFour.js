@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { View, FlatList, Image } from 'react-native';
 import { showDetailInfo} from '../redux/actions/core';
 import { tomain } from '../redux/actions/core';
+import Moment from 'moment';
 import {
   Container,
   Header,
@@ -43,8 +44,9 @@ class Result extends Component {
 
                     </Left>
                     <Body>
-                      <Text>{`${data.driver.firstName} ${data.driver.lastName} `}</Text>
-                      <Text numberOfLines={1} note>{`price:${data.price}   seats available:${data.totalSeats}`}</Text>
+                      <Text>{`${Moment(data.departDate.from).format('lll')} `}</Text>
+                      <Text numberOfLines={2} note>{`From: ${data.pickUpLoc.formattedAddress}`}</Text>
+                      <Text numberOfLines={2} note>{`To: ${data.dropOffLoc.formattedAddress}`}</Text>
                       
                     </Body>
                     <Right>
@@ -63,7 +65,7 @@ class Result extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        data_array : state.core.data
+        data_array : state.core.allpassenger
     };
 }
 

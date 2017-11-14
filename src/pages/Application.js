@@ -7,6 +7,7 @@ import Result from './Result';
 import Register from './Register';
 import Verify from './Verify';
 import Detail from './Detail';
+import DetailDriver from './DetailDriver';
 import Launch from './Launch';
 import ChatList from './ChatList';
 import Chat from './Chat';
@@ -37,6 +38,8 @@ class Application extends Component {
                         return <Chat />;
                     case 'history':
                         return <History />;
+                    case 'detaildriver':
+                        return <DetailDriver />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){
