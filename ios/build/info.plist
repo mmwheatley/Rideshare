@@ -3,7 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>LastAccessedDate</key>
+<<<<<<< HEAD
 	<date>2017-11-15T05:37:31Z</date>
+||||||| merged common ancestors
+	<date>2017-11-14T13:55:57Z</date>
+=======
+	<date>2017-11-14T23:01:54Z</date>
+>>>>>>> ae7be2be8dd794dfc7b825cbacb9976a2e712507
 	<key>WorkspacePath</key>
 	<string>/Users/mark/Documents/GitHub/RideShare/ios/RideShare.xcodeproj</string>
 </dict>

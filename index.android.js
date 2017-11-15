@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import Application from './src/pages/Application';
 import store from './src/redux';
 
-export default class RNCognito extends Component {
+export default class RideShare extends Component {
   render() {
     return (
       <Provider store={store}>
@@ -20,4 +20,4 @@ export default class RNCognito extends Component {
   }
 }
 
-AppRegistry.registerComponent('RNCognito', () => RNCognito);
+AppRegistry.registerComponent('RideShare', () => RideShare);
