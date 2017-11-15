@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		+h6bY9Il58a1iBVZXFHIZCvCKCk=
+		COJPcdIjc0wq/MSsBe8bqDjs7DA=
 		</data>
 		<key>Entypo.ttf</key>
 		<data>
@@ -71,7 +71,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6IHtHQbPWvCSlj8E/a/wrscB2GQ=
+		BoLXmmsOThCg8uEeSU5MmGzmmhQ=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -99,7 +99,7 @@
 		</data>
 		<key>PlugIns/RideShareTests.xctest.dSYM/Contents/Resources/DWARF/RideShareTests</key>
 		<data>
-		ZwTLCcPQNqLLiS+YuXdmlg18eFM=
+		+RVeJQSTscU5qrcs9JrX6fYh18g=
 		</data>
 		<key>PlugIns/RideShareTests.xctest/Info.plist</key>
 		<data>
@@ -107,7 +107,7 @@
 		</data>
 		<key>PlugIns/RideShareTests.xctest/RideShareTests</key>
 		<data>
-		NIkTcwF/O3IR1JBMZxpDAsWHshM=
+		oDLsO1awr7LtzH12fArg4/pSqJ8=
 		</data>
 		<key>PlugIns/RideShareTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
@@ -140,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+h6bY9Il58a1iBVZXFHIZCvCKCk=
+			COJPcdIjc0wq/MSsBe8bqDjs7DA=
 			</data>
 			<key>hash2</key>
 			<data>
-			iWcnoVycKXUVCqQ56sHMwYHerbVd6uL1vzl/W2KuDgQ=
+			/MJy+YYWCbRl+7dmYF7Hf6EnIpJ9a7+qUKnhe7XUgdQ=
 			</data>
 		</dict>
 		<key>Entypo.ttf</key>
@@ -362,11 +362,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZwTLCcPQNqLLiS+YuXdmlg18eFM=
+			+RVeJQSTscU5qrcs9JrX6fYh18g=
 			</data>
 			<key>hash2</key>
 			<data>
-			9JsT/NOjUARsh5o2E3wo+Gss7JaWiyUSeZjN1g8cDXA=
+			YMOu7A4mEnSRa1lmhhmvOQvMdaYtDUYh0jTGY2TimzI=
 			</data>
 		</dict>
 		<key>PlugIns/RideShareTests.xctest/Info.plist</key>
@@ -384,11 +384,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NIkTcwF/O3IR1JBMZxpDAsWHshM=
+			oDLsO1awr7LtzH12fArg4/pSqJ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			agFCrJ29nEN2ek1O4y9r2P3lcTYEapNUWX41NhM25Fk=
+			1whG19S6fG8y8X1wkDspn4zC6LkQDWKNt1bXWx0SXK8=
 			</data>
 		</dict>
 		<key>PlugIns/RideShareTests.xctest/_CodeSignature/CodeResources</key>

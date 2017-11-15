@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
-  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native/ReactCommon/jschelpers/Unicode.h
+  /Users/zhuboyuan/git/rideshare/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
+  /Users/zhuboyuan/git/rideshare/node_modules/react-native/ReactCommon/jschelpers/Unicode.h
