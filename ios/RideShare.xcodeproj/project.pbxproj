@@ -66,6 +66,7 @@
 		48C5E6A665F24FB38C6074B6 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CA0B0147594C5A814ACF89 /* libAirMaps.a */; };
 		076E5A90FCB44102ADA22429 /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCC5CFA632E467188D3D0DA /* libReactNativePermissions.a */; };
 		3A7ACAC4F30B4059B5DE263F /* libRNSpinkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B64C70EF88C04DAE8511D879 /* libRNSpinkit.a */; };
+		EAC74B19E9544359BB28F5B9 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C493B2AB33642C3A5FB583D /* Feather.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +323,7 @@
 		9BCC5CFA632E467188D3D0DA /* libReactNativePermissions.a */ = {isa = PBXFileReference; name = "libReactNativePermissions.a"; path = "libReactNativePermissions.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		DB8731D219AD48C5B52E374C /* RNSpinkit.xcodeproj */ = {isa = PBXFileReference; name = "RNSpinkit.xcodeproj"; path = "../node_modules/react-native-spinkit/ios/RNSpinkit.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		B64C70EF88C04DAE8511D879 /* libRNSpinkit.a */ = {isa = PBXFileReference; name = "libRNSpinkit.a"; path = "libRNSpinkit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		0C493B2AB33642C3A5FB583D /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,6 +593,7 @@
 				B6005F5DD66A456CB66DBB8B /* rubicon-icon-font.ttf */,
 				9125E3AB13174FBFAB9F2420 /* SimpleLineIcons.ttf */,
 				7C1F15C164854CD091326CDE /* Zocial.ttf */,
+				0C493B2AB33642C3A5FB583D /* Feather.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -976,6 +979,7 @@
 				275C6F2BDAFD49B298B5690E /* rubicon-icon-font.ttf in Resources */,
 				8B82ABE2681146F9AE76175B /* SimpleLineIcons.ttf in Resources */,
 				9273A324AA754BD9A48F5CF0 /* Zocial.ttf in Resources */,
+				EAC74B19E9544359BB28F5B9 /* Feather.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
