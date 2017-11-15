@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, FlatList, Image } from 'react-native';
-import { showDetailInfo} from '../redux/actions/core';
+import { showDetailInfoPassenger} from '../redux/actions/core';
 import { tomain } from '../redux/actions/core';
 import Moment from 'moment';
 import {
@@ -26,7 +26,7 @@ class Result extends Component {
         super(props);
     }
 
-    showDetail(item){
+    showDetailInfoPassenger(item){
         console.log(item);
         this.props.detail(item);
     }
@@ -39,7 +39,7 @@ class Result extends Component {
               <List
                 dataArray={this.props.data_array}
                 renderRow={data =>
-                  <ListItem avatar onPress={ () => this.showDetail(data) }>
+                  <ListItem avatar onPress={ () => this.showDetailInfoPassenger(data) }>
                     <Left>
 
                     </Left>
@@ -71,7 +71,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        detail: (item) => {dispatch(showDetailInfo(item))}
+        detail: (item) => {dispatch(showDetailInfoPassenger(item))}
     }
 }
 
