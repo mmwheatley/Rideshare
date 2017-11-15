@@ -7,7 +7,8 @@ import core from './core';
 const rootReducer = combineReducers({
     auth,
     register,
-    core
+    core,
+    location: require("./locationReducer").reducer,
 });
 
 export default rootReducer;

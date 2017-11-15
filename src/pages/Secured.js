@@ -7,7 +7,9 @@ import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
 import Moment from 'moment';
 import {Container,Header,Title,Content,Button,Footer,FooterTab,Text as NBText,Body,Left,Right,Icon,Badge} from "native-base";
-import Styles from "./Styles/LoginScreenStyles";
+import Styles from "./Styles/locatorStyles";
+
+import Locator from "./Locator";
 
 
 class Main extends Component {
@@ -61,19 +63,19 @@ class Main extends Component {
     render() {
         return (
                <Container>
-                <Header>
-                  <Left>
-                    <Button transparent onPress={(e) => this.logoutAndBackToLoginPage(e)}>
-                      <Icon name="body" />
-                    </Button>
-                  </Left>
-                  <Body>
-                    <Title>RideShare</Title>
-                  </Body>
-                  <Right>
+                    <Header>
+                    <Left>
+                        <Button transparent onPress={(e) => this.logoutAndBackToLoginPage(e)}>
+                        <Icon name="body" />
+                        </Button>
+                    </Left>
+                    <Body>
+                        <Title>RideShare</Title>
+                    </Body>
+                    <Right>
 
-                  </Right>
-                </Header>
+                    </Right>
+                    </Header>
 
                 <Content>
                     <ScrollView >
@@ -131,6 +133,9 @@ class Main extends Component {
                                 
                                 <NBText style={Styles.loginText}>Post</NBText>
                             </Button>
+                        </View>
+                        <View style={[Styles.map]}>
+                            <Locator/>
                         </View>
                     </ScrollView>
                 </Content>
