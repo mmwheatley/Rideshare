@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, Text, TextInput, View, TouchableOpacity, Image, Keyboard, LayoutAnimation } from 'react-native';
 import { loginUser, cleanError, onRegister, logout } from '../redux/actions/auth';
-import { Hoshi } from 'react-native-textinput-effects';
 
 import { Button, Text as NBText, Contant, Form, Item, Input, Label } from "native-base";
 import { Images, Metrics } from "../Themes";

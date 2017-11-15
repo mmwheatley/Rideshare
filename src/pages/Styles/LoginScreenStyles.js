@@ -1,10 +1,13 @@
 import { StyleSheet } from 'react-native'
-import { Colors, Metrics } from '../../Themes'
+import { Colors, Metrics, ApplicationStyles } from '../../Themes'
 
 export default StyleSheet.create({
   container: {
     paddingTop: 70,
     backgroundColor: Colors.royal,
+  },
+  section: {
+    margin: 5,
   },
   form: {
     backgroundColor: Colors.snow,
@@ -19,6 +22,13 @@ export default StyleSheet.create({
   },
   rowLabel: {
     color: Colors.charcoal
+  },
+  title: {
+    color: Colors.silver,
+    fontSize: 30,
+    fontWeight: 'normal',
+    fontFamily: 'Futura',
+    textAlign: 'center'
   },
   textInput: {
     height: 40,
