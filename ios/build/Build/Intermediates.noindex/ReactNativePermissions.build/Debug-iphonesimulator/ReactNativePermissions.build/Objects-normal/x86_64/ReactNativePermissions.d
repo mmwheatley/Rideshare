@@ -1,0 +1,32 @@
+dependencies: \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/ReactNativePermissions.m \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/ReactNativePermissions.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/mark/Documents/GitHub/RideShare/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPLocation.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/RCTConvert+RNPStatus.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPBluetooth.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPNotification.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPAudioVideo.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPEvent.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPPhoto.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPContacts.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPBackgroundRefresh.h \
+  /Users/mark/Documents/GitHub/RideShare/node_modules/react-native-permissions/permissions/RNPSpeechRecognition.h

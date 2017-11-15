@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_db6a580203b30004b06ccc96e1ae7e0f68c3449a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.2.4_ba61e25a8256ad1fecf80255d4336701ecaab2ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_5b11a631aa49b7427c75d4fccdb430ed3b2191ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_2715ae1f48b702712beb8082abad93fa81f654f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_d771ccdd44c34d7938873980a5a9b1db53eece57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_8a78218eb287b16a1fdbcca3257c8ff2cba57b59.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_7b70de8bd8bfa2d9e1c601d446ad1fbaadec9154.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/RideShare/react-native-maps/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="211ad67f781d4981e6f4b714cd08b79db4fc69f9">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/RideShare-react-native-maps-unspecified_2ef9eaf0e5f6bc99223c0a618cab30559c82ecd6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_f133ccba9cb9e90cee736eeff04287badd23fa56.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="576b5113887747a7592650ae14d980e1c57983c4">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.47.2_530d576b6d53dde46773110815a133708ced2520.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_c1590b559bbeca80161d2777283d338bc4f70b65.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.1/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_e576bcc4a6a26ef534f802b49bbbbfb18cef6239.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="576b5113887747a7592650ae14d980e1c57983c4">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.47.1_cb40909b08678deef13f000165a9e8a64fd5bbd3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_beb02f6e4da0747fb08c2a08e1d1d0ff4c0d085c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.2.4_668c1859e061b5c8a072f0fe83b216ffb2709433.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_806e465cae04a6a0d9b40287c34cd7ec4de47921.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_a87f89eaacf6f1379f19d4c33b4bd0cd0d925cf2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.2.4_df8aed94b523c91032895b34034a3aa574c3081e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_062d9f20f9d36bafc3b6c99d8a0c026f178a00d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.github.ybq/Android-SpinKit/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="21c0f1b0de29bfe601028757c5cb125c343f5164">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.github.ybq-Android-SpinKit-1.1.0_ebdd7eae5753e7b0980e6845f2716873d279bf94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_3c4db25ec8a42762e7838cc0fcddcd7597e7076f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_e5934eb2f99e31a29c07b2c2d933a8ef2c0f3ecc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/RideShare/react-native-spinkit/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="47b99616af6817e323d7b404b2f1922ca22228ad">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/RideShare-react-native-spinkit-unspecified_51a8331ef3f7b9d7932862dc6749811be37d574a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/RideShare/react-native-maps/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="090803e9eb6588971f788c5a5790be117fc836eb">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/RideShare-react-native-maps-unspecified_e65b8aa18102ce687f2e87d01f9674363af5d09d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_0d0f0bda0b2cac7be37369492eeb23620e3e4cea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_5488c0b774d0bdee22bd4b00b906e18827c36345.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_363cdebd8e517ac8d73cd5f98b907c6255e043f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_9ba8bd904c0e63429753fbaf1a5ac7e7b275b92c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_c36acdc7e8611cb4f2387f23a82ed03a97002534.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_b567f3f3294fff275e41c60f23189a5a295fd3a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5803db663655ef5cb38c6bcb17ba326fdb9edfbd">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.2.4_73a63ea93590037b764dc504c2095ecb72940cc1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_2934d76a2d94656592e229aba45373d61b7512c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.2.4_4fb64eb1f71fab1f30fa7ee8bf4a59c75ab5d881.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5803db663655ef5cb38c6bcb17ba326fdb9edfbd">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.2.4_0cc9ebdb18e7247429f3d74e32f994db309af480.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_67c57cee42a5075fe27663547aa662fda56b2ca6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_71b6cd3ac20ab144daf53b5230f94b91c095ff81.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_16cfe8a48832380a06d8a8dd8be46c1d47fbe42b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.2/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_ecb452f65b7503617fa0ce5649a42f3125970162.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_d4b9bfec2d69a30cdce25cf70f5aa6b04457f8e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_db83750edf6fa08704ab03399954e02b66c2be8c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_55ce371f1b4177ab071f53077bd57b7cfa75b862.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_55090311bbd1ba5a075b9908f49f5bd81ad76faa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.2.4_4a634740dcc365585c44c3f571642261a8dc11ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.2.4_6fab9dde6fa6894e34b1716f573b274bd83af3d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_8ab6b0983a82bab54e7b3b929a549525f3b3038e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/Users/mark/Documents/Extra-Learning/React-Training/RideShare/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_3d7e7cfaf053ed8803234b524255c16c166a20e0.jar" />
+    </item>
+
+</items>
