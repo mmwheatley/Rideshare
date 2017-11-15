@@ -14,6 +14,8 @@ export default function reducer(state = defaultState, action) {
           return {...state, navi_core:'detail', item: action.item}
         case 'TOSHOWDETAILDRIVER':
           return {...state, navi_core:'detaildriver', item: action.item}
+        case 'TOSHOWDETAILPASSENGER':
+          return {...state, navi_core:'detailpassenger', item: action.item}
         case 'TOHISTORY':
           return {...state, navi_core:'history'}
         case 'TOCHATLIST':

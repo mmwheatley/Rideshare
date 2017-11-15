@@ -8,6 +8,7 @@ import Register from './Register';
 import Verify from './Verify';
 import Detail from './Detail';
 import DetailDriver from './DetailDriver';
+import DetailPassenger from './DetailPassenger';
 import Launch from './Launch';
 import ChatList from './ChatList';
 import Chat from './Chat';
@@ -40,6 +41,8 @@ class Application extends Component {
                         return <History />;
                     case 'detaildriver':
                         return <DetailDriver />;
+                    case 'detailpassenger':
+                        return <DetailPassenger />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){

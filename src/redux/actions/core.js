@@ -22,20 +22,19 @@ export const makedecide = (token, decide, ride_id, application_id) => {
                 switch (data_got.code) {
                     case 0: //no_error
                         console.log('SUCCESS!!');
-                        if (decided === true){
+                        if (decide === true){
                             alert('Approved!');
                         }
                         else{
                             alert('Rejected!');
                         }
                         dispatch({
-                            type: 'TOMAIN',
+                            type: 'TOHISTORY',
                         });
                         break;
                     default:
                         console.log('exist an error');
                         alert("error");
-
                 }
             });
         });
@@ -205,6 +204,18 @@ export const showDetailInfoDriver = (item) => {
         console.log(item);
         dispatch({
             type: 'TOSHOWDETAILDRIVER',
+            item: item
+        });
+        
+    }
+};
+
+export const showDetailInfoPassenger = (item) => {
+    return (dispatch) => {
+        console.log('passenger detail');
+        console.log(item);
+        dispatch({
+            type: 'TOSHOWDETAILPASSENGER',
             item: item
         });
         

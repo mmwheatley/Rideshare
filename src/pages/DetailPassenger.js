@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, FlatList, Image } from 'react-native';
 import { tomain, goToChatPage, askForJoinIn, cleandata, tohistory, makedecide} from '../redux/actions/core';
-import { Container, Header, Left, Text, Body, Text as NBText,Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
+import { Container, Header, Left, Text, Body,Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 import Moment from 'moment';
 import styles from "./Styles/LaunchScreenStyles";
 
@@ -11,7 +11,8 @@ class Result extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tel : ''
+            tel : '',
+            flag_success: false
         };
     }
 
@@ -33,17 +34,24 @@ class Result extends Component {
         this.props.toDecide(this.props.token, dec, ride_id, application_id);
     }
 
-    showTel(e){
+    showTelAndButton(e){
         if (this.props.item.showNumber){
             this.setState({tel:this.props.item.driver.number});
         } else{
             this.setState({tel:'Driver does not want to show it'});
         }
+
+        for (var i=0;i<this.props.item.applications.length;i++)
+        {
+            if (this.props.item.applications[i].accepted === true){
+                this.setState({flag_success : true});
+            };
+        }
     }
 
 
     componentWillMount(e){
-        this.showTel(e);
+        this.showTelAndButton(e);
     }
 
     render() {
@@ -67,6 +75,12 @@ class Result extends Component {
 
             <Content>
                 <List>
+                    <ListItem>
+                        <Text>Driver: {this.props.item.driver.firstName} {this.props.item.driver.lastName}</Text>
+                    </ListItem>
+                    <ListItem>
+                        <Text>Tel Number: {this.state.tel}</Text>
+                    </ListItem>
                     <ListItem>
                         <Text>Pick Up Location: {this.props.item.pickUpLoc.formattedAddress}</Text>
                     </ListItem>
@@ -92,25 +106,31 @@ class Result extends Component {
                         <Text>Price: {this.props.item.price}</Text>
                     </ListItem>
                 </List>
-                <Text style = {{marginTop: 10, fontSize: 20, color: 'blue', fontWeight: 'bold', textAlign:'center', lineHeight: 50}}> The list of applicants</Text>
+                    
+
+                    {this.state.flag_success === true &&
+                        <Button 
+                            style={{ marginTop: 10, alignItems:'center', justifyContent: "center" }} 
+                            full
+                            onPress={(e) => this.pay(e)}>
+                            <Text style={{fontSize: 20}}>pay</Text>
+                        </Button>
+                    }
+
+
+                <Text style = {{marginTop: 10, fontSize: 20, color: 'blue', fontWeight: 'bold', textAlign:'center', lineHeight: 50}}> Application History</Text>
               <List
                 dataArray={this.props.item.applications}
                 renderRow={data =>
                   <ListItem >
                     <Body>
-                      <Text>{`Name: ${data.userID.firstName} ${data.userID.lastName}`}</Text>
-                      <Text>{`Rate: ${data.userID.score}`}</Text>
+                      <Text>{`Number of the needed seats: ${data.seatsReserved}`}</Text>
                     </Body>
                     <Right>
 
                     {data.accepted === null &&
                         <View style={{flexDirection: 'row', padding: 6 , justifyContent: 'space-between'}}>
-                            <Button onPress={() => this.decide(true, this.props.item._id, data._id)}>
-                                <Text>Y</Text>
-                            </Button>
-                            <Button onPress={() => this.decide(false, this.props.item._id, data._id)}>
-                                <Text>N</Text>
-                            </Button>
+                            <Text style={{fontSize: 13}}> Pending </Text>
                         </View>
                     }
 
