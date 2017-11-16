@@ -5,7 +5,8 @@ const defaultState = {
     undriver: [],
     alldriver: [],
     unpassenger: [],
-    allpassenger: []
+    allpassenger: [],
+    userinfo:[]
 };
 
 export default function reducer(state = defaultState, action) {
@@ -18,6 +19,8 @@ export default function reducer(state = defaultState, action) {
           return {...state, navi_core:'detailpassenger', item: action.item}
         case 'TOHISTORY':
           return {...state, navi_core:'history'}
+        case 'TOPROFILE':
+          return {...state, navi_core:'profile', userinfo: action.item}
         case 'TOCHATLIST':
           return {...state, navi_core:'chatlist'}
         case 'TOCHATPAGE':

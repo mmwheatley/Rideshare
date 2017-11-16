@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, View,Text} from 'react-native';
-import { topost, getresult, cleandata, tochatlist, tohistory} from '../redux/actions/core';
+import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage} from '../redux/actions/core';
 import { logout } from '../redux/actions/auth';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
@@ -50,6 +50,12 @@ class Main extends Component {
     toChatList (e) {
         console.log('to chat list!!')
         this.props.toChatList();
+        e.preventDefault();
+    }
+
+    toProfile (e) {
+        console.log('to profile page!')
+        this.props.toProfilePage(this.props.token);
         e.preventDefault();
     }
 
@@ -135,28 +141,28 @@ class Main extends Component {
                             </Button>
                         </View>
                         <View style={[Styles.map]}>
-                            <Locator/>
+                            
                         </View>
                     </ScrollView>
                 </Content>
 
                 <Footer>
                   <FooterTab>
-                    <Button active={this.state.tab1} onPress={(e) => this.toHistory(e)}>
-                      <Icon active={this.state.tab1} name="paper" style={{ color: "brown" }} />
+                    <Button onPress={(e) => this.toHistory(e)}>
+                      <Icon name="paper" style={{ color: "brown" }} />
                       <Text>History</Text>
                     </Button>
-                    <Button active={this.state.tab2} onPress={() => this.toggleTab2()}>
-                      <Icon active={this.state.tab2} name="person" style={{ color: "brown" }} />
+                    <Button onPress={(e) => this.toProfile(e)}>
+                      <Icon name="person" style={{ color: "brown" }} />
                       <Text>Profile</Text>
                     </Button>
                     <Button  badge vertical onPress={(e) => this.toChatList(e)}>
                       <Badge ><Text>1</Text></Badge>
-                      <Icon active={this.state.tab3} name="chatbubbles" style={{ color: "brown" }} />
+                      <Icon  name="chatbubbles" style={{ color: "brown" }} />
                       <Text>Chat</Text>
                     </Button>
-                    <Button active={this.state.tab4} onPress={() => this.toggleTab4()}>
-                      <Icon active={this.state.tab4} name="logo-github" style={{ color: "brown" }} />
+                    <Button onPress={() => this.toggleTab4()}>
+                      <Icon name="logo-github" style={{ color: "brown" }} />
                       <Text>Help</Text>
                     </Button>
                   </FooterTab>
@@ -177,6 +183,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         toPostPage: () => { dispatch(topost()); },
+        toProfilePage: (token) => { dispatch(toprofilepage(token)); },
         cleanData: () => {dispatch(cleandata())},
         logout: () => {dispatch(logout())},
         toChatList: () => {dispatch(tochatlist())},

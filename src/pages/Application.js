@@ -13,6 +13,7 @@ import Launch from './Launch';
 import ChatList from './ChatList';
 import Chat from './Chat';
 import History from './History';
+import Profile from './userProfile';
 
 
 
@@ -43,6 +44,8 @@ class Application extends Component {
                         return <DetailDriver />;
                     case 'detailpassenger':
                         return <DetailPassenger />;
+                    case 'profile':
+                        return <Profile />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){

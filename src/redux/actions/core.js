@@ -1,3 +1,36 @@
+export const toprofilepage = (token) => {
+    return (dispatch) => {
+        console.log('profile page');
+        console.log(token);
+
+        fetch('https://rideshare-carpool.herokuapp.com/users/info', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('to profile page!!');
+
+                        dispatch({
+                            type: 'TOPROFILE',
+                            item: data_got.data
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("server error!!");
+
+                }
+            });
+        });
+    }
+}
+
 export const makedecide = (token, decide, ride_id, application_id) => {
     return (dispatch) => {
         console.log('ask for join');
