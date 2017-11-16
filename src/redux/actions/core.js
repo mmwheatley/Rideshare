@@ -334,12 +334,29 @@ export const getresult = (token, pick_up_location,drop_off_location,departDate) 
     };
 };
 
+export const tomodifyinfo = () => {
+    return {
+        type: 'TOMODIFYINFO'
+    };
+};
+
+export const todriverinfo = () => {
+    return {
+        type: 'TODRIVERINFO'
+    };
+};
+
+export const tochangepassword = () => {
+    return {
+        type: 'CHANGEPASSWORD'
+    };
+};
+
 export const tomain = () => {
     return {
         type: 'TOMAIN'
     };
 };
-
 
 export const postinfo = (token, date_from ,date_to, pick_up_location, pick_up_range, drop_off_location, drop_off_range, seat, price, button_value) => {
 	return (dispatch) => {

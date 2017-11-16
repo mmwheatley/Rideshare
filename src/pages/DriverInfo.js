@@ -9,12 +9,12 @@ import { Images, Colors  } from "../Themes";
 import styles from "./Styles/LaunchScreenStyles";
 
 //reducers
-import { tochatlist } from '../redux/actions/core';
+import { toprofilepage } from '../redux/actions/core';
 
-class Chat extends Component {
-    toChatList (e) {
-        console.log('to chat list!!')
-        this.props.toChatList();
+class Driver extends Component {
+    toProfile (e) {
+        console.log('to profile page!')
+        this.props.toProfilePage(this.props.token);
         e.preventDefault();
     }
 
@@ -23,12 +23,12 @@ class Chat extends Component {
           <Container>
             <Header>
               <Left>
-                <Button transparent onPress={(e) => this.toChatList(e)}>
+                <Button transparent onPress={(e) => this.toProfile(e)}>
                   <Icon name='arrow-back' />
                 </Button>
               </Left>
               <Body>
-                <Title>Chat Page</Title>
+                <Title>Driver Info</Title>
               </Body>
               <Right>
               </Right>
@@ -39,7 +39,7 @@ class Chat extends Component {
 
                     <View style={styles.section}>
                         <Text style={styles.title}>
-                            RideShare Chat Page
+                            Driver info
                             
                         </Text>
                     </View >
@@ -53,13 +53,14 @@ class Chat extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        token: state.auth.authentication_token
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        toChatList: () => {dispatch(tochatlist())}
+        toProfilePage: (token) => { dispatch(toprofilepage(token)); }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Chat);
+export default connect(mapStateToProps, mapDispatchToProps)(Driver);

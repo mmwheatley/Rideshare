@@ -17,6 +17,12 @@ export default function reducer(state = defaultState, action) {
           return {...state, navi_core:'detaildriver', item: action.item}
         case 'TOSHOWDETAILPASSENGER':
           return {...state, navi_core:'detailpassenger', item: action.item}
+        case 'TOMODIFYINFO':
+          return {...state, navi_core:'modify'}
+        case 'CHANGEPASSWORD':
+          return {...state, navi_core:'changepassword'}
+        case 'TODRIVERINFO':
+          return {...state, navi_core:'driverinfo'}
         case 'TOHISTORY':
           return {...state, navi_core:'history'}
         case 'TOPROFILE':

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { tomain } from '../redux/actions/core';
+import { tomain, tomodifyinfo, tochangepassword, todriverinfo } from '../redux/actions/core';
 import { Container, Text, Header, Left, Body, Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 
 import { Images, Metrics } from "../Themes";
@@ -17,6 +17,24 @@ class userProfile extends Component {
     backToMain (e) {
         console.log('gonna go back to main')
         this.props.goBackToMain();
+        e.preventDefault();
+    }
+
+    toModifyInfoPage (e) {
+        console.log('gonna modify info')
+        this.props.goToModifyInfoPage();
+        e.preventDefault();
+    }
+
+     toChangePasswordPage (e) {
+        console.log('to change password')
+        this.props.goToChangePasswordPage();
+        e.preventDefault();
+    }
+
+     toChangeDriverInfo (e) {
+        console.log('to change driver info')
+        this.props.goToDriverInfo();
         e.preventDefault();
     }
 
@@ -71,13 +89,13 @@ class userProfile extends Component {
                 <Button 
                     style={{ marginRight: 60, marginLeft: 60, marginTop: 20, flex: 1, justifyContent: "center" }} 
                     full
-                    onPress={(e) => this.askForJoin(e)}>
+                    onPress={(e) => this.toModifyInfoPage(e)}>
                     <Text>Modify User Infomation</Text>
                 </Button>
                 <Button 
                     style={{ marginRight: 60, marginLeft: 60, marginTop: 20, flex: 1, justifyContent: "center" }} 
                     full
-                    onPress={(e) => this.askForJoin(e)}>
+                    onPress={(e) => this.toChangePasswordPage(e)}>
                     <Text >Change Password</Text>
                 </Button>
 
@@ -85,7 +103,7 @@ class userProfile extends Component {
                     <Button 
                         style={{ marginRight: 60, marginLeft: 60, marginTop: 20, flex: 1, justifyContent: "center" }} 
                         full
-                        onPress={(e) => this.askForJoin(e)}>
+                        onPress={(e) => this.toChangeDriverInfo(e)}>
                         <Text >Update Driver information</Text>
                     </Button>
                 }
@@ -94,7 +112,7 @@ class userProfile extends Component {
                     <Button 
                         style={{ marginRight: 60, marginLeft: 60, marginTop: 20, flex: 1, justifyContent: "center" }} 
                         full
-                        onPress={(e) => this.askForJoin(e)}>
+                        onPress={(e) => this.toChangeDriverInfo(e)}>
                         <Text >Apply To Be A Driver</Text>
                     </Button>
                 }
@@ -113,7 +131,11 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        goBackToMain: () => {dispatch(tomain()); }
+        goBackToMain: () => {dispatch(tomain()); },
+        goToModifyInfoPage: () => {dispatch(tomodifyinfo()); },
+        goToChangePasswordPage: () => {dispatch(tochangepassword()); },
+        goToDriverInfo: () =>{dispatch(todriverinfo());}
+
     }
 }
 

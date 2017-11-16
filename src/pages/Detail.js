@@ -38,7 +38,6 @@ class Result extends Component {
     askForJoin(e){
         this.props.askJoin(this.props.token, this.props.item);
         e.preventDefault();
-
     }
 
     componentWillMount(e){

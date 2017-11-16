@@ -13,8 +13,10 @@ import Launch from './Launch';
 import ChatList from './ChatList';
 import Chat from './Chat';
 import History from './History';
-import Profile from './userProfile';
-
+import Profile from './UserProfile';
+import Modify from './ModifyInfo';
+import Password from './ChangePassword';
+import Driver from './DriverInfo';
 
 
 class Application extends Component {
@@ -46,6 +48,12 @@ class Application extends Component {
                         return <DetailPassenger />;
                     case 'profile':
                         return <Profile />;
+                    case 'modify':
+                        return <Modify />;
+                    case 'changepassword':
+                        return <Password />;
+                    case 'driverinfo':
+                        return <Driver />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){
