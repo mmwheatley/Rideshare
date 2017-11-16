@@ -4,6 +4,20 @@
 var request = require('request');
 var cheerio = require('cheerio');
 var URL = require('url-parse');
+var Datastore = require('nedb');
+var db = new Datastore({ filename: 'frequent.db', autoload: true});
+
+
+var common_search = 'toronto';
+
+ 
+db.insert(common_search, function(err,doc) {
+
+
+console.log('Inserted', common_search , 'Id No:', doc._id);
+
+
+});
 
 
 var START_URL = "https://www.kijiji.ca/b-travel-vacations/kitchener-waterloo/c302l1700212";
