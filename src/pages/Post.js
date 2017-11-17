@@ -151,7 +151,7 @@ class Main extends Component {
                   autoCapitalize='none'
                   onChangeText={(text) => this.setState({ price: text })}
                   />
-                <View style={{margin: 10, justifyContent: 'center',}}>
+                <View style={{margin: 10, justifyContent: 'center'}}>
 
                     <RadioForm
                       radio_props={radio_props}

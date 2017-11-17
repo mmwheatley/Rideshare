@@ -20,8 +20,6 @@ class Register extends Component {
             visibleHeight: Metrics.screenHeight,
             fontSize: 30
         };
-
-        
     }
 
     focusNextField(id) {
