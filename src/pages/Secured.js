@@ -127,14 +127,14 @@ class Main extends Component {
 
                         <View style={[Styles.loginRow]}>
                             <Button 
-                                style={{ flex: 1, justifyContent: "center" }} 
-                                full 
+                                style={Styles.loginButton} 
+                                //full 
                                 onPress={(e) => this.searchRideshare(e)}>
                                 <NBText style={Styles.loginText}>Search</NBText>
                             </Button>
                             <Button 
-                                style={{ flex: 1, justifyContent: "center" }} 
-                                full
+                                style={Styles.loginButton} 
+                                //full
                                 onPress={(e) => this.postRideshare(e)}>
                                 
                                 <NBText style={Styles.loginText}>Post</NBText>

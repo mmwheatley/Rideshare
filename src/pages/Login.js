@@ -117,14 +117,16 @@ class Login extends Component {
                     </Form>
                     <View style={[Styles.loginRow]}>
                         <Button 
-                            style={{ flex: 1, justifyContent: "center" }} 
-                            full 
+                            style={Styles.loginButton}
+                            //style={{ flex: 1, justifyContent: 'space-around', }} 
+                            //full 
                             onPress={(e) => this.userLogin(e)}>
                             <NBText style={Styles.loginText}>Sign In</NBText>
                         </Button>
                         <Button 
-                            style={{ flex: 1, justifyContent: "center" }} 
-                            full
+                            style={Styles.loginButton}
+                            //style={{ flex: 1, justifyContent: "space-around" }} 
+                            //full
                             onPress={(e) => this.userLogout(e)}>
                             
                             <NBText style={Styles.loginText}>Cancel</NBText>
