@@ -141,7 +141,7 @@ class Main extends Component {
                             </Button>
                         </View>
                         <View style={[Styles.map]}>
-                            
+                            <Locator />
                         </View>
                     </ScrollView>
                 </Content>
