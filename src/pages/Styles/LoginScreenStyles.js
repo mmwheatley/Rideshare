@@ -42,12 +42,18 @@ export default StyleSheet.create({
     paddingBottom: Metrics.doubleBaseMargin,
     paddingHorizontal: Metrics.doubleBaseMargin,
     flexDirection: 'row',
-    marginTop: 10
+    marginTop: 10,
+    justifyContent: "space-around",
   },
   loginButtonWrapper: {
     flex: 1
   },
   loginButton: {
+    width: '40%',
+    justifyContent: "center",
+    padding: 6,
+  },
+  loginButtonFancy: {
     flex: 1,
     borderWidth: 1,
     borderColor: Colors.charcoal,
