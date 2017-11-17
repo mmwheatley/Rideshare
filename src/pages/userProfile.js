@@ -3,9 +3,6 @@ import { connect } from 'react-redux';
 import { tomain, tomodifyinfo, tochangepassword, todriverinfo } from '../redux/actions/core';
 import { Container, Text, Header, Left, Body, Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 
-import { Images, Metrics } from "../Themes";
-
-
 class userProfile extends Component {
     constructor(props) {
         super(props);
@@ -135,7 +132,6 @@ const mapDispatchToProps = (dispatch) => {
         goToModifyInfoPage: () => {dispatch(tomodifyinfo()); },
         goToChangePasswordPage: () => {dispatch(tochangepassword()); },
         goToDriverInfo: () =>{dispatch(todriverinfo());}
-
     }
 }
 
