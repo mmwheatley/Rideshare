@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React  from 'react';
+>>>>>>> 8b762395674c4df7dfe15948c50ffdeac9c829f5
 import PropTypes from 'prop-types';
 import {
   Text,
@@ -27,10 +31,6 @@ const propTypes = {
     longitude: PropTypes.number.isRequired,
     latitudeDelta: PropTypes.number.isRequired,
     longitudeDelta: PropTypes.number.isRequired,
-  }),
-  coordinate: PropTypes.shape({
-    latitude: PropTypes.number.isRequired,
-    longitude: PropTypes.number.isRequired,
   }),
   children: PropTypes.node,
   geolocationOptions: PropTypes.shape({
