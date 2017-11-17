@@ -145,7 +145,7 @@ class Register extends Component {
                     <Item floatingLabel>
                         <Label>Last Name</Label>
                         <Input
-                            value={this.state.email}
+                            value={this.state.lastName}
                             blurOnSubmit={ false }
                             keyboardType="default"
                             returnKeyType="next"
@@ -164,7 +164,7 @@ class Register extends Component {
                     <Item floatingLabel>
                         <Label>Mobile Number</Label>
                         <Input
-                            value={this.state.lastName} 
+                            value={this.state.mobileNumber} 
                             blurOnSubmit={ true }
                             keyboardType="numeric"
                             returnKeyType="next"

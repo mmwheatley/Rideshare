@@ -1,3 +1,126 @@
+export const driverapply = (token, driversLicense, vehiclePlate) => {
+    return (dispatch) => {
+        console.log('driver apply');
+        console.log(token, driversLicense, vehiclePlate);
+
+        fetch('https://rideshare-carpool.herokuapp.com/users/apply_for_driver_permission', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            },
+
+            body: JSON.stringify({
+                driversLicense: driversLicense,
+                vehiclePlate: vehiclePlate
+            })
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+                        alert('SUCCEEDED!');
+                        fetch('https://rideshare-carpool.herokuapp.com/users/info', {
+                            method: 'GET',
+                            headers: {
+                                Accept: 'application/json',
+                                'x-access-token': token
+                            }
+                        }).then((response) => {
+                            response.json().then(data_got => {
+                                console.log(data_got);
+                                switch (data_got.code) {
+                                    case 0: //no_error
+                                        console.log('to profile page!!');
+
+                                        dispatch({
+                                            type: 'TOPROFILE',
+                                            item: data_got.data
+                                        });
+                                        break;
+                                    default:
+                                        console.log('exist an error');
+                                        alert("server error!!");
+
+                                }
+                            });
+                        });
+                        break;
+                    default:
+                        console.log('OCCUR an error');
+                        alert("error");
+                }
+            });
+        });
+        
+    }
+};
+
+export const changepassword = (token, old_password, new_password) => {
+    return (dispatch) => {
+        console.log('change password');
+        console.log(token, old_password, new_password);
+
+        fetch('https://rideshare-carpool.herokuapp.com/users/change_password', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            },
+
+            body: JSON.stringify({
+                old_pass: old_password,
+                new_pass: new_password
+            })
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('SUCCESS!!');
+                        alert('PASSWORD UPDATED!');
+                        fetch('https://rideshare-carpool.herokuapp.com/users/info', {
+                            method: 'GET',
+                            headers: {
+                                Accept: 'application/json',
+                                'x-access-token': token
+                            }
+                        }).then((response) => {
+                            response.json().then(data_got => {
+                                console.log(data_got);
+                                switch (data_got.code) {
+                                    case 0: //no_error
+                                        console.log('to profile page!!');
+
+                                        dispatch({
+                                            type: 'TOPROFILE',
+                                            item: data_got.data
+                                        });
+                                        break;
+                                    default:
+                                        console.log('exist an error');
+                                        alert("server error!!");
+
+                                }
+                            });
+                        });
+                        break;
+                    case 3:
+                        alert('THE OLD PASSWORD IS WRONG!!');
+                        break;
+                    default:
+                        console.log('OCCUR an error');
+                        alert("error");
+                }
+            });
+        });
+        
+    }
+};
+
 export const submitinfochange = (token, firstName, lastName, mobileNumber, paypalLink) => {
     return (dispatch) => {
         console.log('submit info change');
