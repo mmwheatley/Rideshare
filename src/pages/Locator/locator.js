@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React  from 'react';
->>>>>>> 8b762395674c4df7dfe15948c50ffdeac9c829f5
 import PropTypes from 'prop-types';
 import {
   Text,
