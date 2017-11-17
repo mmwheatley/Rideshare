@@ -13,7 +13,7 @@ import Launch from './Launch';
 import ChatList from './ChatList';
 import Chat from './Chat';
 import History from './History';
-import Profile from './UserProfile';
+import Profile from './userProfile';
 import Modify from './ModifyInfo';
 import Password from './ChangePassword';
 import Driver from './DriverInfo';
