@@ -30,7 +30,7 @@ class Result extends Component {
     }
 
     pay (e) {
-        const url = "http://"+this.props.item.driver.payment.paypal;
+        const url = "http://"+this.props.item.driver.payment.paypal+'/'+this.props.item.price;
         console.log(url);
         // this.props.toPay(this.props.item.driver.payment.paypal);
         // e.preventDefault();
