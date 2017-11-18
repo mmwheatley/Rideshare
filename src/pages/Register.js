@@ -43,7 +43,6 @@ class Register extends Component {
         console.log(this.refs)
       }
     }
-<<<<<<< HEAD
 
     componentWillMount() {
 		// Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android
@@ -75,8 +74,6 @@ class Register extends Component {
 			fontSize: 30
 		});
     };
-=======
->>>>>>> 4ba629f0d69f1a2c362c7154304c046a04711799
     
     render() {
         return (
