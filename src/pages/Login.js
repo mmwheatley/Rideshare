@@ -14,7 +14,6 @@ class Login extends Component {
             email: 'uwzhuboyuan@gmail.com',
             password: '123',
             visibleHeight: Metrics.screenHeight,
-			topLogo: { width: Metrics.screenWidth - 40 },
         };   
     }
 

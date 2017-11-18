@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component }from 'react';
 import PropTypes from 'prop-types';
 import {
   Text,
@@ -112,14 +112,12 @@ export default class Locator extends React.PureComponent {
 
       );
     }
-
     return (
         <MapView
           //provider={MapView.PROVIDER_GOOGLE}
           style={styles.map}
           region={myRegion}
         >
-        
                   <MapView.Marker
                   anchor={ANCHOR}
                   pinColor="blue"

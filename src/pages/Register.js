@@ -44,16 +44,19 @@ class Register extends Component {
         console.log(this.refs)
       }
     }
+
     componentWillMount() {
 		// Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android
 		// TODO: Revisit this if Android begins to support - https://github.com/facebook/react-native/issues/3468
 		this.keyboardDidShowListener = Keyboard.addListener("keyboardDidShow", this.keyboardDidShow);
 		this.keyboardDidHideListener = Keyboard.addListener("keyboardDidHide", this.keyboardDidHide);
     }
+
     componentWillUnmount() {
 		this.keyboardDidShowListener.remove();
 		this.keyboardDidHideListener.remove();
     }
+
     keyboardDidShow = e => {
 		// Animation types easeInEaseOut/linear/spring
 		LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
@@ -63,6 +66,7 @@ class Register extends Component {
 			fontSize: 20,
         });
     };
+    
     keyboardDidHide = e => {
 		// Animation types easeInEaseOut/linear/spring
 		LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
