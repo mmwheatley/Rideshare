@@ -1,10 +1,14 @@
 [
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
     },
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v23/abc_color_highlight_material.xml"
     }
 ]

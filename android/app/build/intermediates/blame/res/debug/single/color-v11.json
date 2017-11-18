@@ -1,18 +1,26 @@
 [
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     }
 ]

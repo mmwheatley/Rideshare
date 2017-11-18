@@ -1,54 +1,82 @@
 [
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_standard_color_18.png",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_standard_color_18.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
     },
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_disabled_color_18.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
     },
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/src_images_speedcar.jpg",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/src/main/res/drawable-mdpi/src_images_speedcar.jpg"
     },
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\src_images_speedcar.jpg",
-        "source": "D:\\Project\\Rideshare\\android\\app\\src\\main\\res\\drawable-mdpi\\src_images_speedcar.jpg"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\src_images_speedcar.jpg",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\src\\main\\res\\drawable-mdpi\\src_images_speedcar.jpg"
     },
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_standard_color_18.png",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_standard_color_18.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-mdpi-v4/googleg_standard_color_18.png"
     },
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_disabled_color_18.png",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
-        "source": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_disabled_color_18.png",
-        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_standard_color_18.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\googleg_disabled_color_18.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_disabled_color_18.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/res/drawable-mdpi-v4/googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/Users/mark/Documents/GitHub/RideShare/android/D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\10.2.4\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     }
 ]
