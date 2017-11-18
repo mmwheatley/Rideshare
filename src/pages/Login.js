@@ -90,19 +90,19 @@ class Login extends Component {
                             <Input
                                 value={this.state.email}
                                 keyboardType="email-address"
-                                returnKeyType="next"
                                 autoCapitalize="none"
                                 autoCorrect={false}
                                 onChangeText={this.handleChangeUsername}
                                 underlineColorAndroid="transparent"
-                                onSubmitEditing={(event) => {this.refs.passwordInput.focus()}}
+
                             />
                         </Item>
                         <Item floatingLabel>
                             <Label>Password</Label>
                             <Input
                                 value={this.state.password}
-                                ref='passwordInput'
+                                // ref='passwordInput' 
+                                ref={(input) => { this.passwordInput = input; }}
                                 keyboardType="default"
                                 returnKeyType="go"
                                 autoCapitalize="none"

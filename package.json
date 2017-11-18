@@ -35,6 +35,7 @@
     "react-native-chooser": "^1.6.3",
     "react-native-datepicker": "^1.6.0",
     "react-native-elements": "^0.18.2",
+    "react-native-keyboard-aware-scroll-view": "^0.2",
     "react-native-maps": "0.16.4",
     "react-native-permissions": "^1.0.1",
     "react-native-simple-radio-button": "^2.7.0",

@@ -84,7 +84,7 @@ class Main extends Component {
                     </Header>
 
                 <Content>
-                    <ScrollView >
+                    <ScrollView keyboardShouldPersistTaps="always">
                         <Kaede
                             label={'Pick Up'}
                             autoCorrect={false}

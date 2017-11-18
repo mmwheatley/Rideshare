@@ -50,7 +50,7 @@ export const goBack = () => {
     };
 };
 
-export const register = (email, password, firstName, lastName, mobileNumber) => {
+export const register = (email, password, firstName, lastName, mobileNumber, PayPalLink) => {
 	return (dispatch) => {
         console.log('start register')
 
@@ -65,7 +65,8 @@ export const register = (email, password, firstName, lastName, mobileNumber) => 
                 password: password,
                 firstName: firstName, 
                 lastName: lastName, 
-                number: mobileNumber
+                number: mobileNumber,
+                paypal: PayPalLink
             })
         }).then((response) => {
             console.log(response);

@@ -7,6 +7,7 @@ import { register, cleanError} from '../redux/actions/register';
 import { Button, Text as NBText, Contant, Form, Item, Input, Label } from "native-base";
 import { Images, Metrics } from "../Themes";
 import Styles from "./Styles/RegisterScreenStyles";
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 class Register extends Component {
     constructor (props) {
@@ -17,13 +18,10 @@ class Register extends Component {
             firstName:'',
             lastName:'',
             mobileNumber:'',
-            visibleHeight: Metrics.screenHeight,
+            PayPalLink:''
+
         };
     }
-
-    focusNextField(id) {
-        this.inputs[id].focus();
-      }
 
     userLogout(e) {
         this.props.onLogout();
@@ -44,43 +42,18 @@ class Register extends Component {
       }
     }
 
-    componentWillMount() {
-		// Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android
-		// TODO: Revisit this if Android begins to support - https://github.com/facebook/react-native/issues/3468
-		this.keyboardDidShowListener = Keyboard.addListener("keyboardDidShow", this.keyboardDidShow);
-		this.keyboardDidHideListener = Keyboard.addListener("keyboardDidHide", this.keyboardDidHide);
-    }
 
-    componentWillUnmount() {
-		this.keyboardDidShowListener.remove();
-		this.keyboardDidHideListener.remove();
-    }
-
-    keyboardDidShow = e => {
-		// Animation types easeInEaseOut/linear/spring
-		LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-		let newSize = Metrics.screenHeight - e.endCoordinates.height;
-		this.setState({
-			visibleHeight: newSize,
-			fontSize: 20,
-        });
-    };
-    
-    keyboardDidHide = e => {
-		// Animation types easeInEaseOut/linear/spring
-		LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-		this.setState({
-			visibleHeight: Metrics.screenHeight,
-			fontSize: 30
-		});
-    };
-    
     render() {
         return (
-            <ScrollView
+            <KeyboardAwareScrollView
                 contentContainerStyle={{ justifyContent: "center" }}
                 style={[Styles.container]}
+                resetScrollToCoords={{ x: 0, y: 0 }}
+                scrollOffset = {50}
+                // contentContainerStyle={[Styles.container]}
+                scrollEnabled={false}
                 keyboardShouldPersistTaps="never"
+                enableOnAndroid={true}
             >
             <View style={Styles.section}>
                 <Text style={[Styles.title]}>
@@ -95,13 +68,10 @@ class Register extends Component {
                             value={this.state.email}
                             blurOnSubmit={ false }
                             keyboardType="email-address"
-                            returnKeyType="next"
                             autoCapitalize="none"
                             autoCorrect={false}
                             onChangeText={(text) => this.setState({ email: text })}
                             underlineColorAndroid="transparent"
-                            //onSubmitEditing={() => { this.lastName._root.focus(); }}
-                            //ref={ input => { this.inputs['one'] = input; }}
                         />
                     </Item>
                     <Item floatingLabel>
@@ -110,14 +80,11 @@ class Register extends Component {
                             value={this.state.password}
                             blurOnSubmit={ false }
                             keyboardType="default"
-                            returnKeyType="next"
                             autoCapitalize="none"
                             autoCorrect={false}
                             secureTextEntry
                             onChangeText={(text) => this.setState({ password: text })}
                             underlineColorAndroid="transparent"
-                            //onSubmitEditing={() => { this.focusNextField('three'); }}
-                            //ref={ input => this.lastName = input}
                         />
                     </Item>
                     <Item floatingLabel>
@@ -126,13 +93,10 @@ class Register extends Component {
                             value={this.state.firstName}
                             blurOnSubmit={ false }
                             keyboardType="default"
-                            returnKeyType="next"
                             autoCapitalize="words"
                             autoCorrect={false}
                             onChangeText={(text) => this.setState({ firstName: text })}
                             underlineColorAndroid="transparent"
-                            //onSubmitEditing={() => {this.focusNextField('four');}}
-                            //ref={ input => {this.inputs['three'] = input;}}
                         />
                     </Item>
                     <Item floatingLabel>
@@ -141,13 +105,10 @@ class Register extends Component {
                             value={this.state.lastName}
                             blurOnSubmit={ false }
                             keyboardType="default"
-                            returnKeyType="next"
                             autoCapitalize="words"
                             autoCorrect={false}
                             onChangeText={(text) => this.setState({ lastName: text })}
                             underlineColorAndroid="transparent"
-                            //onSubmitEditing={() => {this.focusNextField('five');}}
-                            //ref={ input => {is.inputs['four'] = input;}}
                         />
                     </Item>
                     <Item floatingLabel>
@@ -156,13 +117,22 @@ class Register extends Component {
                             value={this.state.mobileNumber} 
                             blurOnSubmit={ true }
                             keyboardType="numeric"
-                            returnKeyType="next"
                             autoCapitalize="none"
                             autoCorrect={false}
                             onChangeText={(text) => this.setState({ mobileNumber: text })}
                             underlineColorAndroid="transparent"
-                            //onSubmitEditing={(e) => this.userRegister(e)}
-                            //ref={ input => {this.inputs['five'] = input;}}
+                        />
+                    </Item>
+                    <Item floatingLabel>
+                        <Label>PayPal Link</Label>
+                        <Input
+                            value={this.state.mobileNumber} 
+                            blurOnSubmit={ false }
+                            keyboardType="default"
+                            autoCapitalize="words"
+                            autoCorrect={false}
+                            onChangeText={(text) => this.setState({ PayPalLink: text })}
+                            underlineColorAndroid="transparent"
                         />
                     </Item>
                 </Form>
@@ -180,7 +150,7 @@ class Register extends Component {
                     </Button>
                 </View>
             </View>
-        </ScrollView>
+        </KeyboardAwareScrollView>
         );
     }
 }
@@ -195,7 +165,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onLogout: () => { dispatch(logout()); },
-        onRegister: (email, password, firstName, lastName, mobileNumber) => { dispatch(register(email, password, firstName, lastName, mobileNumber)); },
+        onRegister: (email, password, firstName, lastName, mobileNumber, PayPalLink) => { dispatch(register(email, password, firstName, lastName, mobileNumber, PayPalLink)); },
         cleanErrorStatus: () => {dispatch(cleanError()); },
     }
 }
