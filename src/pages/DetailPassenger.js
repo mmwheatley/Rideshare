@@ -29,6 +29,19 @@ class Result extends Component {
         e.preventDefault();
     }
 
+    call (e) {
+        const url = "telprompt:"+this.state.tel;
+        console.log(url);
+        Linking.canOpenURL(url).then(supported => {
+          if (!supported) {
+            console.log('Can\'t handle url: ' + url);
+          } else {
+            return Linking.openURL(url);
+          }
+        }).catch(err => console.error('An error occurred', err));
+
+    }
+
     pay (e) {
         const url = "http://"+this.props.item.driver.payment.paypal+'/'+this.props.item.price;
         console.log(url);
@@ -93,7 +106,7 @@ class Result extends Component {
                     <ListItem>
                         <Text>Driver: {this.props.item.driver.firstName} {this.props.item.driver.lastName}</Text>
                     </ListItem>
-                    <ListItem>
+                    <ListItem onPress={(e) => this.call(e)}>
                         <Text>Tel Number: {this.state.tel}</Text>
                     </ListItem>
                     <ListItem>
