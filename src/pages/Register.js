@@ -6,7 +6,7 @@ import { register, cleanError} from '../redux/actions/register';
 
 import { Button, Text as NBText, Contant, Form, Item, Input, Label } from "native-base";
 import { Images, Metrics } from "../Themes";
-import Styles from "./Styles/LoginScreenStyles";
+import Styles from "./Styles/RegisterScreenStyles";
 
 class Register extends Component {
     constructor (props) {
@@ -18,7 +18,6 @@ class Register extends Component {
             lastName:'',
             mobileNumber:'',
             visibleHeight: Metrics.screenHeight,
-            fontSize: 30
         };
     }
 
@@ -44,6 +43,7 @@ class Register extends Component {
         console.log(this.refs)
       }
     }
+<<<<<<< HEAD
 
     componentWillMount() {
 		// Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android
@@ -75,16 +75,18 @@ class Register extends Component {
 			fontSize: 30
 		});
     };
+=======
+>>>>>>> 4ba629f0d69f1a2c362c7154304c046a04711799
     
     render() {
         return (
-            <KeyboardAvoidingView
+            <ScrollView
                 contentContainerStyle={{ justifyContent: "center" }}
-                style={[Styles.container, { height: this.state.visibleHeight }]}
+                style={[Styles.container]}
                 keyboardShouldPersistTaps="never"
             >
             <View style={Styles.section}>
-                <Text style={[Styles.title, this.state.fontSize]}>
+                <Text style={[Styles.title]}>
                     Sign Up  
                 </Text>
             </View >
@@ -101,12 +103,8 @@ class Register extends Component {
                             autoCorrect={false}
                             onChangeText={(text) => this.setState({ email: text })}
                             underlineColorAndroid="transparent"
-                            onSubmitEditing={() => {
-                                this.lastName._root.focus();
-                              }}
-                            ref={ input => {
-                            this.inputs['one'] = input;
-                            }}
+                            //onSubmitEditing={() => { this.lastName._root.focus(); }}
+                            //ref={ input => { this.inputs['one'] = input; }}
                         />
                     </Item>
                     <Item floatingLabel>
@@ -121,10 +119,8 @@ class Register extends Component {
                             secureTextEntry
                             onChangeText={(text) => this.setState({ password: text })}
                             underlineColorAndroid="transparent"
-                            onSubmitEditing={() => {
-                                this.focusNextField('three');
-                              }}
-                            ref={ input => this.lastName = input}
+                            //onSubmitEditing={() => { this.focusNextField('three'); }}
+                            //ref={ input => this.lastName = input}
                         />
                     </Item>
                     <Item floatingLabel>
@@ -138,12 +134,8 @@ class Register extends Component {
                             autoCorrect={false}
                             onChangeText={(text) => this.setState({ firstName: text })}
                             underlineColorAndroid="transparent"
-                            onSubmitEditing={() => {
-                                this.focusNextField('four');
-                              }}
-                            ref={ input => {
-                            this.inputs['three'] = input;
-                            }}
+                            //onSubmitEditing={() => {this.focusNextField('four');}}
+                            //ref={ input => {this.inputs['three'] = input;}}
                         />
                     </Item>
                     <Item floatingLabel>
@@ -157,12 +149,8 @@ class Register extends Component {
                             autoCorrect={false}
                             onChangeText={(text) => this.setState({ lastName: text })}
                             underlineColorAndroid="transparent"
-                            onSubmitEditing={() => {
-                                this.focusNextField('five');
-                              }}
-                            ref={ input => {
-                            this.inputs['four'] = input;
-                            }}
+                            //onSubmitEditing={() => {this.focusNextField('five');}}
+                            //ref={ input => {is.inputs['four'] = input;}}
                         />
                     </Item>
                     <Item floatingLabel>
@@ -176,30 +164,26 @@ class Register extends Component {
                             autoCorrect={false}
                             onChangeText={(text) => this.setState({ mobileNumber: text })}
                             underlineColorAndroid="transparent"
-                            onSubmitEditing={(e) => this.userRegister(e)}
-                            ref={ input => {
-                                this.inputs['five'] = input;
-                            }}
+                            //onSubmitEditing={(e) => this.userRegister(e)}
+                            //ref={ input => {this.inputs['five'] = input;}}
                         />
                     </Item>
                 </Form>
                 <View style={[Styles.loginRow]}>
                     <Button 
-                        style={{ flex: 1, justifyContent: "center" }} 
-                        full 
+                        style={Styles.loginButton} 
                         onPress={(e) => this.userRegister(e)}>
                         <NBText style={Styles.loginText}>Register</NBText>
                     </Button>
                     <Button 
-                        style={{ flex: 1, justifyContent: "center" }} 
-                        full
+                        style={Styles.loginButton}
                         onPress={(e) => this.userLogout(e)}>
                         
                         <NBText style={Styles.loginText}>Cancel</NBText>
                     </Button>
                 </View>
             </View>
-        </KeyboardAvoidingView>
+        </ScrollView>
         );
     }
 }
