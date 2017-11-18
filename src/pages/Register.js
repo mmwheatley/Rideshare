@@ -18,8 +18,7 @@ class Register extends Component {
             firstName:'',
             lastName:'',
             mobileNumber:'',
-            PayPalLink:''
-
+            PayPalLink:'PayPal.Me/'
         };
     }
 
@@ -29,7 +28,7 @@ class Register extends Component {
     }
 
     userRegister(e) {
-        this.props.onRegister(this.state.email, this.state.password, this.state.firstName, this.state.lastName, this.state.mobileNumber);
+        this.props.onRegister(this.state.email, this.state.password, this.state.firstName, this.state.lastName, this.state.mobileNumber, this.state.PayPalLink);
         e.preventDefault();
     }
 
@@ -41,7 +40,6 @@ class Register extends Component {
         console.log(this.refs)
       }
     }
-
 
     render() {
         return (
@@ -126,7 +124,7 @@ class Register extends Component {
                     <Item floatingLabel>
                         <Label>PayPal Link</Label>
                         <Input
-                            value={this.state.mobileNumber} 
+                            value={this.state.PayPalLink} 
                             blurOnSubmit={ false }
                             keyboardType="default"
                             autoCapitalize="words"

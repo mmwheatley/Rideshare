@@ -406,6 +406,7 @@ export const gobacktoresult = () => {
     };
 };
 
+
 export const showDetailInfo = (item) => {
     return (dispatch) => {
         console.log('begin to show');
@@ -434,6 +435,7 @@ export const showDetailInfoPassenger = (item) => {
     return (dispatch) => {
         console.log('passenger detail');
         console.log(item);
+        console.log(item.driver.payment.paypal);
         dispatch({
             type: 'TOSHOWDETAILPASSENGER',
             item: item
