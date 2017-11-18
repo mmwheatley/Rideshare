@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/mark/Documents/GitHub/RideShare/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
-        "source": "/Users/mark/Documents/GitHub/RideShare/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "D:\\Users\\mark\\Documents\\GitHub\\RideShare\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Project\\Rideshare\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "D:\\Project\\Rideshare\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

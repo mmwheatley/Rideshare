@@ -2089,7 +2089,36 @@ containing a value of this type.
         public static final int common_google_signin_btn_text_light_normal_background=0x7f020050;
         public static final int googleg_disabled_color_18=0x7f020051;
         public static final int googleg_standard_color_18=0x7f020052;
-        public static final int notification_template_icon_bg=0x7f020053;
+        public static final int node_modules_reactnativedatepicker_date_icon=0x7f020053;
+        public static final int node_modules_reactnativeelements_src_rating_images_bell=0x7f020054;
+        public static final int node_modules_reactnativeelements_src_rating_images_heart=0x7f020055;
+        public static final int node_modules_reactnativeelements_src_rating_images_rocket=0x7f020056;
+        public static final int node_modules_reactnativeelements_src_rating_images_star=0x7f020057;
+        public static final int notification_template_icon_bg=0x7f020070;
+        public static final int src_images_bg=0x7f020058;
+        public static final int src_images_buttonbg=0x7f020059;
+        public static final int src_images_fastcar=0x7f02005a;
+        public static final int src_images_icons_backbutton=0x7f02005b;
+        public static final int src_images_icons_chevronright=0x7f02005c;
+        public static final int src_images_icons_closebutton=0x7f02005d;
+        public static final int src_images_icons_faqicon=0x7f02005e;
+        public static final int src_images_icons_hamburger=0x7f02005f;
+        public static final int src_images_icons_iconapitesting=0x7f020060;
+        public static final int src_images_icons_iconcomponents=0x7f020061;
+        public static final int src_images_icons_icondeviceinformation=0x7f020062;
+        public static final int src_images_icons_iconhome=0x7f020063;
+        public static final int src_images_icons_icontheme=0x7f020064;
+        public static final int src_images_icons_iconusageexamples=0x7f020065;
+        public static final int src_images_ignite_logo=0x7f020066;
+        public static final int src_images_ignitelogotransparent=0x7f020067;
+        public static final int src_images_ignitenb=0x7f020068;
+        public static final int src_images_ignitenbdark=0x7f020069;
+        public static final int src_images_launchicon=0x7f02006a;
+        public static final int src_images_r=0x7f02006b;
+        public static final int src_images_speedcar=0x7f02006c;
+        public static final int src_images_tile_bg=0x7f02006d;
+        public static final int src_images_top_logo=0x7f02006e;
+        public static final int src_images_yourapp=0x7f02006f;
     }
     public static final class id {
         public static final int action0=0x7f0d0063;
