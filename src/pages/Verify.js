@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, Text, View, Button } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
+import { Button, Text as NBText, Contant, Form, Item, Input, Label } from "native-base";
 import { goBack,verify, cleanError } from '../redux/actions/register';
 import { Hoshi } from 'react-native-textinput-effects';
 import { logout} from '../redux/actions/auth';
+
+import Styles from './Styles/VerifyScreenStyles';
 
 class Secured extends Component {
     constructor (props) {
@@ -35,23 +38,47 @@ class Secured extends Component {
 
     render() {
         return (
-            <ScrollView style={{padding: 20}}>
-                <Text style={{fontSize: 27}}>
-                    {`please check your mailbox and input verification code`}
-                </Text>
-                <Hoshi
-                  label={'verification code'}
-                  borderColor={'#b76c94'}
-                  backgroundColor={'#FFF'}
-                  autoCorrect={false}
-                  keyboardType='number-pad'
-                  autoCapitalize='none'
-                  onChangeText={(text) => this.setState({ code: text })}
-                  />
-                <View style={{margin: 20}}/>
-                <Button onPress={(e) => this.verify(e)} title="verify"/>
-                <Button onPress={(e) => this.userGoBack(e)} title="back to previous page"/>
-            </ScrollView>
+            <ScrollView style={[Styles.container]}>
+                <View style={Styles.section}>
+                    <Text style={[Styles.title]}>
+                        Verification
+                    </Text>
+                </View >
+                <View style={Styles.form}>
+                    <View style={Styles.textRow}>
+                    <Text style={Styles.paraText}>
+                    We've sent a verification code to your email address.
+                    Please check your inbox and enter the code below.
+                    </Text>
+                    </View>
+                    <Form>
+                        <Item floatingLabel>
+                            <Label>Code</Label>
+                            <Input
+                                value={this.state.email}
+                                blurOnSubmit={ false }
+                                keyboardType='numeric'
+                                autoCapitalize="none"
+                                autoCorrect={false}
+                                onChangeText={(text) => this.setState({ code: text })}
+                                underlineColorAndroid="transparent"
+                            />
+                        </Item>
+                    </Form>
+                    <View style={[Styles.loginRow]}>
+                        <Button 
+                            style={Styles.loginButton} 
+                            onPress={(e) => this.verify(e)}>
+                            <NBText style={Styles.loginText}>Verify</NBText>
+                        </Button>
+                        <Button 
+                            style={Styles.loginButton} 
+                            onPress={(e) => this.userGoBack(e)}>
+                            <NBText style={Styles.loginText}>Cancel</NBText>
+                        </Button>
+                    </View>
+                </View>
+        </ScrollView>
         );
     }
 }

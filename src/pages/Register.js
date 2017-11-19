@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, Text, TextInput, View, TouchableOpacity, Image, Keyboard, LayoutAnimation, KeyboardAvoidingView } from 'react-native';
+import { ScrollView, View, Text, Image, Keyboard, LayoutAnimation, KeyboardAvoidingView } from 'react-native';
 import { logout} from '../redux/actions/auth';
 import { register, cleanError} from '../redux/actions/register';
 
