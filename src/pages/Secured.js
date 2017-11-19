@@ -6,8 +6,8 @@ import { logout } from '../redux/actions/auth';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
 import Moment from 'moment';
-import {Container,Header,Title,Content,Button,Footer,FooterTab,Text as NBText,Body,Left,Right,Icon,Badge} from "native-base";
-import Styles from "./Styles/locatorStyles";
+import {Container,Header,Title,Content,Button,Footer,FooterTab,Text as NBText,Body,Left,Right,Icon,Badge,Form, Item, Input, Label } from "native-base";
+import Styles from "./Styles/SecuredScreenStyles";
 
 import Locator from "./Locator";
 
@@ -16,8 +16,8 @@ class Main extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            pick_up_location:'459 hazel street, waterloo, ON',
-            drop_off_location:'27 King\'s College Circle Toronto, Ontario M5S 1A1 Canada',
+            pick_up_location:'',
+            drop_off_location:'',
             departDate:''
         };
     }
@@ -72,7 +72,7 @@ class Main extends Component {
                     <Header>
                     <Left>
                         <Button transparent onPress={(e) => this.logoutAndBackToLoginPage(e)}>
-                        <Icon name="body" />
+                        <Icon name="log-out" />
                         </Button>
                     </Left>
                     <Body>
@@ -83,87 +83,100 @@ class Main extends Component {
                     </Right>
                     </Header>
 
-                <Content>
-                    <ScrollView keyboardShouldPersistTaps="always">
-                        <Kaede
-                            label={'Pick Up'}
-                            autoCorrect={false}
-                            autoCapitalize='none'
-                            value={this.state.pick_up_location} 
-                            onChangeText={(text) => this.setState({ pick_up_location: text })}
-                        />
-                        <Kaede
-                            label={'Drop Off'}
-                            style = {{marginTop: 4}}
-                            autoCorrect={false}
-                            autoCapitalize='none'
-                            value={this.state.drop_off_location} 
-                            onChangeText={(text) => this.setState({ drop_off_location: text })}
-                        />
+                    <View style={Styles.container}>
+                        <Locator />
+
+                    <View style={Styles.serachBox}>
+                    <View 
+                        keyboardShouldPersistTaps="never"
+                        style={Styles.form}>
+                        <Form>
+                            <Item>
+                                <Icon active name='ios-search' />
+                                <Input placeholder="Pick up"
+                                    value={this.state.pick_up_location} 
+                                    keyboardType="default"
+                                    autoCapitalize="none"
+                                    autoCorrect={false}
+                                    onChangeText={(text) => this.setState({ pick_up_location: text })}
+                                    underlineColorAndroid="transparent"
+
+                                />
+                            </Item>
+                            <Item last>
+                                <Icon active name='ios-search' />
+                                <Input placeholder="Drop off"
+                                    value={this.state.drop_off_location} 
+                                    keyboardType="default"
+                                    autoCapitalize="none"
+                                    autoCorrect={false}
+                                    onChangeText={(text) => this.setState({ drop_off_location: text })}
+                                    underlineColorAndroid="transparent"
+
+                                />
+                            </Item>
+                        </Form>
                         <DatePicker
                             style={{width: 320, marginTop: 4}}
                             date={this.state.departDate}
 
                             mode="datetime"
-                            placeholder="select departure time"
+                            placeholder="Departure time"
                             format='YYYY-MM-DD HH:mm'
                             minDate="2017-11-01"
                             maxDate="2018-11-01"
                             confirmBtnText="Confirm"
                             cancelBtnText="Cancel"
                             customStyles={{
-                              dateIcon: {
-                                position: 'absolute',
-                                left: 0,
-                                top: 4,
-                                marginLeft: 0
-                              },
-                              dateInput: {
-                                marginLeft: 36
-                              }
-                            }}
+                                dateIcon: {
+                                    position: 'absolute',
+                                    left: 0,
+                                    top: 4,
+                                    marginLeft: 0
+                                  },
+                                  dateInput: {
+                                    marginLeft: 36
+                                  }
+                                }}
                             onDateChange={(date) => {this.setState({departDate: date})}}
                           />
-
                         <View style={[Styles.loginRow]}>
                             <Button 
                                 style={Styles.loginButton} 
-                                //full 
                                 onPress={(e) => this.searchRideshare(e)}>
                                 <NBText style={Styles.loginText}>Search</NBText>
                             </Button>
                             <Button 
                                 style={Styles.loginButton} 
-                                //full
                                 onPress={(e) => this.postRideshare(e)}>
-                                
                                 <NBText style={Styles.loginText}>Post</NBText>
                             </Button>
                         </View>
-                        <View style={[Styles.map]}>
-                            <Locator />
-                        </View>
-                    </ScrollView>
-                </Content>
+                    </View>
+                    </View>
+                    </View>
+               
+
+                
 
                 <Footer>
                   <FooterTab>
                     <Button onPress={(e) => this.toHistory(e)}>
-                      <Icon name="paper" style={{ color: "brown" }} />
-                      <Text>History</Text>
+                      <Icon name="paper"/>
+                      <NBText>History</NBText>
                     </Button>
                     <Button onPress={(e) => this.toProfile(e)}>
-                      <Icon name="person" style={{ color: "brown" }} />
-                      <Text>Profile</Text>
+                      <Icon name="person"/>
+                      <NBText>Profile</NBText>
                     </Button>
                     <Button  badge vertical onPress={(e) => this.toChatList(e)}>
                       <Badge ><Text>1</Text></Badge>
-                      <Icon  name="chatbubbles" style={{ color: "brown" }} />
-                      <Text>Chat</Text>
+                      <Icon  name="chatbubbles"/>
+                      <NBText>Chat</NBText>
                     </Button>
                     <Button onPress={() => this.toggleTab4()}>
-                      <Icon name="logo-github" style={{ color: "brown" }} />
-                      <Text>Help</Text>
+                      <Icon name="logo-github"/>
+                      <NBText>Help</NBText>
                     </Button>
                   </FooterTab>
                 </Footer>
