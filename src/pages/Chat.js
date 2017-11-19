@@ -1,55 +1,56 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { ScrollView,Text, View } from "react-native";
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
-
-import { Images, Colors  } from "../Themes";
-
-// Styles
-import styles from "./Styles/LaunchScreenStyles";
-
-//reducers
-import { tochatlist } from '../redux/actions/core';
+import { GiftedChat } from 'react-native-gifted-chat';
 
 class Chat extends Component {
-    toChatList (e) {
-        console.log('to chat list!!')
-        this.props.toChatList();
-        e.preventDefault();
-    }
+  state = {
+    messages: [],
+  };
 
-    render() {
-        return (
-          <Container>
-            <Header>
-              <Left>
-                <Button transparent onPress={(e) => this.toChatList(e)}>
-                  <Icon name='arrow-back' />
-                </Button>
-              </Left>
-              <Body>
-                <Title>Chat Page</Title>
-              </Body>
-              <Right>
-              </Right>
-            </Header>
+  componentWillMount() {
+    this.setState({
+      messages: [
+        {
+          _id: 1,
+          text: 'Hello developer',
+          createdAt: new Date(),
+          user: {
+            _id: 2,
+            name: 'Erlie Shang',
 
-            <Content>
-                <ScrollView style={styles.container}>
+          },
+        },
+        {
+          _id: 2,
+          text: 'This is a system message',
+          createdAt: new Date(),
+          system: true,
+          // Any additional custom parameters are passed through
+        },
+      ],
+    });
+  }
 
-                    <View style={styles.section}>
-                        <Text style={styles.title}>
-                            RideShare Chat Page
-                            
-                        </Text>
-                    </View >
-                </ScrollView>
-            </Content>
-          </Container>
-        );
+  onSend(messages = []) {
+    this.setState((previousState) => ({
+      messages: GiftedChat.append(previousState.messages, messages),
+    }),()=> {console.log(this.state.messages)});
+  }
 
-    }
+  render() {
+    return (
+      <GiftedChat
+        messages={this.state.messages}
+        onSend={(messages) => this.onSend(messages)}
+        user={{
+          _id: 1,
+        }}
+      />
+    );
+  }
+
 }
+
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -58,7 +59,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        toChatList: () => {dispatch(tochatlist())}
     }
 }
 

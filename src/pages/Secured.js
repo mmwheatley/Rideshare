@@ -16,8 +16,8 @@ class Main extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            pick_up_location:'',
-            drop_off_location:'',
+            pick_up_location:'459 hazel street, waterloo, ON',
+            drop_off_location:'27 King\'s College Circle Toronto, Ontario M5S 1A1 Canada',
             departDate:''
         };
     }
