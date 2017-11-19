@@ -30,8 +30,8 @@ class Main extends Component {
 
     searchRideshare (e) {
         console.log('Pressed!!')
-        if (!this.state.departDate){
-            alert("please input departure time");
+        if (!this.state.departDate || !this.state.pick_up_location || !this.state.drop_off_location){
+            alert("please input all the needed infomation to search");
         }
         else{
             this.props.cleanData();
@@ -145,6 +145,11 @@ class Main extends Component {
                                 style={Styles.loginButton} 
                                 onPress={(e) => this.searchRideshare(e)}>
                                 <NBText style={Styles.loginText}>Search</NBText>
+                            </Button>
+                            <Button 
+                                style={Styles.BigButton} 
+                                onPress={(e) => this.postRideshare(e)}>
+                                <NBText style={Styles.loginText}>External Rideshares</NBText>
                             </Button>
                             <Button 
                                 style={Styles.loginButton} 

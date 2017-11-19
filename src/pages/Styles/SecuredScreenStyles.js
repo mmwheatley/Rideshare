@@ -27,9 +27,16 @@ const styles = StyleSheet.create({
         flex: 1
       },
       loginButton: {
+        width: '28%',
+        justifyContent: "center",
+        marginRight: 10,
+        padding: 2,
+      },
+      BigButton: {
         width: '40%',
         justifyContent: "center",
-        padding: 6,
+        marginRight: 10,
+        padding: 2,
       },
       form: {
         backgroundColor: Colors.snow,
