@@ -29,7 +29,7 @@ android/.idea
 android/.gradle
 android/local.properties
 *.iml
- android/app/build
+android/app/build
 
 # node.js
 #
