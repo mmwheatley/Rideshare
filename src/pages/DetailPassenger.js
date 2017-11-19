@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, FlatList, Image } from 'react-native';
-import { tomain, goToChatPage, askForJoinIn, cleandata, tohistory, makedecide} from '../redux/actions/core';
+import { View, FlatList, Image, Linking } from 'react-native';
+import { tomain, goToChatPage, askForJoinIn, cleandata, tohistory, makedecide, topay} from '../redux/actions/core';
 import { Container, Header, Left, Text, Body,Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 import Moment from 'moment';
 import styles from "./Styles/LaunchScreenStyles";
@@ -27,6 +27,34 @@ class Result extends Component {
         console.log('go to chat page')
         this.props.toChat();
         e.preventDefault();
+    }
+
+    call (e) {
+        const url = "telprompt:"+this.state.tel;
+        console.log(url);
+        Linking.canOpenURL(url).then(supported => {
+          if (!supported) {
+            console.log('Can\'t handle url: ' + url);
+          } else {
+            return Linking.openURL(url);
+          }
+        }).catch(err => console.error('An error occurred', err));
+
+    }
+
+    pay (e) {
+        const url = "http://"+this.props.item.driver.payment.paypal+'/'+this.props.item.price;
+        console.log(url);
+        // this.props.toPay(this.props.item.driver.payment.paypal);
+        // e.preventDefault();
+        Linking.canOpenURL(url).then(supported => {
+          if (!supported) {
+            console.log('Can\'t handle url: ' + url);
+          } else {
+            return Linking.openURL(url);
+          }
+        }).catch(err => console.error('An error occurred', err));
+
     }
 
     decide (dec, ride_id, application_id) {
@@ -78,7 +106,7 @@ class Result extends Component {
                     <ListItem>
                         <Text>Driver: {this.props.item.driver.firstName} {this.props.item.driver.lastName}</Text>
                     </ListItem>
-                    <ListItem>
+                    <ListItem onPress={(e) => this.call(e)}>
                         <Text>Tel Number: {this.state.tel}</Text>
                     </ListItem>
                     <ListItem>
@@ -167,6 +195,7 @@ const mapDispatchToProps = (dispatch) => {
         toHistoryPage: (token) => {dispatch(tohistory(token))},
         cleanData: () => {dispatch(cleandata())},
         toChat: () => {dispatch(goToChatPage()); },
+        toPay: (link) => {dispatch(topay(link));},
         toDecide: (token, dec, ride_id, application_id) => {dispatch(makedecide(token, dec, ride_id, application_id)); },
         askJoin: (token, item) => {dispatch(askForJoinIn(token, item)); }
 

@@ -53,6 +53,7 @@ export const goBack = () => {
 export const register = (email, password, firstName, lastName, mobileNumber, PayPalLink) => {
 	return (dispatch) => {
         console.log('start register')
+        console.log(email, password, firstName, lastName, mobileNumber, PayPalLink)
 
         fetch('https://rideshare-carpool.herokuapp.com/users/register', {
             method: 'POST',
@@ -69,9 +70,9 @@ export const register = (email, password, firstName, lastName, mobileNumber, Pay
                 paypal: PayPalLink
             })
         }).then((response) => {
-            console.log(response);
 
             response.json().then(data => {
+                console.log(data)
                 switch (data.code) {
                     case 0: //no_error
                         console.log('SUCCESS!!');
