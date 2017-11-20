@@ -17,6 +17,7 @@ import Profile from './userProfile';
 import Modify from './ModifyInfo';
 import Password from './ChangePassword';
 import Driver from './DriverInfo';
+import Help from './Help';
 
 
 class Application extends Component {
@@ -54,6 +55,8 @@ class Application extends Component {
                         return <Password />;
                     case 'driverinfo':
                         return <Driver />;
+                    case 'help':
+                        return <Help />;
                 }
             case 'registerPage':
                 switch (this.props.navi_register){
