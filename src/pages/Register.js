@@ -48,10 +48,8 @@ class Register extends Component {
                 style={[Styles.container]}
                 resetScrollToCoords={{ x: 0, y: 0 }}
                 scrollOffset = {50}
-                // contentContainerStyle={[Styles.container]}
-                scrollEnabled={false}
+                scrollEnabled={true}
                 keyboardShouldPersistTaps="never"
-                enableOnAndroid={true}
             >
             <View style={Styles.section}>
                 <Text style={[Styles.title]}>
@@ -148,7 +146,7 @@ class Register extends Component {
                     </Button>
                 </View>
             </View>
-        </KeyboardAwareScrollView>
+            </KeyboardAwareScrollView>
         );
     }
 }
