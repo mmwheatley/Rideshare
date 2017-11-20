@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ScrollView, View,Text} from 'react-native';
-import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage} from '../redux/actions/core';
+import { ScrollView, View,Text, Keyboard} from 'react-native';
+import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage, toHelp} from '../redux/actions/core';
 import { logout } from '../redux/actions/auth';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
@@ -18,7 +18,8 @@ class Main extends Component {
         this.state = {
             pick_up_location:'459 hazel street, waterloo, ON',
             drop_off_location:'27 King\'s College Circle Toronto, Ontario M5S 1A1 Canada',
-            departDate:''
+            departDate:'',
+            showFooter: true
         };
     }
 
@@ -64,6 +65,29 @@ class Main extends Component {
         this.props.cleanData();
         this.props.toHistoryPage(this.props.token);
         e.preventDefault();
+    }
+    toHelp (e) {
+        console.log('to help page!')
+        this.props.toHelpPage(this.props.token);
+        e.preventDefault();
+    }
+
+
+    componentWillMount () {
+        this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
+        this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this));
+    }
+
+    componentWillUnmount () {
+        this.keyboardDidShowListener.remove();
+        this.keyboardDidHideListener.remove();
+    }
+    _keyboardDidShow () {
+        this.setState({showFooter: false});
+    }
+
+    _keyboardDidHide () {
+        this.setState({showFooter: true});
     }
 
     render() {
@@ -162,9 +186,8 @@ class Main extends Component {
                     </View>
                
 
-                
-
-                <Footer>
+                {this.state.showFooter &&
+                <Footer >   
                   <FooterTab>
                     <Button onPress={(e) => this.toHistory(e)}>
                       <Icon name="paper"/>
@@ -179,12 +202,13 @@ class Main extends Component {
                       <Icon  name="chatbubbles"/>
                       <NBText>Chat</NBText>
                     </Button>
-                    <Button onPress={() => this.toggleTab4()}>
+                    <Button onPress={(e) => this.toHelp(e)}>
                       <Icon name="logo-github"/>
                       <NBText>Help</NBText>
                     </Button>
                   </FooterTab>
                 </Footer>
+                }
               </Container>
             
         );
@@ -206,6 +230,7 @@ const mapDispatchToProps = (dispatch) => {
         logout: () => {dispatch(logout())},
         toChatList: () => {dispatch(tochatlist())},
         toHistoryPage: (token) => {dispatch(tohistory(token))},
+        toHelpPage: (token) => {dispatch(toHelp(token))},
         toResultPage: (token, pick_up_location,drop_off_location,departDate) => { dispatch(getresult(token, pick_up_location,drop_off_location,departDate)); }
     }
 }
