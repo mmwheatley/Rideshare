@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { ScrollView,Text, View } from "react-native";
-import { Container, ScrollableTab, Tabs, Tab, Header, Left, Body, Right, Button, Icon, Segment,Title, Content, List, ListItem} from 'native-base';
+import { ScrollView, View } from "react-native";
+import { Container, ScrollableTab, Tabs, Tab, Text, Header, Left, Body, Right, Button, Icon, Segment,Title, Content, List, ListItem} from 'native-base';
 import { Images, Colors  } from "../Themes";
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
 import TabThree from "./tabThree";
 import TabFour from "./tabFour";
 // Styles
-import styles from "./Styles/LaunchScreenStyles";
+import styles from "./Styles/HistoryStyles";
 
 //reducers
 import { launchLogin, onRegister} from '../redux/actions/auth';
@@ -37,7 +37,7 @@ class Launch extends React.Component {
 
     render() {
         return (
-            <Container >
+            <Container style={styles.container} >
               <Header hasTabs>
                 <Left>
                   <Button transparent onPress={(e) => this.backToMain(e)}>
@@ -51,14 +51,14 @@ class Launch extends React.Component {
                       active={this.state.seg === 1 ? true : false}
                       onPress={() => this.setState({ seg: 1 })}
                     >
-                      <Text>Driver</Text>
+                      <Text style={styles.text}>Driver</Text>
                     </Button>
                     <Button
-                      last
+                      second
                       active={this.state.seg === 2 ? true : false}
                       onPress={() => this.setState({ seg: 2 })}
                     >
-                      <Text>Passenger</Text>
+                      <Text style={styles.text}>Rider</Text>
                     </Button>
                   </Segment>
                 </Body>
@@ -69,7 +69,7 @@ class Launch extends React.Component {
                 </Right>
               </Header>
 
-              <Content padder>
+             
                 {this.state.seg === 1 &&
                   <Tabs>
                     <Tab heading="Unprocessed">
@@ -88,7 +88,7 @@ class Launch extends React.Component {
                       <TabFour />
                     </Tab>
                   </Tabs>}
-            </Content>
+
             </Container>
         );
 
