@@ -39,6 +39,8 @@ export default function reducer(state = defaultState, action) {
           return {...state, navi_core:'main'};     
         case 'TOPOSTPAGE':
           return {...state, navi_core:'post'}; 
+        case 'TOHELPPAGE':
+          return {...state, navi_core:'help'}
         case 'TOMAIN':
           return {...state, navi_core:'main'};  
         case 'GETRESULT':

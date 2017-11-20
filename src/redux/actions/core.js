@@ -535,6 +535,12 @@ export const todriverinfo = () => {
     };
 };
 
+export const toHelp = () => {
+    return {
+        type: 'TOHELPPAGE'
+    };
+};
+
 export const tochangepassword = () => {
     return {
         type: 'CHANGEPASSWORD'
