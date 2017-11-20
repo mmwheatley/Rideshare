@@ -35,7 +35,7 @@ class Result extends Component {
       return (
         
           <Container>
-             <Content>
+             <Content padder>
               <List
                 dataArray={this.props.data_array}
                 renderRow={data =>
