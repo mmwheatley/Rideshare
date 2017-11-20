@@ -5,6 +5,7 @@ import { loginUser, cleanError, onRegister, logout } from '../redux/actions/auth
 
 import { Button, Text as NBText, Contant, Form, Item, Input, Label } from "native-base";
 import { Images, Metrics } from "../Themes";
+import Alert from './AlertModal';
 import Styles from "./Styles/LoginScreenStyles";
 
 class Login extends Component {
@@ -13,8 +14,8 @@ class Login extends Component {
         this.state = {
             email: 'uwzhuboyuan@gmail.com',
             password: '123',
-            visibleHeight: Metrics.screenHeight,
         };   
+        this.alert = false;
     }
 
     userLogin (e) {
@@ -36,6 +37,7 @@ class Login extends Component {
     componentDidUpdate (prevProps) {
       if (this.props.sysAlert != '' && this.props.errorFlag) {
         alert(this.props.sysAlert);
+        //this.alert = true;
         this.props.cleanErrorStatus();
       }
     }
@@ -76,6 +78,7 @@ class Login extends Component {
 	};
 
     render() {
+        // TODO add alert modal. Debug AlertModal.js
         return (
             <ScrollView
                 contentContainerStyle={{ justifyContent: "center" }}
@@ -83,6 +86,8 @@ class Login extends Component {
                 keyboardShouldPersistTaps="always"
             >
                 <Image source={Images.fastcar} style={[Styles.anotherLogo, this.state.topLogo]} />
+
+
                 <View style={Styles.form}>
                     <Form>
                         <Item floatingLabel>
@@ -94,15 +99,15 @@ class Login extends Component {
                                 autoCorrect={false}
                                 onChangeText={this.handleChangeUsername}
                                 underlineColorAndroid="transparent"
-
+                                returnKeyType="next"
+                                //onSubmitEditing={() => this.password.focus()}
                             />
                         </Item>
                         <Item floatingLabel>
                             <Label>Password</Label>
                             <Input
                                 value={this.state.password}
-                                // ref='passwordInput' 
-                                ref={(input) => { this.passwordInput = input; }}
+                                ref= {password=>this.password = password}
                                 keyboardType="default"
                                 returnKeyType="go"
                                 autoCapitalize="none"
