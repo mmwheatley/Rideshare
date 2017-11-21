@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         flex: 1
       },
       loginButton: {
-        width: '28%',
+        width: '40%',
         justifyContent: "center",
         marginRight: 10,
         padding: 2,

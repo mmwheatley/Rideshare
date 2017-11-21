@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, FlatList, Image } from 'react-native';
 import { showDetailInfoDriver} from '../redux/actions/core';
-import { tomain } from '../redux/actions/core';
 import Moment from 'moment';
 import {
   Container,
@@ -32,8 +31,7 @@ class Result extends Component {
     }
 
     render() {
-      return (
-        
+      return (     
           <Container>
              <Content padder>
               <List
@@ -52,8 +50,6 @@ class Result extends Component {
                   </ListItem>}
               />
             </Content>
-
-
           </Container>
       );
     }

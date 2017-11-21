@@ -1,6 +1,21 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { GiftedChat } from 'react-native-gifted-chat';
+import { tomain } from '../redux/actions/core';
+import {
+  Container,
+  Header,
+  Title,
+  Content,
+  Button,
+  Icon,
+  Left,
+  Right,
+  Body,
+  Text,
+  Subtitle
+} from "native-base";
+
 
 class Chat extends Component {
   state = {
@@ -12,7 +27,7 @@ class Chat extends Component {
       messages: [
         {
           _id: 1,
-          text: 'Hello developer',
+          text: 'Hello, can I book a seat from Waterloo to Markham tomorrow?',
           createdAt: new Date(),
           user: {
             _id: 2,
@@ -20,32 +35,48 @@ class Chat extends Component {
 
           },
         },
-        {
-          _id: 2,
-          text: 'This is a system message',
-          createdAt: new Date(),
-          system: true,
-          // Any additional custom parameters are passed through
-        },
       ],
     });
   }
 
-  onSend(messages = []) {
+  backToMain (e) {
+      console.log('gonna go back to main');
+      this.props.goBackToMain();
+      e.preventDefault();
+  }
+
+  onSend(message = []) {
     this.setState((previousState) => ({
-      messages: GiftedChat.append(previousState.messages, messages),
+      messages: GiftedChat.append(previousState.messages, message),
     }),()=> {console.log(this.state.messages)});
   }
 
   render() {
     return (
-      <GiftedChat
-        messages={this.state.messages}
-        onSend={(messages) => this.onSend(messages)}
-        user={{
-          _id: 1,
-        }}
-      />
+        <Container>
+          <Header>
+            <Left>
+              <Button transparent onPress={(e) => this.backToMain(e)}>
+                <Icon name='arrow-back' />
+              </Button>
+            </Left>
+            <Body>
+              <Title>chat</Title>
+            </Body>
+            <Right>
+
+            </Right>
+          </Header>
+
+           <GiftedChat
+            messages={this.state.messages}
+            onSend={(message) => this.onSend(message)}
+            user={{
+              _id: 1,
+            }}
+          />
+
+        </Container>
     );
   }
 
@@ -54,12 +85,16 @@ class Chat extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        data_array : state.core.data
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        detail: (item) => {dispatch(showDetailInfo(item))},
+        goBackToMain: () => {dispatch(tomain()); }
     }
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Chat);

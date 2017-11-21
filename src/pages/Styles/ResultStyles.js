@@ -6,6 +6,6 @@ export default StyleSheet.create({
     backgroundColor: "#fff"
   },
   text: {
-    fontSize: 11
+    fontSize: 11,
   },
 });

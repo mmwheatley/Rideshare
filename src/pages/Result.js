@@ -1,26 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { View, FlatList, Image } from 'react-native';
-import { List, ListItem } from "react-native-elements";
-import { showDetailInfo} from '../redux/actions/core';
-import { tomain } from '../redux/actions/core';
-import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Button,
-  Icon,
-  Left,
-  Right,
-  Body,
-  Text,
-  Subtitle
-} from "native-base";
+import { ScrollView, View,FlatList, Image } from "react-native";
+import { Container, ScrollableTab, Tabs, Tab, Text, Header, Left, Body, Right, Button, Icon, Segment,Title, Content, ListItem as LI, List as L} from 'native-base';
+import { Images, Colors  } from "../Themes";
+// Styles
+import styles from "./Styles/ResultStyles";
 
-class Result extends Component {
+//reducers
+import { tomain, showDetailInfo} from '../redux/actions/core';
+
+class Launch extends Component {
     constructor(props) {
-        super(props);
+      super(props);
+      this.state = {
+        seg: 1
+      };
     }
 
     backToMain (e) {
@@ -35,44 +29,90 @@ class Result extends Component {
     }
 
     render() {
-      return (
-        
-          <Container>
-            <Header>
-              <Left>
-                <Button transparent onPress={(e) => this.backToMain(e)}>
-                  <Icon name='arrow-back' />
-                </Button>
-              </Left>
-              <Body>
-                <Title>Search Result</Title>
-              </Body>
-              <Right>
+        return (
+            <Container style={styles.container} >
+              <Header hasTabs>
+                <Left>
+                  <Button transparent onPress={(e) => this.backToMain(e)}>
+                    <Icon name="arrow-back" />
+                  </Button>
+                </Left>
+                <Body>
+                  <Segment>
+                    <Button
+                      first
+                      active={this.state.seg === 1 ? true : false}
+                      onPress={() => this.setState({ seg: 1 })}
+                    >
+                      <Text style={styles.text}>This App</Text>
+                    </Button>
+                    <Button
+                      second
+                      active={this.state.seg === 2 ? true : false}
+                      onPress={() => this.setState({ seg: 2 })}
+                    >
+                      <Text style={styles.text}>Outside</Text>
+                    </Button>
+                  </Segment>
+                </Body>
+                <Right>
+                </Right>
+              </Header>
 
-              </Right>
-            </Header>
 
-            <Content>
-              <List>
-                <FlatList
-                  data={this.props.data_array}
-                  renderItem={({ item }) => (
-                    <ListItem
-                      // roundAvatar
-                      title={`${item.driver.firstName} ${item.driver.lastName}    Rate:${item.driver.score}`}
-                      subtitle={`price:${item.price}      seats available:${item.totalSeats}`}
-                      onPress={ () => this.showDetail(item) }
-                    />
-                  )}
-                  keyExtractor={item => item._id}
-                />
-              </List>
-            </Content>
-          </Container>
-      );
+                <Content padder>
+                  {this.state.seg === 1 &&
+                    <Content>
+                       <Content padder>
+                        <L
+                          dataArray={this.props.data_array}
+                          renderRow={data =>
+                            <LI avatar onPress={ () => this.showDetail(data) }>
+                              <Left>
+
+                              </Left>
+                              <Body>
+                                <Text>{`Driver: ${data.driver.firstName} ${data.driver.lastName}`}</Text>
+                                <Text note>{`price:${data.price}      seats available:${data.totalSeats}`}</Text>
+                              </Body>
+                              <Right>
+                                <Text note>{`Rate:${data.driver.score}`}</Text>
+                              </Right>
+                            </LI>}
+                        />
+                      </Content>
+                    </Content>
+                  }
+                  {this.state.seg === 2 &&
+                    <Content>
+                       <Content padder>
+                        <L
+                          dataArray={this.props.data_array}
+                          renderRow={data =>
+                            <LI avatar onPress={ () => this.showDetail(data) }>
+                              <Left>
+
+                              </Left>
+                              <Body>
+                                <Text>{`Driver: ${data.driver.firstName} ${data.driver.lastName}`}</Text>
+                                <Text note>{`price:${data.price}      seats available:${data.totalSeats}`}</Text>
+                              </Body>
+                              <Right>
+                                <Text note>{`Rate:${data.driver.score}`}</Text>
+                              </Right>
+                            </LI>}
+                        />
+                      </Content>
+                    </Content>
+                  }
+                </Content>
+
+
+            </Container>
+        );
+
     }
 }
-
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -82,9 +122,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        detail: (item) => {dispatch(showDetailInfo(item))},
-        goBackToMain: () => {dispatch(tomain()); }
+        goBackToMain: () => {dispatch(tomain())},
+        detail: (item) => {dispatch(showDetailInfo(item))}
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Result);
+export default connect(mapStateToProps, mapDispatchToProps)(Launch);
