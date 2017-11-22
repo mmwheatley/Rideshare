@@ -25,9 +25,10 @@ var found = false;
 var SEARCH_WORD = [];
 
 
-//module.exports = function crawler(options) {
+module.exports = function crawler(options) {
 
-function crawler(options) 
+//function crawler(options) 
+
 {
 
 var origin = options.start_city;
