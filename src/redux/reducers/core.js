@@ -5,8 +5,13 @@ const defaultState = {
     undriver: [],
     alldriver: [],
     unpassenger: [],
+    chatdata: [],
     allpassenger: [],
-    userinfo:[]
+    userinfo:[],
+    userID:'',
+    chatterID:'',
+    chatterFirstName: '',
+    chatterLastName: '',
 };
 
 export default function reducer(state = defaultState, action) {
@@ -27,12 +32,12 @@ export default function reducer(state = defaultState, action) {
           return {...state, navi_core:'history'}
         case 'TOPROFILE':
           return {...state, navi_core:'profile', userinfo: action.item}
-        case 'TOCHATLIST':
-          return {...state, navi_core:'chatlist'}
+        case 'SAVEUSERID':
+          return {...state, userID: action.id}
         case 'TOCHATPAGE':
-          return {...state, navi_core:'chatpage'}
+          return {...state, navi_core:'chatpage', chatterID: action.chatterID, chatterFirstName: action.chatterFirstName, chatterLastName: action.chatterLastName,}
         case 'CLEAN':
-          return {...state, data : [], undriver: [], alldriver: [], unpassenger: [], allpassenger: []}
+          return {...state, chatdata: [], data: [], undriver: [], alldriver: [], unpassenger: [], allpassenger: []}
         case 'GOBACKTORESULT':
           return {...state, navi_core:'result'}
         case 'POST_SUCCESS':
@@ -42,7 +47,12 @@ export default function reducer(state = defaultState, action) {
         case 'TOHELPPAGE':
           return {...state, navi_core:'help'}
         case 'TOMAIN':
-          return {...state, navi_core:'main'};  
+          return {...state, navi_core:'main'}; 
+        case 'TOCHATLIST':
+          return {...state, 
+                    navi_core:'chatlist',
+                    chatdata: state.data.concat(action.chat_user_data)
+                  };
         case 'GETRESULT':
           return {...state, 
                     navi_core:'result', 

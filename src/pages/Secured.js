@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, View,Text, Keyboard} from 'react-native';
-import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage, toHelp} from '../redux/actions/core';
+import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage, toHelp, getuserID} from '../redux/actions/core';
 import { logout } from '../redux/actions/auth';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
@@ -50,7 +50,8 @@ class Main extends Component {
 
     toChatList (e) {
         console.log('to chat list!!')
-        this.props.toChatList();
+        this.props.cleanData();
+        this.props.toChatList(this.props.token);
         e.preventDefault();
     }
 
@@ -75,7 +76,8 @@ class Main extends Component {
 
     componentWillMount () {
         this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
-        this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this));
+        this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this))
+        this.props.getuserID(this.props.token);
     }
 
     componentWillUnmount () {
@@ -124,7 +126,6 @@ class Main extends Component {
                                     autoCorrect={false}
                                     onChangeText={(text) => this.setState({ pick_up_location: text })}
                                     underlineColorAndroid="transparent"
-
                                 />
                             </Item>
                             <Item last>
@@ -136,7 +137,6 @@ class Main extends Component {
                                     autoCorrect={false}
                                     onChangeText={(text) => this.setState({ drop_off_location: text })}
                                     underlineColorAndroid="transparent"
-
                                 />
                             </Item>
                         </Form>
@@ -180,32 +180,30 @@ class Main extends Component {
                     </View>
                     </View>
                
-
                 {this.state.showFooter &&
-                <Footer >   
-                  <FooterTab>
-                    <Button onPress={(e) => this.toHistory(e)}>
-                      <Icon name="paper"/>
-                      <NBText>History</NBText>
-                    </Button>
-                    <Button onPress={(e) => this.toProfile(e)}>
-                      <Icon name="person"/>
-                      <NBText>Profile</NBText>
-                    </Button>
-                    <Button  badge vertical onPress={(e) => this.toChatList(e)}>
-                      <Badge ><Text>1</Text></Badge>
-                      <Icon  name="chatbubbles"/>
-                      <NBText>Chat</NBText>
-                    </Button>
-                    <Button onPress={(e) => this.toHelp(e)}>
-                      <Icon name="logo-github"/>
-                      <NBText>Help</NBText>
-                    </Button>
-                  </FooterTab>
-                </Footer>
+                    <Footer >   
+                      <FooterTab>
+                        <Button onPress={(e) => this.toHistory(e)}>
+                          <Icon name="paper"/>
+                          <NBText>History</NBText>
+                        </Button>
+                        <Button onPress={(e) => this.toProfile(e)}>
+                          <Icon name="person"/>
+                          <NBText>Profile</NBText>
+                        </Button>
+                        <Button  badge vertical onPress={(e) => this.toChatList(e)}>
+                          <Badge ><Text>1</Text></Badge>
+                          <Icon  name="chatbubbles"/>
+                          <NBText>Chat</NBText>
+                        </Button>
+                        <Button onPress={(e) => this.toHelp(e)}>
+                          <Icon name="logo-github"/>
+                          <NBText>Help</NBText>
+                        </Button>
+                      </FooterTab>
+                    </Footer>
                 }
               </Container>
-            
         );
     }
 }
@@ -223,9 +221,10 @@ const mapDispatchToProps = (dispatch) => {
         toProfilePage: (token) => { dispatch(toprofilepage(token)); },
         cleanData: () => {dispatch(cleandata())},
         logout: () => {dispatch(logout())},
-        toChatList: () => {dispatch(tochatlist())},
+        toChatList: (token) => {dispatch(tochatlist(token))},
         toHistoryPage: (token) => {dispatch(tohistory(token))},
         toHelpPage: (token) => {dispatch(toHelp(token))},
+        getuserID: (token) => {dispatch(getuserID(token))},
         toResultPage: (token, pick_up_location,drop_off_location,departDate) => { dispatch(getresult(token, pick_up_location,drop_off_location,departDate)); }
     }
 }

@@ -4,7 +4,8 @@ const defaultState = {
     email: '',
     errorFlag: false,
     sysAlert: '',
-    navi_page: ''
+    navi_page: '',
+    user_id: '',
 };
 
 export default function reducer(state = defaultState, action) {

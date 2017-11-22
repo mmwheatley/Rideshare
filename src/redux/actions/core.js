@@ -183,7 +183,36 @@ export const submitinfochange = (token, firstName, lastName, mobileNumber, paypa
     }
 };
 
+export const getuserID = (token) => {
+    return (dispatch) => {
+        console.log('get userID');
+        console.log(token);
 
+        fetch('https://rideshare-carpool.herokuapp.com/users/info', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                console.log(data_got.data._id);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        dispatch({
+                            type: 'SAVEUSERID',
+                            id: data_got.data._id,
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("server error!!");
+                }
+            });
+        });
+    }
+}
 
 export const toprofilepage = (token) => {
     return (dispatch) => {
@@ -289,7 +318,6 @@ export const tohistory = (token) => {
                     default:
                         console.log('exist an error');
                         alert("error");
-
                 }
             });
         });
@@ -314,7 +342,6 @@ export const tohistory = (token) => {
                     default:
                         console.log('exist an error');
                         alert("error");
-
                 }
             });
         });
@@ -339,7 +366,6 @@ export const tohistory = (token) => {
                     default:
                         console.log('exist an error');
                         alert("error");
-
                 }
             });
         });
@@ -376,21 +402,49 @@ export const tohistory = (token) => {
     }
 };
 
-export const tochatlist = () => {
-    return {
-        type: 'TOCHATLIST'
-    };
+export const tochatlist = (token) => {
+    return (dispatch) => {
+        fetch('https://rideshare-carpool.herokuapp.com/chat/chat_list', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log('loading');
+                console.log(data_got);
+
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log(data_got.data);
+                        dispatch({
+                            type: 'TOCHATLIST',
+                            chat_user_data: data_got.data
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
+                }
+            });
+        });
+    }
+    
 };
 
-export const goToChatPage = () => {
+export const goToChatPage = (chatterID, firstName, lastName) => {
     return {
-        type: 'TOCHATPAGE'
+        type: 'TOCHATPAGE',
+        chatterID: chatterID,
+        chatterFirstName: firstName,
+        chatterLastName: lastName,
     };
 };
 
 export const topost = () => {
     return {
-        type: 'TOPOSTPAGE'
+        type: 'TOPOSTPAGE',
     };
 };
 

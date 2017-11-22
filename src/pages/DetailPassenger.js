@@ -197,8 +197,7 @@ const mapDispatchToProps = (dispatch) => {
         toChat: () => {dispatch(goToChatPage()); },
         toPay: (link) => {dispatch(topay(link));},
         toDecide: (token, dec, ride_id, application_id) => {dispatch(makedecide(token, dec, ride_id, application_id)); },
-        askJoin: (token, item) => {dispatch(askForJoinIn(token, item)); }
-
+        askJoin: (token, item) => {dispatch(askForJoinIn(token, item)); },
     }
 }
 

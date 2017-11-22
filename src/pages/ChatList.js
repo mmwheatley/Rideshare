@@ -2,15 +2,14 @@ import React from "react";
 import { connect } from 'react-redux';
 import { ScrollView,Text, View } from "react-native";
 import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
-
+import Moment from 'moment';
 import { Images, Colors  } from "../Themes";
 
 // Styles
 import styles from "./Styles/LaunchScreenStyles";
 
 //reducers
-import { launchLogin, onRegister } from '../redux/actions/auth';
-import { tomain } from '../redux/actions/core';
+import { tomain, goToChatPage } from '../redux/actions/core';
 
 class Launch extends React.Component {
     backToMain (e) {
@@ -19,7 +18,12 @@ class Launch extends React.Component {
         e.preventDefault();
     }
 
-	render() {
+    toChatPage (chatterID, firstName, lastName) {
+        console.log('go to chat page')
+        this.props.toChat(chatterID, firstName, lastName);
+    }
+
+  	render() {
         return (
           <Container>
             <Header>
@@ -35,35 +39,40 @@ class Launch extends React.Component {
               </Right>
             </Header>
 
-            <Content>
-                <ScrollView style={styles.container}>
+             <Content padder>
+              <List
+                dataArray={this.props.data_array}
+                renderRow={data =>
+                  <ListItem avatar onPress={ () => this.toChatPage(data.user._id, data.user.firstName, data.user.lastName)}>
+                    <Left>
 
-                    <View style={styles.section}>
-                        <Text style={styles.title}>
-                            RideShare Chat List
-                            
-                        </Text>
-                    </View >
-                </ScrollView>
+                    </Left>
+                    <Body>
+                      <Text style={{fontSize:20, fontWeight: 'bold'}}>{`${data.user.firstName} ${data.user.lastName}`}</Text>
+                      <Text style={{fontSize:14}}>{`Last message: ${data.messages.text}`}</Text>
+                    </Body>
+                    <Right>
+                      <Text>{`${Moment(data.createdAt).format('lll')} `}</Text>
+                    </Right>
+                  </ListItem>}
+              />
             </Content>
           </Container>
         );
-
-	}
+  	}
 }
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        sysAlert: state.auth.sysAlert,
-        errorFlag: state.auth.errorFlag
+        token: state.auth.authentication_token,
+        data_array: state.core.chatdata,
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onRegister: () => {dispatch(onRegister()); },
-        launchLogin: () => {dispatch(launchLogin()); },
-        goBackToMain: () => {dispatch(tomain()); }
+        goBackToMain: () => {dispatch(tomain()); },
+        toChat: (chatterID, firstName, lastName) => {dispatch(goToChatPage(chatterID, firstName, lastName)); },
     }
 }
 

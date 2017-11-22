@@ -23,6 +23,7 @@ class Chat extends Component {
   };
 
   componentWillMount() {
+    console.log(this.props.chatterID, this.props.chatterFirstName, this.props.chatterLastName, this.props.userID);
     this.setState({
       messages: [
         {
@@ -30,9 +31,8 @@ class Chat extends Component {
           text: 'Hello, can I book a seat from Waterloo to Markham tomorrow?',
           createdAt: new Date(),
           user: {
-            _id: 2,
-            name: 'Erlie Shang',
-
+            _id: this.props.chatterID,
+            name: `${this.props.chatterFirstName} ${this.props.chatterLastName}`,
           },
         },
       ],
@@ -61,7 +61,7 @@ class Chat extends Component {
               </Button>
             </Left>
             <Body>
-              <Title>chat</Title>
+              <Title>{this.props.chatterFirstName} {this.props.chatterLastName}</Title>
             </Body>
             <Right>
 
@@ -72,20 +72,23 @@ class Chat extends Component {
             messages={this.state.messages}
             onSend={(message) => this.onSend(message)}
             user={{
-              _id: 1,
+              _id: this.props.userID,
+              name: 'Boyuan Zhu'
             }}
           />
 
         </Container>
     );
   }
-
 }
-
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        data_array : state.core.data
+        token: state.auth.authentication_token,
+        userID : state.core.userID,
+        chatterID : state.core.chatterID,
+        chatterFirstName : state.core.chatterFirstName,
+        chatterLastName : state.core.chatterLastName,
     };
 }
 
@@ -95,6 +98,5 @@ const mapDispatchToProps = (dispatch) => {
         goBackToMain: () => {dispatch(tomain()); }
     }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Chat);

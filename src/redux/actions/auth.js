@@ -28,6 +28,7 @@ export const loginUser = (email, password) => {
         //     type: 'LOAD_SPINNER'
         // });
         // console.log('spinner')
+
         fetch('https://rideshare-carpool.herokuapp.com/users/get_token', {
             method: 'POST',
             headers: {
