@@ -24,12 +24,13 @@ var found = false;
 
 var SEARCH_WORD = [];
 
+var options;
 
-module.exports = function crawler(options) {
+module.exports = function crawler(option_input) {
 
 //function crawler(options) 
 
-{
+options = option_input;
 
 var origin = options.start_city;
 var destination = options.end_city;
@@ -193,7 +194,7 @@ function visitPage(url, callback)
      else
      {
        collectInternalLinks($);
-       // Callback is crawl()
+       // Callback is crawler()
        callback(options);
      }
 
