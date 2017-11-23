@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, View,Text, Keyboard} from 'react-native';
-import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage, toHelp, getuserinfo} from '../redux/actions/core';
+import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage, checkchat, toHelp, getuserinfo} from '../redux/actions/core';
 import { logout } from '../redux/actions/auth';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
@@ -78,12 +78,19 @@ class Main extends Component {
         this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
         this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this))
         this.props.getuserinfo(this.props.token);
+        this.props.checkchat(this.props.token);
+    }
+
+    componentDidMount() {
+        this.round = setInterval(()=> {this.props.checkchat(this.props.token)}, 5000);
     }
 
     componentWillUnmount () {
         this.keyboardDidShowListener.remove();
         this.keyboardDidHideListener.remove();
+        clearInterval(this.round);
     }
+
     _keyboardDidShow () {
         this.setState({showFooter: false});
     }
@@ -192,7 +199,7 @@ class Main extends Component {
                           <NBText>Profile</NBText>
                         </Button>
                         <Button  badge vertical onPress={(e) => this.toChatList(e)}>
-                          <Badge ><Text>1</Text></Badge>
+                          <Badge ><Text style={{ color: 'white' }}> {this.props.chatbubble}</Text></Badge>
                           <Icon  name="chatbubbles"/>
                           <NBText>Chat</NBText>
                         </Button>
@@ -211,7 +218,8 @@ class Main extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        token: state.auth.authentication_token
+        token: state.auth.authentication_token,
+        chatbubble: state.core.chatbubble,
     };
 }
 
@@ -220,6 +228,7 @@ const mapDispatchToProps = (dispatch) => {
         toPostPage: () => { dispatch(topost()); },
         toProfilePage: (token) => { dispatch(toprofilepage(token)); },
         cleanData: () => {dispatch(cleandata())},
+        checkchat: (token) => {dispatch(checkchat(token));},
         logout: () => {dispatch(logout())},
         toChatList: (token) => {dispatch(tochatlist(token))},
         toHistoryPage: (token) => {dispatch(tohistory(token))},

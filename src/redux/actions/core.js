@@ -503,8 +503,6 @@ export const tohistory = (token) => {
         dispatch({
             type: 'TOHISTORY'
         });
-
-    
     }
 };
 
@@ -536,8 +534,67 @@ export const tochatlist = (token) => {
             });
         });
     }
-    
 };
+
+export const getchatdetail = (token) => {
+    return (dispatch) => {
+        fetch('https://rideshare-carpool.herokuapp.com/chat/chat_list', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log('loading');
+                console.log(data_got);
+
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log(data_got.data);
+                        dispatch({
+                            type: 'GETDETAILCHAT',
+                            chat_user_data: data_got.data
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
+                }
+            });
+        });
+    }
+};
+
+export const checkchat = (token) => {
+    return (dispatch) => {
+        fetch('https://rideshare-carpool.herokuapp.com/chat/chat_list', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'x-access-token': token
+            }
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log('CHECK CHAT');
+
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log(data_got.unread);
+                        dispatch({
+                            type: 'CHECKCHAT',
+                            chatbubble: data_got.unread,
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("error");
+                }
+            });
+        });
+    }
+};
+
 
 export const goToChatPage = (chatterID, firstName, lastName) => {
     return {
@@ -631,6 +688,9 @@ export const askForJoinIn = (token, item) => {
                         dispatch({
                             type: 'TOMAIN',
                         });
+                        break;
+                    case 15:
+                        alert('cannot join the rideshare posted by yourself');
                         break;
                     default:
                         console.log('exist an error');

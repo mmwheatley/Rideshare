@@ -5,7 +5,7 @@ import { tomain, goToChatPage, askForJoinIn, cleandata, tohistory, makedecide} f
 import { Container, Header, Left, Text, Body, Text as NBText,Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 import Moment from 'moment';
 import styles from "./Styles/LaunchScreenStyles";
-
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
 class Result extends Component {
     constructor(props) {
@@ -22,10 +22,9 @@ class Result extends Component {
         e.preventDefault();
     }
 
-    toChatPage (e) {
-        console.log('go to chat page')
-        this.props.toChat();
-        e.preventDefault();
+    toChatPage (chatterID, firstName, lastName) {
+        console.log('go to chat page');
+        this.props.toChat(chatterID, firstName, lastName);
     }
 
     decide (dec, ride_id, application_id) {
@@ -59,9 +58,7 @@ class Result extends Component {
                 <Title>Details</Title>
               </Body>
               <Right>
-                <Button transparent onPress={(e) => this.toChatPage(e)}>
-                  <Icon name="chatbubbles"  />
-                </Button>
+
               </Right>
             </Header>
 
@@ -96,10 +93,15 @@ class Result extends Component {
               <List
                 dataArray={this.props.item.applications}
                 renderRow={data =>
-                  <ListItem >
+                  <ListItem avatar>
+                    <Left>
+                        <Button transparent onPress={() => this.toChatPage(data.userID._id, data.userID.firstName, data.userID.lastName)}>
+                            <Icon name="chatbubbles"  />
+                        </Button>
+                    </Left>
                     <Body>
-                      <Text>{`Name: ${data.userID.firstName} ${data.userID.lastName}`}</Text>
-                      <Text>{`Rate: ${data.userID.score}`}</Text>
+                        <Text>{`Name: ${data.userID.firstName} ${data.userID.lastName}`}</Text>
+                        <Text>{`Rate: ${data.userID.score}`}</Text>
                     </Body>
                     <Right>
 
@@ -124,6 +126,7 @@ class Result extends Component {
                             <Text style={{fontSize: 13}}> Rejected </Text>
                         </View>
                     }
+
                     </Right>
 
                   </ListItem>}
@@ -146,7 +149,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         toHistoryPage: (token) => {dispatch(tohistory(token))},
         cleanData: () => {dispatch(cleandata())},
-        toChat: () => {dispatch(goToChatPage()); },
+        toChat: (chatterID, firstName, lastName) => {dispatch(goToChatPage(chatterID, firstName, lastName)); },
         toDecide: (token, dec, ride_id, application_id) => {dispatch(makedecide(token, dec, ride_id, application_id)); },
         askJoin: (token, item) => {dispatch(askForJoinIn(token, item)); }
 

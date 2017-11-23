@@ -23,10 +23,9 @@ class Result extends Component {
         e.preventDefault();
     }
 
-    toChatPage (e) {
-        console.log('go to chat page')
-        this.props.toChat();
-        e.preventDefault();
+    toChatPage (chatterID, firstName, lastName) {
+        console.log('go to chat page');
+        this.props.toChat(chatterID, firstName, lastName);
     }
 
     call (e) {
@@ -95,7 +94,7 @@ class Result extends Component {
                 <Title>Details</Title>
               </Body>
               <Right>
-                <Button transparent onPress={(e) => this.toChatPage(e)}>
+                <Button transparent onPress={() => this.toChatPage(this.props.item.driver._id ,this.props.item.driver.firstName,this.props.item.driver.lastName)}>
                   <Icon name="chatbubbles"  />
                 </Button>
               </Right>
@@ -193,8 +192,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         toHistoryPage: (token) => {dispatch(tohistory(token))},
+        toChat: (chatterID, firstName, lastName) => {dispatch(goToChatPage(chatterID, firstName, lastName)); },
         cleanData: () => {dispatch(cleandata())},
-        toChat: () => {dispatch(goToChatPage()); },
         toPay: (link) => {dispatch(topay(link));},
         toDecide: (token, dec, ride_id, application_id) => {dispatch(makedecide(token, dec, ride_id, application_id)); },
         askJoin: (token, item) => {dispatch(askForJoinIn(token, item)); },

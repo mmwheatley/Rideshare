@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { ScrollView,Text, View } from "react-native";
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
+import { Container, Header, Badge, Left, Body, Right, Button, Icon, Title, Content, List, ListItem} from 'native-base';
 import Moment from 'moment';
 import { Images, Colors  } from "../Themes";
 
@@ -9,7 +9,7 @@ import { Images, Colors  } from "../Themes";
 import styles from "./Styles/LaunchScreenStyles";
 
 //reducers
-import { tomain, goToChatPage } from '../redux/actions/core';
+import { tomain, goToChatPage, getchatdetail } from '../redux/actions/core';
 
 class Launch extends React.Component {
     backToMain (e) {
@@ -23,6 +23,14 @@ class Launch extends React.Component {
         this.props.toChat(chatterID, firstName, lastName);
     }
 
+    componentDidMount() {
+        this.round = setInterval(()=> {this.props.getChatDetail(this.props.token)}, 5000);
+    }
+
+    componentWillUnmount () {
+        clearInterval(this.round);
+    }
+    
   	render() {
         return (
           <Container>
@@ -45,7 +53,7 @@ class Launch extends React.Component {
                 renderRow={data =>
                   <ListItem avatar onPress={ () => this.toChatPage(data.user._id, data.user.firstName, data.user.lastName)}>
                     <Left>
-
+                          <Badge ><Text style={{ color: 'white' }}> {data.unread}</Text></Badge>
                     </Left>
                     <Body>
                       <Text style={{fontSize:20, fontWeight: 'bold'}}>{`${data.user.firstName} ${data.user.lastName}`}</Text>
@@ -71,6 +79,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        getChatDetail: (token) => {dispatch(getchatdetail(token));},
         goBackToMain: () => {dispatch(tomain()); },
         toChat: (chatterID, firstName, lastName) => {dispatch(goToChatPage(chatterID, firstName, lastName)); },
     }

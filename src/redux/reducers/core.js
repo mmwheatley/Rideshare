@@ -6,6 +6,7 @@ const defaultState = {
     alldriver: [],
     unpassenger: [],
     chatdata: [],
+    chatdatabubble: [],
     allpassenger: [],
     chathistory: [],
     userinfo:[],
@@ -15,6 +16,7 @@ const defaultState = {
     chatterID:'',
     chatterFirstName: '',
     chatterLastName: '',
+    chatbubble:'0',
 };
 
 export default function reducer(state = defaultState, action) {
@@ -40,9 +42,11 @@ export default function reducer(state = defaultState, action) {
         case 'TOCHATPAGE':
           return {...state, navi_core:'chatpage', chatterID: action.chatterID, chatterFirstName: action.chatterFirstName, chatterLastName: action.chatterLastName,}
         case 'CLEAN':
-          return {...state, chatdata: [], data: [], undriver: [], alldriver: [], unpassenger: [], allpassenger: []}
+          return {...state, chatdata: [], chatdatabubble: [], data: [], undriver: [], alldriver: [], unpassenger: [], allpassenger: []}
         case 'CLEANCHATHISTORY':
           return {...state, chathistory: []}
+        case 'CHECKCHAT':
+          return {...state, chatbubble: action.chatbubble}
         case 'SAVECHATHISTORY':
           return {...state, 
                     chathistory: state.chathistory.concat(action.messages)
@@ -64,6 +68,10 @@ export default function reducer(state = defaultState, action) {
         case 'TOCHATLIST':
           return {...state, 
                     navi_core:'chatlist',
+                    chatdata: state.data.concat(action.chat_user_data)
+                  };
+        case 'GETDETAILCHAT':
+          return {...state, 
                     chatdata: state.data.concat(action.chat_user_data)
                   };
         case 'GETRESULT':
