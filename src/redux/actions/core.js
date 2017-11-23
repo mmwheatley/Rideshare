@@ -183,9 +183,9 @@ export const submitinfochange = (token, firstName, lastName, mobileNumber, paypa
     }
 };
 
-export const getuserID = (token) => {
+export const getuserinfo = (token) => {
     return (dispatch) => {
-        console.log('get userID');
+        console.log('get user info');
         console.log(token);
 
         fetch('https://rideshare-carpool.herokuapp.com/users/info', {
@@ -197,12 +197,13 @@ export const getuserID = (token) => {
         }).then((response) => {
             response.json().then(data_got => {
                 console.log(data_got);
-                console.log(data_got.data._id);
                 switch (data_got.code) {
                     case 0: //no_error
                         dispatch({
                             type: 'SAVEUSERID',
                             id: data_got.data._id,
+                            userFirstName: data_got.data.firstName,
+                            userLastName: data_got.data.lastName,
                         });
                         break;
                     default:
@@ -211,6 +212,111 @@ export const getuserID = (token) => {
                 }
             });
         });
+    }
+}
+
+export const gethistorychat = (token, chatterID) => {
+    return (dispatch) => {
+        console.log('get history chat');
+        console.log(token, chatterID);
+
+        fetch('https://rideshare-carpool.herokuapp.com/chat/get_history', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            },
+            body: JSON.stringify({
+                user: chatterID,
+            })
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                dispatch({
+                    type: 'CLEANCHATHISTORY',
+                });
+                dispatch({
+                    type: 'SAVECHATHISTORY',
+                    messages: data_got,
+                });
+            });
+        });
+        
+    }
+}
+
+export const sendmessage = (token, chatterID, message) => {
+    return (dispatch) => {
+        console.log('send messages');
+        console.log(token, chatterID, message);
+
+        fetch('https://rideshare-carpool.herokuapp.com/chat/send', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            },
+            body: JSON.stringify({
+                to: chatterID,
+                text: message[0].text,
+            })
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('sent');
+                        dispatch({
+                            type: 'SHOWSENTMESSAGE',
+                            item: message
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("server error!!");
+                }
+            });
+        });
+        
+    }
+}
+
+export const getmessage = (token, chatterID) => {
+    return (dispatch) => {
+        console.log('get');
+        console.log(token, chatterID);
+
+        fetch('https://rideshare-carpool.herokuapp.com/chat/check_conv', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            },
+            body: JSON.stringify({
+                user: chatterID,
+            })
+        }).then((response) => {
+            response.json().then(data_got => {
+                console.log(data_got);
+                switch (data_got.code) {
+                    case 0: //no_error
+                        console.log('sent');
+                        dispatch({
+                            type: 'SHOWSENTMESSAGE',
+                            item: data_got.data
+                        });
+
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("server error!!");
+                }
+            });
+        });
+        
     }
 }
 

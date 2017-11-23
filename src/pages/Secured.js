@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ScrollView, View,Text, Keyboard} from 'react-native';
-import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage, toHelp, getuserID} from '../redux/actions/core';
+import { topost, getresult, cleandata, tochatlist, tohistory, toprofilepage, toHelp, getuserinfo} from '../redux/actions/core';
 import { logout } from '../redux/actions/auth';
 import { Kaede } from 'react-native-textinput-effects';
 import DatePicker from 'react-native-datepicker';
@@ -77,7 +77,7 @@ class Main extends Component {
     componentWillMount () {
         this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
         this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this))
-        this.props.getuserID(this.props.token);
+        this.props.getuserinfo(this.props.token);
     }
 
     componentWillUnmount () {
@@ -224,7 +224,7 @@ const mapDispatchToProps = (dispatch) => {
         toChatList: (token) => {dispatch(tochatlist(token))},
         toHistoryPage: (token) => {dispatch(tohistory(token))},
         toHelpPage: (token) => {dispatch(toHelp(token))},
-        getuserID: (token) => {dispatch(getuserID(token))},
+        getuserinfo: (token) => {dispatch(getuserinfo(token))},
         toResultPage: (token, pick_up_location,drop_off_location,departDate) => { dispatch(getresult(token, pick_up_location,drop_off_location,departDate)); }
     }
 }

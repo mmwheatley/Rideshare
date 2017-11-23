@@ -19,7 +19,7 @@ class Launch extends React.Component {
     }
 
     toChatPage (chatterID, firstName, lastName) {
-        console.log('go to chat page')
+        console.log('go to chat page');
         this.props.toChat(chatterID, firstName, lastName);
     }
 

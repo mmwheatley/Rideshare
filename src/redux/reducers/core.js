@@ -7,8 +7,11 @@ const defaultState = {
     unpassenger: [],
     chatdata: [],
     allpassenger: [],
+    chathistory: [],
     userinfo:[],
     userID:'',
+    userFirstName: '',
+    userLastName: '',
     chatterID:'',
     chatterFirstName: '',
     chatterLastName: '',
@@ -33,11 +36,21 @@ export default function reducer(state = defaultState, action) {
         case 'TOPROFILE':
           return {...state, navi_core:'profile', userinfo: action.item}
         case 'SAVEUSERID':
-          return {...state, userID: action.id}
+          return {...state, userID: action.id, userFirstName: action.userFirstName, userLastName: action.userLastName}
         case 'TOCHATPAGE':
           return {...state, navi_core:'chatpage', chatterID: action.chatterID, chatterFirstName: action.chatterFirstName, chatterLastName: action.chatterLastName,}
         case 'CLEAN':
           return {...state, chatdata: [], data: [], undriver: [], alldriver: [], unpassenger: [], allpassenger: []}
+        case 'CLEANCHATHISTORY':
+          return {...state, chathistory: []}
+        case 'SAVECHATHISTORY':
+          return {...state, 
+                    chathistory: state.chathistory.concat(action.messages)
+                 };
+        case 'SHOWSENTMESSAGE':
+          return {...state, 
+                    chathistory: action.item.concat(state.chathistory)
+                 };
         case 'GOBACKTORESULT':
           return {...state, navi_core:'result'}
         case 'POST_SUCCESS':
