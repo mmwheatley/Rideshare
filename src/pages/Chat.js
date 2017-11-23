@@ -25,7 +25,7 @@ class Chat extends Component {
   }
 
   componentDidMount() {
-    this.round = setInterval(()=> {this.props.getmessage(this.props.token, this.props.chatterID)}, 3000);
+    this.round = setInterval(()=> {this.props.getmessage(this.props.token, this.props.chatterID)}, 2000);
   }
 
   componentWillUnmount() {
