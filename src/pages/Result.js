@@ -73,7 +73,7 @@ class Launch extends Component {
                               </Left>
                               <Body>
                                 <Text>{`Driver: ${data.driver.firstName} ${data.driver.lastName}`}</Text>
-                                <Text note>{`price:${data.price}      seats available:${data.totalSeats}`}</Text>
+                                <Text note>{`price:${data.price}      seats available:${data.totalSeats-data.occupiedSeats}`}</Text>
                               </Body>
                               <Right>
                                 <Text note>{`Rate:${data.driver.score}`}</Text>
@@ -95,7 +95,7 @@ class Launch extends Component {
                               </Left>
                               <Body>
                                 <Text>{`Driver: ${data.driver.firstName} ${data.driver.lastName}`}</Text>
-                                <Text note>{`price:${data.price}      seats available:${data.totalSeats}`}</Text>
+                                <Text note>{`price:${data.price}      seats available:${data.totalSeats-data.occupiedSeats}`}</Text>
                               </Body>
                               <Right>
                                 <Text note>{`Rate:${data.driver.score}`}</Text>

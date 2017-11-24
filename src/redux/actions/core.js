@@ -233,19 +233,25 @@ export const gethistorychat = (token, chatterID) => {
         }).then((response) => {
             response.json().then(data_got => {
                 console.log(data_got);
-                dispatch({
-                    type: 'CLEANCHATHISTORY',
-                });
-                dispatch({
-                    type: 'SAVECHATHISTORY',
-                    messages: data_got,
-                });
+                switch (data_got.code) {
+                    case 0: //no_error
+                        dispatch({
+                            type: 'CLEANCHATHISTORY',
+                        });
+                        dispatch({
+                            type: 'SAVECHATHISTORY',
+                            messages: data_got.data,
+                        });
+                        break;
+                    default:
+                        console.log('exist an error');
+                        alert("server error!!");
+                }
             });
         });
         
     }
 }
-
 export const sendmessage = (token, chatterID, message) => {
     return (dispatch) => {
         console.log('send messages');
@@ -312,6 +318,7 @@ export const getmessage = (token, chatterID) => {
                         break;
                     default:
                         console.log('exist an error');
+                        console.log(data_got.data);
                         alert("server error!!");
                 }
             });

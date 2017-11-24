@@ -21,10 +21,10 @@ class Result extends Component {
         this.props.goBack();
         e.preventDefault();
     }
-    toChatPage (e) {
-        console.log('go to chat page')
-        this.props.toChat();
-        e.preventDefault();
+
+    toChatPage (chatterID, firstName, lastName) {
+        console.log('go to chat page');
+        this.props.toChat(chatterID, firstName, lastName);
     }
 
     showTel(e){
@@ -57,7 +57,7 @@ class Result extends Component {
                 <Title>Details</Title>
               </Body>
               <Right>
-                <Button transparent active={this.state.tab3} onPress={(e) => this.toChatPage(e)}>
+                <Button transparent active={this.state.tab3} onPress={() => this.toChatPage(this.props.item.driver._id, this.props.item.driver.firstName, this.props.item.driver.lastName)}>
                   <Icon active={this.state.tab3} name="chatbubbles"  />
                   <Text>Chat</Text>
                 </Button>
@@ -121,7 +121,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         goBack: () => {dispatch(gobacktoresult()); },
-        toChat: () => {dispatch(goToChatPage()); },
+        toChat: (chatterID, firstName, lastName) => {dispatch(goToChatPage(chatterID, firstName, lastName)); },
         askJoin: (token, item) => {dispatch(askForJoinIn(token, item)); }
 
     }
