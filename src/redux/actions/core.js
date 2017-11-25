@@ -362,7 +362,7 @@ export const toprofilepage = (token) => {
 
 export const makedecide = (token, decide, ride_id, application_id) => {
     return (dispatch) => {
-        console.log('ask for join');
+        console.log('makedecide');
         console.log(token, decide, ride_id, application_id);
 
         fetch('https://rideshare-carpool.herokuapp.com/rides/respond_to_ride', {
@@ -390,17 +390,73 @@ export const makedecide = (token, decide, ride_id, application_id) => {
                         else{
                             alert('Rejected!');
                         }
-                        dispatch({
-                            type: 'TOHISTORY',
-                        });
+                        break;
+                    case 21:
+                        alert('There is not enough seats!');
                         break;
                     default:
                         console.log('exist an error');
                         alert("error");
                 }
             });
+        }).then( ()=> {
+                dispatch({
+                    type: 'CLEANDRIVERORDER'
+                });
+        }).then( ()=> {
+                fetch('https://rideshare-carpool.herokuapp.com/rides/get_unprocessed_orders', {
+                    method: 'GET',
+                    headers: {
+                        Accept: 'application/json',
+                        'x-access-token': token
+                    }
+                }).then((response) => {
+                    response.json().then(data_got => {
+                        console.log(data_got.data);
+                        switch (data_got.code) {
+                            case 0: //no_error
+                                console.log('got driver unprocessed!!');
+
+                                dispatch({
+                                    type: 'DRIVERUNPROCESSED',
+                                    array: data_got.data
+                                });
+                                break;
+                            default:
+                                console.log('exist an error');
+                                alert("error");
+                        }
+                    });
+                }).then( ()=> {
+                    fetch('https://rideshare-carpool.herokuapp.com/rides/get_offering_orders', {
+                        method: 'GET',
+                        headers: {
+                            Accept: 'application/json',
+                            'x-access-token': token
+                        }
+                    }).then((response) => {
+                        response.json().then(data_got => {
+                            switch (data_got.code) {
+                                case 0: //no_error
+                                    console.log('got driver all orders!!');
+                                    console.log(data_got.data);
+                                    dispatch({
+                                        type: 'DRIVERALL',
+                                        array: data_got.data
+                                    });
+                                    break;
+                                default:
+                                    console.log('exist an error');
+                                    alert("error");
+                            }
+                        });
+                    }).then( ()=> {
+                        dispatch({
+                        type: 'TOHISTORY'
+                        });
+                    }); 
+                });
         });
-        
     }
 };
 

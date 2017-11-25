@@ -43,6 +43,8 @@ export default function reducer(state = defaultState, action) {
           return {...state, navi_core:'chatpage', chatterID: action.chatterID, chatterFirstName: action.chatterFirstName, chatterLastName: action.chatterLastName,}
         case 'CLEAN':
           return {...state, chatdata: [], chatdatabubble: [], data: [], undriver: [], alldriver: [], unpassenger: [], allpassenger: []}
+        case 'CLEANDRIVERORDER':
+          return {...state, undriver: [], alldriver: []}
         case 'CLEANCHATHISTORY':
           return {...state, chathistory: []}
         case 'CHECKCHAT':
