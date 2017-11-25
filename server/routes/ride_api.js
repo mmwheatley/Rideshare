@@ -11,6 +11,8 @@ var User = require("../model/user");
 var Ride = require('../model/ride');
 var crawler = require('../crawler/Rideshare_Crawler');
 var get_city = require('./get_city');
+var async = require('asyncawait/async');
+var await = require('asyncawait/await');
 
 var router = express.Router();
 var transporter = config.transporter;
@@ -53,7 +55,7 @@ router.post('/search_ride', function (req, res) {
                     unirest.get(config.map_url)
                         .query({'address': req.body.dropOffLoc})
                         .query({'key': config.map_key})
-                        .end(function (response) {
+                        .end(async function (response) {
                             if (response.error) {
                                 return res.json({'code': error.map_error});
                             } else {
@@ -81,7 +83,7 @@ router.post('/search_ride', function (req, res) {
                                         'kijiji': req.body.crawler.kijiji || false,
                                         'craigslist': req.body.crawler.craigslist || false
                                     };
-                                    var external_data = crawler(options);
+                                    var external_data = await crawler(options);
                                     return res.json({
                                         'success': true,
                                         'code': error.no_error,
