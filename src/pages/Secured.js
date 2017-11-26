@@ -204,7 +204,7 @@ class Main extends Component {
                           <NBText>Chat</NBText>
                         </Button>
                         <Button onPress={(e) => this.toHelp(e)}>
-                          <Icon name="logo-github"/>
+                          <Icon name="help-with-circle"/>
                           <NBText>Help</NBText>
                         </Button>
                       </FooterTab>
