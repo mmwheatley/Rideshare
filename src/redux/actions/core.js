@@ -861,6 +861,7 @@ export const postinfo = (token, date_from ,date_to, pick_up_location, pick_up_ra
             })
         }).then((response) => {
             response.json().then(data => {
+                console.log(data.code)
                 switch (data.code) {
                     case 0: //no_error
                         console.log('SUCCESS!!');
@@ -869,6 +870,9 @@ export const postinfo = (token, date_from ,date_to, pick_up_location, pick_up_ra
                         dispatch({
                         	type: 'POST_SUCCESS',
                         });
+                        break;
+                    case 11:
+                        alert("Have no permission to post a rideshare")
                         break;
                     default:
                         console.log('exist an error');
