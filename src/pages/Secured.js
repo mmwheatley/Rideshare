@@ -8,7 +8,7 @@ import DatePicker from 'react-native-datepicker';
 import Moment from 'moment';
 import {Container,Header,Title,Content,Button,Footer,FooterTab,Text as NBText,Body,Left,Right,Icon,Badge,Form, Item, Input, Label } from "native-base";
 import Styles from "./Styles/SecuredScreenStyles";
-import Entypo from 'react-native-vector-icons/Entypo';
+
 
 import Locator from "./Locator";
 
@@ -205,7 +205,7 @@ class Main extends Component {
                           <NBText>Chat</NBText>
                         </Button>
                         <Button onPress={(e) => this.toHelp(e)}>
-                          <Entypo style={{fontSize:23}} color='grey' name="help-with-circle"/>
+                          <Icon  name="help-circle"/>
                           <NBText>Help</NBText>
                         </Button>
                       </FooterTab>
