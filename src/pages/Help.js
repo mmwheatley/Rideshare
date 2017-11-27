@@ -26,6 +26,8 @@ class Help extends Component {
                          <Body>
                         <Title>Help!</Title>
                         </Body>
+                        <Right>
+                        </Right>
                     </Header>
                 <Content padder>
                 

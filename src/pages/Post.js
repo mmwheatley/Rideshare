@@ -100,7 +100,6 @@ class Main extends Component {
                 <Hoshi
                   label={'Pick Up Location'}
                   borderColor={'#b76c94'}
-                  backgroundColor={'#FFF'}
                   autoCorrect={false}
                   value={this.state.pick_up_location} 
                   autoCapitalize='none'
@@ -109,7 +108,6 @@ class Main extends Component {
                 <Hoshi
                   label={'Pick Up Range (KM)'}
                   borderColor={'#b76c94'}
-                  backgroundColor={'#FFF'}
                   autoCorrect={false}
                   value={this.state.pick_up_range} 
                   autoCapitalize='none'
@@ -118,7 +116,6 @@ class Main extends Component {
                 <Hoshi
                   label={'Drop Off Location'}
                   borderColor={'#b76c94'}
-                  backgroundColor={'#FFF'}
                   autoCorrect={false}
                   value={this.state.drop_off_location} 
                   autoCapitalize='none'
@@ -127,7 +124,6 @@ class Main extends Component {
                 <Hoshi
                   label={'Drop Off Range (KM)'}
                   borderColor={'#b76c94'}
-                  backgroundColor={'#FFF'}
                   autoCorrect={false}
                   value={this.state.drop_off_range} 
                   autoCapitalize='none'
@@ -136,7 +132,6 @@ class Main extends Component {
                 <Hoshi
                   label={'Available Seats'}
                   borderColor={'#b76c94'}
-                  backgroundColor={'#FFF'}
                   autoCorrect={false}
                   value={this.state.seat} 
                   autoCapitalize='none'
@@ -145,7 +140,6 @@ class Main extends Component {
                 <Hoshi
                   label={'Price Per Seat (CAD)'}
                   borderColor={'#b76c94'}
-                  backgroundColor={'#FFF'}
                   autoCorrect={false}
                   value={this.state.price} 
                   autoCapitalize='none'
