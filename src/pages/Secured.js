@@ -83,7 +83,7 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        this.round = setInterval(()=> {this.props.checkchat(this.props.token)}, 5000);
+        this.round = setInterval(()=> {this.props.checkchat(this.props.token)}, 2500);
     }
 
     componentWillUnmount () {

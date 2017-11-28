@@ -24,7 +24,7 @@ class Launch extends React.Component {
     }
 
     componentDidMount() {
-        this.round = setInterval(()=> {this.props.getChatDetail(this.props.token)}, 5000);
+        this.round = setInterval(()=> {this.props.getChatDetail(this.props.token)}, 2500);
     }
 
     componentWillUnmount () {
