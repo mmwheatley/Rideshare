@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { ScrollView, View,FlatList, Image } from "react-native";
+import { ScrollView, View,FlatList, Image, Linking } from "react-native";
 import { Container, ScrollableTab, Tabs, Tab, Text, Header, Left, Body, Right, Button, Icon, Segment,Title, Content, ListItem as LI, List as L} from 'native-base';
 import { Images, Colors  } from "../Themes";
 // Styles
@@ -26,6 +26,20 @@ class Launch extends Component {
     showDetail(item){
         console.log(item);
         this.props.detail(item);
+    }
+
+    jump (data) {
+        console.log(data);
+        // this.props.toPay(this.props.item.driver.payment.paypal);
+        // e.preventDefault();
+        Linking.canOpenURL(data).then(supported => {
+          if (!supported) {
+            console.log('Can\'t handle url: ' + data);
+          } else {
+            return Linking.openURL(data);
+          }
+        }).catch(err => console.error('An error occurred', err));
+
     }
 
     render() {
@@ -87,18 +101,16 @@ class Launch extends Component {
                     <Content>
                        <Content padder>
                         <L
-                          dataArray={this.props.data_array}
+                          dataArray={this.props.external_data_array}
                           renderRow={data =>
-                            <LI avatar onPress={ () => this.showDetail(data) }>
+                            <LI avatar onPress={() => this.jump(data)}>
                               <Left>
 
                               </Left>
                               <Body>
-                                <Text>{`Driver: ${data.driver.firstName} ${data.driver.lastName}`}</Text>
-                                <Text note>{`price:${data.price}      seats available:${data.totalSeats-data.occupiedSeats}`}</Text>
+                                <Text>{`${data}`}</Text>
                               </Body>
                               <Right>
-                                <Text note>{`Rate:${data.driver.score}`}</Text>
                               </Right>
                             </LI>}
                         />
@@ -116,7 +128,8 @@ class Launch extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        data_array : state.core.data
+        data_array : state.core.data,
+        external_data_array : state.core.external_data,
     };
 }
 

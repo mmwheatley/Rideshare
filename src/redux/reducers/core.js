@@ -1,6 +1,7 @@
 const defaultState = {
     navi_core:'main',
     data : [],
+    external_data: [],
     item: {},
     undriver: [],
     alldriver: [],
@@ -42,7 +43,7 @@ export default function reducer(state = defaultState, action) {
         case 'TOCHATPAGE':
           return {...state, navi_core:'chatpage', chatterID: action.chatterID, chatterFirstName: action.chatterFirstName, chatterLastName: action.chatterLastName,}
         case 'CLEAN':
-          return {...state, chatdata: [], chatdatabubble: [], data: [], undriver: [], alldriver: [], unpassenger: [], allpassenger: []}
+          return {...state, external_data:[], chatdata: [], chatdatabubble: [], data: [], undriver: [], alldriver: [], unpassenger: [], allpassenger: []}
         case 'CLEANDRIVERORDER':
           return {...state, undriver: [], alldriver: []}
         case 'CLEANCHATHISTORY':
@@ -79,7 +80,8 @@ export default function reducer(state = defaultState, action) {
         case 'GETRESULT':
           return {...state, 
                     navi_core:'result', 
-                    data: state.data.concat(action.array)
+                    data: state.data.concat(action.array),
+                    external_data: state.external_data.concat(action.external_data_array)
                  };
         case 'DRIVERALL':
           return {...state, 

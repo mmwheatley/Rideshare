@@ -771,6 +771,8 @@ export const getresult = (token, pick_up_location,drop_off_location,departDate) 
     return (dispatch) => {
         console.log('get result')
         console.log(token, pick_up_location,drop_off_location,departDate)
+        var kijiji = true;
+        var craigslist = false;
 
         fetch('https://rideshare-carpool.herokuapp.com/rides/search_ride', {
             method: 'POST',
@@ -783,7 +785,8 @@ export const getresult = (token, pick_up_location,drop_off_location,departDate) 
             body: JSON.stringify({
                 departDate: departDate,
                 pickUpLoc: pick_up_location,
-                dropOffLoc: drop_off_location
+                dropOffLoc: drop_off_location,
+                crawler: {kijiji: kijiji, craigslist: craigslist},
             })
         }).then((response) => {
             response.json().then(data_got => {
@@ -793,7 +796,8 @@ export const getresult = (token, pick_up_location,drop_off_location,departDate) 
                         console.log('SUCCESS!!');
                         dispatch({
                             type: 'GETRESULT',
-                            array: data_got.data
+                            array: data_got.data,
+                            external_data_array: data_got.external_data
                         });
                         break;
                     default:
